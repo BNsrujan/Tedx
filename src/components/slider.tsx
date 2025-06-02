@@ -38,12 +38,9 @@ export function ThreeDMarquees() {
   ];
 
   return (
-    <div className="h-screen  relative">
-      <div className="h-screen absolute bg-gray-900 opacity-5 z-30 w-full">
-        {" "}
-      </div>
-      <div className="absolute flex w-full h-full justify-center items-center z-40">
-        <h1 className="text-amber-50 font-bold text-9xl">TEDxAIET</h1>
+    <div className="h-screen relative flex  justify-center items-center">
+      <div className="absolute flex w-full h-full justify-center items-center ">
+        <h1 className="text-amber-50 font-bold text-9xl"><span className="text-red-500">TEDx</span>AIET</h1>
       </div>{" "}
       <div className="mx-auto my-10  rounded-3xl bg-gray-950/5 p-2 ring-1   dark:bg-neutral-800">
         <ThreeDMarquee images={images} className=" opacity-30" />

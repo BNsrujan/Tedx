@@ -3,7 +3,7 @@ import { MaskContainer } from "@/components/ui/svg-mask-effect";
 
 export function TEDxhidden() {
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className=" relative  h-screen flex justify-center items-center">
     <div className="flex h-screen w-full items-center justify-center overflow-hidden">
       <MaskContainer
         revealText={
@@ -15,7 +15,6 @@ export function TEDxhidden() {
         className="h-screen w-full text-black  text-center"
       >
         <p className="text-9xl font-semibold leading-snug w-full px-4">
-        
           <span className="text-red-500">TEDx<span className="text-black">AIET</span></span>{" "}
          
         </p>

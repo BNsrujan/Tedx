@@ -29,8 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SmoothCursor />
         <Navbar/>
+        <SmoothCursor />
         {children}
         <Footer/>
       </body>

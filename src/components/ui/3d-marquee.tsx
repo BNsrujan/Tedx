@@ -83,7 +83,7 @@ const GridLineHorizontal = ({
       style={
         {
           "--background": "#ffffff",
-          "--color": "rgba(0, 0, 0, 0.2)",
+          "--color": "rgba(225, 225, 225, 0.2)",
           "--height": "1px",
           "--width": "5px",
           "--fade-stop": "90%",
