@@ -3,7 +3,6 @@
 import React from "react";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import Image from "next/image";
-import { Globecontainer } from "./globalcontainer";
 
 export function WobbleCards() {
   return (

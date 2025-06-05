@@ -8,8 +8,8 @@ export function TEDxhidden() {
       <MaskContainer
         revealText={
           <p className="w-full max-w-full px-4 text-center text-6xl font-bold text-white dark:text-white leading-tight">
-            One stage. Countless ideas. Infinite impact.<br />
-            <span className="text-red-500">TEDxAIET</span> is where innovation meets inspiration.
+            An IDEA. A STORY. A TRANSFORMATION.<br />
+            <span className="text-red-500">TEDxAIET</span>
           </p>
         }
         className="h-screen w-full text-black  text-center"
