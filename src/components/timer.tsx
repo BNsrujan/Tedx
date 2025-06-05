@@ -37,18 +37,22 @@ function Timer() {
   }, []);
 
   return (
-    <div className="flex gap-9 justify-center items-center text-red-600 h-screen p-4">
+    <div className="flex gap-4 justify-center items-center p-4">
       <div className="text-center">
-        <div className="text-7xl font-bold">{timeLeft.days}</div>
+        <div className="text-4xl font-bold">{timeLeft.days}</div>
+        <div className="text-sm">Days</div>
       </div>
       <div className="text-center">
-        <div className="text-7xl font-bold">{timeLeft.hours}</div>
+        <div className="text-4xl font-bold">{timeLeft.hours}</div>
+        <div className="text-sm">Hours</div>
       </div>
       <div className="text-center">
-        <div className="text-7xl font-bold">{timeLeft.minutes}</div>
+        <div className="text-4xl font-bold">{timeLeft.minutes}</div>
+        <div className="text-sm">Minutes</div>
       </div>
       <div className="text-center">
-        <div className="text-7xl font-bold">{timeLeft.seconds}</div>
+        <div className="text-4xl font-bold">{timeLeft.seconds}</div>
+        <div className="text-sm">Seconds</div>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import {Event} from "@/components/event";
 import { ThreeDMarquees } from "@/components/slider";
+import Speaker from "@/components/speaker";
 import { TEDxhidden } from "@/components/tedhidden";
 import Timer from "@/components/timer";
 import { WobbleCards } from "@/components/why";
@@ -11,6 +12,7 @@ export default function Home() {
       <WobbleCards/>
       <ThreeDMarquees/>
       <Event/>
+      <Speaker/>
       <Timer/>
       {/* https://magicui.design/docs/components/hyper-text */}
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
