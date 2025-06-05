@@ -11,7 +11,7 @@ function Timer() {
 
   useEffect(() => {
     // Set target date to August 16, 2024 at midnight UTC
-    const targetDate = new Date('2024-08-16T00:00:00Z');
+    const targetDate = new Date('2024-08-16T00:00:00');
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -43,7 +43,7 @@ function Timer() {
   }, []);
 
   return (
-    <div className="flex gap-9 justify-center text-red-500 items-center p-9">
+    <div className="flex gap-9 justify-center h-screen text-ted-red items-center p-9">
       <div className="text-center">
         <div className="text-9xl font-bold">{timeLeft.days.toString().padStart(2, '0')}</div>
         <div className="text-xl font-semibold mt-2">Days</div>

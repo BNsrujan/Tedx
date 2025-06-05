@@ -5,59 +5,69 @@ export function Event() {
   const eventData = [
     {
       title: "09:30 AM",
-      content: <div><p className="text-sm font-semibold">START</p><p className="text-xs text-muted-foreground">INAUGURATION</p></div>,
+      content: <div><p className="text-3xl font-semibold">INAUGURATION</p></div>,
     },
     {
       title: "10:00 AM",
-      content: <p className="text-sm font-semibold">Speaker 1</p>,
+      content: <div><p className="text-3xl font-semibold">Speaker 1</p></div>,
     },
     {
-      title: "10:35 AM",
-      content: <p className="text-sm font-semibold">Speaker 2</p>,
+      title: "10:25 AM",
+      content: <div><p className="text-3xl font-semibold">Speaker 2</p></div>,
     },
     {
-      title: "11:10 AM",
-      content: <div><p className="text-sm font-semibold">Performance</p><p className="text-sm font-semibold">Speaker 3</p></div>,
+      title: "10:50 AM",
+      content: <div><p className="text-3xl font-semibold">BREAK 1</p></div>,
     },
     {
-      title: "11:40 AM",
-      content: <p className="text-sm font-semibold">Speaker 4</p>,
+      title: "11:00 AM",
+      content: <div><p className="text-3xl font-semibold">Speaker 3</p></div>,
     },
     {
-      title: "12:15 PM",
-      content: <p className="text-sm font-semibold">Break</p>,
+      title: "11:25 AM",
+      content: <div><p className="text-3xl font-semibold">Speaker 4</p></div>,
     },
     {
-      title: "02:00 PM",
-      content: <p className="text-sm font-semibold">Speaker 5</p>,
+      title: "11:50 AM",
+      content: <div><p className="text-3xl font-semibold">QnA - 1</p></div>,
     },
     {
-      title: "02:35 PM",
-      content: <p className="text-sm font-semibold">Speaker 6</p>,
+      title: "12:30 PM",
+      content: <div><p className="text-3xl font-semibold">LUNCH BREAK</p></div>,
     },
     {
-      title: "03:05 PM",
-      content: <p className="text-sm font-semibold">Speaker 7</p>,
+      title: "01:30 PM",
+      content: <div><p className="text-3xl font-semibold">Speaker 5</p></div>,
     },
     {
-      title: "03:40 PM",
-      content: <p className="text-sm font-semibold">Performance</p>,
+      title: "01:55 PM",
+      content: <div><p className="text-3xl font-semibold">Speaker 6</p></div>,
     },
     {
-      title: "04:15 PM",
-      content: <p className="text-sm font-semibold">Speaker 8</p>,
+      title: "02:20 PM",
+      content: <div><p className="text-3xl font-semibold">BREAK 2</p></div>,
     },
     {
-      title: "04:40 PM",
-      content: <p className="text-sm font-semibold">End</p>,
+      title: "02:30 PM",
+      content: <div><p className="text-3xl font-semibold">Speaker 7</p></div>,
+    },
+    {
+      title: "02:55 PM",
+      content: <div><p className="text-3xl font-semibold">Speaker 8</p></div>,
+    },
+    {
+      title: "03:20 PM",
+      content: <div><p className="text-3xl font-semibold">QnA - 2</p></div>,
+    },
+    {
+      title: "04:00 PM",
+      content: <div><p className="text-3xl font-semibold">VALEDICTORY CEREMONY</p></div>,
     },
   ];
 
   return (
-    <div className="w-full max-w-2xl mx-auto rounded-xl  shadow-lg">
+    <div className="w-full max-w-5xl mx-auto rounded-xl   shadow-3xl">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold text-red-500">TEDxAIET</h2>
-        <span className="text-sm font-semibold text-white ">Elements</span>
       </div>
       <h1 className="text-2xl font-bold mb-6 text-muted">Event Schedule</h1>
       <Timeline data={eventData} />

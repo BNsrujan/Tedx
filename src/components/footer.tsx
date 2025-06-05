@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Logo and Social */}
         <div>
           <h2 className="text-5xl font-bold ">TedxAIET</h2>
-          <p className="font-semibold  space-x-0.5"><span className=" text-red-400 pl-1">x=</span>independent insituste</p>
+          <p className="font-semibold  space-x-0.5"><span className=" text-ted-red-400 pl-1">x=</span>independent insituste</p>
           <div className="flex gap-3 ">
             <div className="flex gap-4 mt-4 ">
               <a

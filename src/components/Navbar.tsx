@@ -6,15 +6,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           
-          <div className="flex-shrink-0 text-red-600 font-bold text-xl">
+          <div className="flex-shrink-0 text-ted-red-600 font-bold text-xl">
             TED<span className="text-white ">xAIET</span>
           </div>
 
           <div className="hidden md:flex space-x-8 text-gray-300  font-medium">
-            <a href="#about" className="hover:text-red-600 transition">About</a>
-            <a href="#speakers" className="hover:text-red-600 transition">Speakers</a>
-            <a href="#event" className="hover:text-red-600 transition">Event</a>
-            <a href="#partners" className="hover:text-red-600 transition">Partners</a>
+            <a href="#about" className="hover:text-ted-red-600 transition">About</a>
+            <a href="#speakers" className="hover:text-ted-red-600 transition">Speakers</a>
+            <a href="#event" className="hover:text-ted-red-600 transition">Event</a>
+            <a href="#partners" className="hover:text-ted-red-600 transition">Partners</a>
           </div>
 
           <div>
