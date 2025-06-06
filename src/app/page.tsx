@@ -13,7 +13,7 @@ export default function Home() {
     <div className="bg-black">
       <TEDxhidden/>
       <WobbleCards/>
-      {/* <ThreeDMarquees/> */}
+      <ThreeDMarquees/>
       <Event/>
       <Speaker/>
       <Timer/>

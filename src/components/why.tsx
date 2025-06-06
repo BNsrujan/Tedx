@@ -7,6 +7,7 @@ import { Globecontainer } from "./globalcontainer";
 
 export function WobbleCards() {
   return (
+    <section id="about" className="min-h-screen">
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full h-screen">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-red-700 min-h-[500px] lg:min-h-[300px]"
@@ -56,5 +57,6 @@ export function WobbleCards() {
         </div>
       </WobbleCard>
     </div>
+    </section>
   );
 }
