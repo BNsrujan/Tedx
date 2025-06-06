@@ -58,7 +58,7 @@ interface WorldProps {
   data: Position[];
 }
 
-export function Globe({ globeConfig, data }: WorldProps) {
+export default function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
   const groupRef = useRef<Group | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);

@@ -28,7 +28,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Dr. Achyuthan Eswar",
-    image: "/speaker/achutank.jpeg",
+    image: "/speaker/text-ted-red.jpeg",
     description: "Dr. Achyuthan Eswar is a distinguished academic and researcher, bringing valuable perspectives to our event."
   },
   {

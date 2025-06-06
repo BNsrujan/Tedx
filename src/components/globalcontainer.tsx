@@ -1,36 +1,58 @@
 "use client";
-import React from "react";
-import { motion } from "motion/react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
-  ssr: false,
-});
+const World = dynamic(
+  () => import("@/components/ui/globe").then((m) => m.World),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-tedx-red border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    ),
+  }
+);
 
 export function Globecontainer() {
-    const globeConfig = {
-        pointSize: 4,
-        globeColor: "#000000", // black globe
-        showAtmosphere: true,
-        atmosphereColor: "#e62b1e", // TEDx red for subtle glow
-        atmosphereAltitude: 0.1,
-        emissive: "#000000",
-        emissiveIntensity: 0.2,
-        shininess: 1,
-        polygonColor: "rgba(255,255,255,0.3)", // white translucent land polygons
-        ambientLight: "#ffffff", // white ambient light
-        directionalLeftLight: "#e62b1e", // red directional
-        directionalTopLight: "#ffffff", // white highlight
-        pointLight: "#e62b1e", // red point light
-        arcTime: 1000,
-        arcLength: 0.9,
-        rings: 1,
-        maxRings: 3,
-        initialPosition: { lat: 22.3193, lng: 114.1694 },
-        autoRotate: true,
-        autoRotateSpeed: 0.5,
-      };
-      const colors = ["#e62b1e", "#ffffff", "#b30000"]; 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-tedx-red border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  const globeConfig = {
+    pointSize: 4,
+    globeColor: "#000000",
+    showAtmosphere: true,
+    atmosphereColor: "#e62b1e",
+    atmosphereAltitude: 0.1,
+    emissive: "#000000",
+    emissiveIntensity: 0.2,
+    shininess: 1,
+    polygonColor: "rgba(255,255,255,0.3)",
+    ambientLight: "#ffffff",
+    directionalLeftLight: "#e62b1e",
+    directionalTopLight: "#ffffff",
+    pointLight: "#e62b1e",
+    arcTime: 1000,
+    arcLength: 0.9,
+    rings: 1,
+    maxRings: 3,
+    initialPosition: { lat: 22.3193, lng: 114.1694 },
+    autoRotate: true,
+    autoRotateSpeed: 0.5,
+  };
+
+  const colors = ["#e62b1e", "#ffffff", "#b30000"];
   const sampleArcs = [
     {
       order: 1,
@@ -395,27 +417,9 @@ export function Globecontainer() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center  h-screen md:h-auto  bg-black relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        >
-        
-        </motion.div>
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
+    <div className="w-full h-full relative">
+      <div className="absolute inset-0 scale-200 transform-gpu -translate-y-10 -translate-x-60">
+        <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
     </div>
   );
