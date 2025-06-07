@@ -49,7 +49,7 @@ export function ThreeDMarquees() {
       <div className="mx-auto sm:w-full">
         <ThreeDMarquee 
           images={images} 
-          className="opacity-30 h-[200px] sm:h-[250px] md:h-[400px]"
+          className="opacity-30 h-[200px] sm:h-[250px] md:h-[600px]"
         
         />
       </div>

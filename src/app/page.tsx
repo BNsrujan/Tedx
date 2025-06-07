@@ -16,7 +16,7 @@ export default function Home() {
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
-      <Timer/>
+      <Timer />
       <Ticket/>
       <MarqueeDemo/>
       {/* https://magicui.design/docs/components/hyper-text */}
