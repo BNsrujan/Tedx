@@ -30,13 +30,13 @@ export function WobbleCards() {
               spreading to local communities around the globe.
             </p>
           </div>
-          <Image
+          {/* <Image
             src="/tedx_stage.webp"
             width={500}
             height={500}
             alt="TEDx stage"
             className="absolute -right-4 lg:-right-[20%] grayscale filter -bottom-10 object-contain w-40 md:w-60 lg:w-80"
-          />
+          /> */}
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[250px] md:min-h-[300px] bg-white">
