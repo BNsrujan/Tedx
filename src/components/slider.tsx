@@ -38,12 +38,18 @@ export function ThreeDMarquees() {
   ];
 
   return (
-    <div className="h-screen relative flex  justify-center items-center">
-      <div className="absolute flex w-full h-full justify-center items-center ">
-        <h1 className="text-amber-50 font-bold text-9xl"><span className="text-ted-red">TEDx</span>AIET</h1>
-      </div>{" "}
-      <div className="mx-auto my-10  rounded-3xl bg-gray-950/5 p-2 ring-1   dark:bg-neutral-800">
-        <ThreeDMarquee images={images} className=" opacity-30" />
+    <div className="h-screen relative flex justify-center items-center overflow-hidden">
+      <div className="absolute flex w-full h-full justify-center items-center">
+        <h1 className="text-white font-bold text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
+          <span className="text-ted-red">TEDx</span>AIET
+        </h1>
+      </div>
+      <div className="mx-auto sm:w-full">
+        <ThreeDMarquee 
+          images={images} 
+          className="opacity-30"
+          ClassName="h-[100px] sm:h-[150px] md:h-[200px]" // Adjust if your component supports this prop
+        />
       </div>
     </div>
   );

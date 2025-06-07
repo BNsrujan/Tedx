@@ -66,7 +66,7 @@ export function Event() {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto rounded-xl   shadow-3xl">
+    <div className="w-full max-w-5xl mx-auto   shadow-3xl">
       <div className="flex justify-between items-center mb-4">
       </div>
       <h1 className="text-2xl font-bold mb-6 text-muted">Event Schedule</h1>

@@ -23,7 +23,7 @@ export function TEDxhidden() {
                     { text: "Worth", className: "text-white" },
                     { text: "Spreading", className: "text-ted-red" },
                   ]}
-                  className="text-white text-5xl sm:text-5xl md:text-6xl lg:text-[6rem] xl:text-8xl leading-tight"
+                  className="text-white text-5xl sm:text-5xl md:text-6xl lg:text-[6rem] xl:text-9xl leading-tight uppercase"
                   cursorClassName="bg-ted-red"
                 />
               )}
@@ -31,7 +31,7 @@ export function TEDxhidden() {
           }
           className="min-h-screen w-full text-black text-center"
         >
-          <p className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-semibold leading-snug w-full px-4">
+          <p className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-semibold leading-snug w-full px-4">
             <span className="text-ted-red">TEDx</span>
             <span className="text-black">AIET</span>
           </p>
