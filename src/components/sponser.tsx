@@ -2,8 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import Image from "next/image";
+
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const sponsors = [
   { img: "/sponser/alvas.png" },
@@ -12,7 +13,7 @@ const sponsors = [
 ];
 
 const firstRow = sponsors.slice(0, sponsors.length / 2);
-const secondRow = sponsors.slice(sponsors.length / 2);
+
 
 const SponsorCard = ({ img }: { img: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);

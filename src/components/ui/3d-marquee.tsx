@@ -18,17 +18,17 @@ export const ThreeDMarquee = ({
   return (
     <div
       className={cn(
-        "mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-100",
+        "mx-auto block h-[600px] rounded-2xl max-sm:h-100",
         className,
       )}
     >
-      <div className="flex size-full items-center justify-center">
+      <div className="flex size-full overflow-hidden items-center justify-center">
         <div className="size-[1720px] shrink-0 scale-50 sm:scale-75 lg:scale-100">
           <div
             style={{
-              transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
+              transform: "rotateX(5deg) rotateY(0deg) rotateZ(-35deg)",
             }}
-            className="relative top-96 right-[50%] grid size-full origin-top-left grid-cols-4 gap-8 transform-3d"
+            className="relative top-96 right-[30%] grid size-full origin-top-left grid-cols-4 gap-4 transform-3d"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div
@@ -39,7 +39,7 @@ export const ThreeDMarquee = ({
                   repeatType: "reverse",
                 }}
                 key={colIndex + "marquee"}
-                className="flex flex-col items-start gap-8"
+                className="flex flex-col items-start gap-4"
               >
                 <GridLineVertical className="-left-4" offset="80px" />
                 {subarray.map((image, imageIndex) => (
@@ -56,7 +56,7 @@ export const ThreeDMarquee = ({
                       key={imageIndex + image}
                       src={image}
                       alt={`Image ${imageIndex + 1}`}
-                      className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
+                      className="aspect-[970/700]  object-cover ring ring-gray-950/5 hover:shadow-2xl"
                       width={970}
                       height={700}
                     />
@@ -82,8 +82,8 @@ const GridLineHorizontal = ({
     <div
       style={
         {
-          "--background": "#ffffff",
-          "--color": "rgba(225, 225, 225, 0.2)",
+          "--background": "",
+          "--color": "",
           "--height": "1px",
           "--width": "5px",
           "--fade-stop": "90%",
@@ -118,7 +118,7 @@ const GridLineVertical = ({
       style={
         {
           "--background": "#ffffff",
-          "--color": "rgba(0, 0, 0, 0.2)",
+          "--color": "",
           "--height": "5px",
           "--width": "1px",
           "--fade-stop": "90%",
