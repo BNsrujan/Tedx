@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRef } from "react";
 
 interface SlideData {
@@ -19,11 +20,13 @@ const Slide = ({ slide }: SlideProps) => {
       className="flex flex-col items-center justify-center text-white relative text-center w-[70vmin] h-[70vmin] mx-[4vmin] flex-shrink-0"
     >
       <div className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden">
-        <img
+        <Image
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-600 ease-in-out"
           alt={title}
           src={src}
           loading="eager"
+          width={50}
+          height={50}
         />
         <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
       </div>

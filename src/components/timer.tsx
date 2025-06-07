@@ -29,8 +29,6 @@ function Timer() {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
-    console.log("Timer tick:", new Date().toLocaleTimeString(), timeLeft);
-
 
     // Calculate immediately
     calculateTimeLeft();
@@ -40,25 +38,25 @@ function Timer() {
 
     // Cleanup on unmount
     return () => clearInterval(timer);
-  }, []);
+  }, [timeLeft]); 
 
   return (
-    <div className="flex gap-9 justify-center h-screen text-ted-red items-center p-9">
-      <div className="text-center">
-        <div className="text-9xl font-bold">{timeLeft.days.toString().padStart(2, '0')}</div>
-        <div className="text-xl font-semibold mt-2">Days</div>
+    <div className="flex flex-wrap gap-4 h-screen md:gap-9 justify-center items-center p-4 md:p-9 min-h-[50vh] text-ted-red">
+      <div className="text-center w-[120px] md:w-auto">
+        <div className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">{timeLeft.days.toString().padStart(2, '0')}</div>
+        <div className="text-sm md:text-xl font-semibold mt-2">Days</div>
       </div>
-      <div className="text-center">
-        <div className="text-9xl font-bold">{timeLeft.hours.toString().padStart(2, '0')}</div>
-        <div className="text-xl font-semibold mt-2">Hours</div>
+      <div className="text-center w-[120px] md:w-auto">
+        <div className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">{timeLeft.hours.toString().padStart(2, '0')}</div>
+        <div className="text-sm md:text-xl font-semibold mt-2">Hours</div>
       </div>
-      <div className="text-center">
-        <div className="text-9xl font-bold">{timeLeft.minutes.toString().padStart(2, '0')}</div>
-        <div className="text-xl font-semibold mt-2">Minutes</div>
+      <div className="text-center w-[120px] md:w-auto">
+        <div className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">{timeLeft.minutes.toString().padStart(2, '0')}</div>
+        <div className="text-sm md:text-xl font-semibold mt-2">Minutes</div>
       </div>
-      <div className="text-center">
-        <div className="text-9xl font-bold">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-        <div className="text-xl font-semibold mt-2">Seconds</div>
+      <div className="text-center w-[120px] md:w-auto">
+        <div className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">{timeLeft.seconds.toString().padStart(2, '0')}</div>
+        <div className="text-sm md:text-xl font-semibold mt-2">Seconds</div>
       </div>
     </div>
   )

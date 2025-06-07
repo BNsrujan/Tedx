@@ -27,7 +27,7 @@ const SponsorCard = ({ img }: { img: string }) => {
       )}
     >
      
-      <img
+      <Image
         src={img}
         alt="Sponsor Logo"
         className={cn(
@@ -36,6 +36,8 @@ const SponsorCard = ({ img }: { img: string }) => {
         )}
         onLoad={() => setIsLoaded(true)}
         priority
+        width={50}
+        height={50}
       />
     </div>
   );

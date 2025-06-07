@@ -1,10 +1,5 @@
 "use client";
-import {
-  
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -37,7 +32,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-red-500 font-sans md:px-10 overflow-hidden"
       ref={containerRef}
     >
-
       <div ref={ref} className="relative max-w-[1800px] mx-auto pb-10">
         {data.map((item, index) => (
           <div
@@ -57,9 +51,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-5xl mb-4 text-left font-bold text-white">
                 {item.title}
               </h3>
-              <h3 className="text-5xl">
-              {item.content}{" "}
-              </h3>
+              <h3 className="text-5xl">{item.content} </h3>
             </div>
           </div>
         ))}

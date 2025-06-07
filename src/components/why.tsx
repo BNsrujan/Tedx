@@ -2,9 +2,7 @@
 
 import React from "react";
 import { WobbleCard } from "@/components/ui/wobble-card";
-import Image from "next/image";
 import { WorldMap } from "@/components/ui/worldmap";
-
 export function WobbleCards() {
   return (
     <section id="about" className="min-h-screen">
@@ -26,17 +24,11 @@ export function WobbleCards() {
               Inspiring Talks
             </h2>
             <p className="mt-2 md:mt-4 text-left text-sm md:text-base text-neutral-200">
-              TEDx events bring the spirit of TED's mission of ideas worth
+              TEDx events bring the spirit of TED&apos;s mission of ideas worth
               spreading to local communities around the globe.
             </p>
           </div>
-          {/* <Image
-            src="/tedx_stage.webp"
-            width={500}
-            height={500}
-            alt="TEDx stage"
-            className="absolute -right-4 lg:-right-[20%] grayscale filter -bottom-10 object-contain w-40 md:w-60 lg:w-80"
-          /> */}
+  
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[250px] md:min-h-[300px] bg-white">
@@ -52,7 +44,7 @@ export function WobbleCards() {
         </WobbleCard>
 
      
-        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-gray-900 min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[500px] relative overflow-hidden">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-gray-900 min-h-[150px] sm:min-h-[150px] md:min-h-[250px] lg:min-h-[500px] relative overflow-hidden">
 
          
           <div className="absolute inset-0 pointer-events-none z-10 opacity-50 w-full h-full overflow-hidden">
@@ -90,11 +82,8 @@ export function WobbleCards() {
           },
               ]}
               lineColor="#ef4444"
-              className="
-                w-full h-full 
-                scale-[1] sm:scale-[1.2] md:scale-[1.4] lg:scale-[1.6] xl:scale-[1.8]
-                transition-transform duration-500"
-            />
+              
+            ></WorldMap>
 
          
             <div className="absolute inset-0 flex items-center justify-center">
@@ -116,7 +105,7 @@ export function WobbleCards() {
                 transformative ideas that inspire and provoke thought.
               </p>
             </div>
-            <div className="w-full lg:w-1/2 h-[200px] md:h-[300px] lg:h-full"></div>
+            
           </div>
 
         </WobbleCard>

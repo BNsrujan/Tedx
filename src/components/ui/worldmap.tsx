@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import DottedMap from "dotted-map";
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 interface MapProps {
   dots?: Array<{
@@ -46,8 +47,10 @@ export function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black bg-white relative font-sans">
-      <img
+    <div className="w-full aspect-[2/1] dark:bg-black bg-white relative font-sans h-full 
+                    scale-[1] sm:scale-[1.2] md:scale-[1.4] lg:scale-[1] xl:scale-[1.2]
+                    transition-transform duration-500">
+      <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
         alt="world map"

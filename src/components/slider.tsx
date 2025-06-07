@@ -40,15 +40,17 @@ export function ThreeDMarquees() {
   return (
     <div className="h-screen relative flex justify-center items-center overflow-hidden">
       <div className="absolute flex w-full h-full justify-center items-center">
-        <h1 className="text-white font-bold text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
-          <span className="text-ted-red">TEDx</span>AIET
+        <h1 className=" relative text-white font-bold text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
+          <span className="text-ted-red">TED</span>
+          <span className="absolute text-ted-red font-bold text-[0.4em] ">x</span>{"     "}
+          <span className="font-medium">AIET</span>
         </h1>
       </div>
       <div className="mx-auto sm:w-full">
         <ThreeDMarquee 
           images={images} 
-          className="opacity-30"
-          ClassName="h-[100px] sm:h-[150px] md:h-[200px]" // Adjust if your component supports this prop
+          className="opacity-30 h-[200px] sm:h-[250px] md:h-[400px]"
+        
         />
       </div>
     </div>
