@@ -54,6 +54,13 @@ export const MaskContainer = ({
         backgroundColor: { duration: 0.3 },
       }}
     >
+       {/* Background content */}
+      <div
+        className={`absolute inset-0 z-0 h-full w-full bg-transparent transition-all duration-300 ${
+          isHovered ? "bg-black opacity-50 blur-md" : "blur-0"
+        }`}
+      />
+
       <motion.div
         className="absolute flex h-full w-full items-center justify-center bg-white text-6xl [mask-image:url(/mask.svg)] [mask-repeat:no-repeat] [mask-size:40px] dark:bg-black"
         animate={{
@@ -75,7 +82,7 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="relative z-20 mx-auto max-w-4xl text-center text-4xl font-bold"
+        className={`reawwlative z-20 mx-auto ${isHovered ?"filter blur-lg" :""}max-w-4xl text-center text-4xl font-bold`}
         >
           {children}
         </div>
