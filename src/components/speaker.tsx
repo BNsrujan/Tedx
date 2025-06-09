@@ -67,10 +67,10 @@ export default function Speaker() {
   };
 
   return (
-    <div className="bg-black h-screen flex-col justify-center content-center text-white py-12 px-4 max-w-7xl m-auto space-y-16 text-center">
-      <h2 className="text-4xl font-bold mb-4 tracking-widest max-w-4xl  text-start">SPEAKERS</h2>
+    <div className="bg-black flex-col justify-center content-center text-white py-12 px-4 max-w-7xl m-auto space-y-16 text-center">
+      <h2 className="text-6xl xl:text-9xl font-bold mb-4 tracking-widest max-w-4xl text-start">SPEAKERS</h2>
 
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         {/* Main Display */}
         <div className="flex flex-row items-center gap-8 max-w-4xl">
           {/* Image Section */}
