@@ -5,9 +5,9 @@ export default function Footer() {
       <div className="mx-auto flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-4">
         {/* Logo and Social */}
         <div className="flex flex-col items-center lg:items-start">
-          <h2 className="text-4xl lg:text-5xl font-bold">TedxAIET</h2>
+          <Image src={'/logo-white-tedxaiet.png'} alt="logo" className="" width={200} height={200} />
           <p className="font-semibold text-center lg:text-left">
-            <span className="text-ted-red-400">x=</span>independent insituste
+            <span className="text-ted-red-400">x{" "}=</span> <span className="font-light">independently organized TED event</span>
           </p>
           <div className="flex gap-2 lg:gap-4 mt-4">
             <a

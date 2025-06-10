@@ -66,15 +66,8 @@ export default function MarqueeDemo() {
           <SponsorCard key={i} img={sponsor.img} />
         ))}
       </Marquee>
-      {/* <Marquee reverse pauseOnHover className="[--duration:20s] gap-6">
-        {secondRow.map((sponsor, i) => (
-          <SponsorCard key={i} img={sponsor.img} />
-        ))}
-      </Marquee> */}
+   
 
-      {/* Left and right fade */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-black"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-black"></div>
     </div>
   );
 }

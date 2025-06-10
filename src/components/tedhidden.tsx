@@ -20,7 +20,7 @@ export function TEDxhidden() {
                 <TypewriterEffect
                   words={[
                     { text: "An", className: "text-white" },
-                    { text: "Ideas.", className: "text-white" },
+                    { text: "Idea.", className: "text-white" },
                     { text: "A", className: "text-white" },
                     { text: "Story.", className: "text-white" },
                     { text: "A", className: "text-white" },

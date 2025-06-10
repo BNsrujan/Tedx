@@ -5,11 +5,11 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 import { WorldMap } from "@/components/ui/worldmap";
 export function WobbleCards() {
   return (
-    <section id="about" className="min-h-screen">
+    <section id="about" className=" min-h-[1200px]">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full h-auto lg:h-screen px-4 md:px-6 py-6">
 
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-red-700 min-h-[300px] md:min-h-[400px] lg:min-h-[300px] relative overflow-hidden"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-red-700 min-h-[300px] md:min-h-[400px] lg:min-h-[400px] relative overflow-hidden"
         >
           <video
             src="/cardimages/Tedx-video.mp4"
@@ -26,7 +26,7 @@ export function WobbleCards() {
             <p className="mt-2 md:mt-4 text-left text-sm md:text-base text-neutral-200">
               TEDx events bring the spirit of TED&apos;s mission of ideas worth
               spreading to local communities around the globe.
-            </p>
+            </p>Insp
           </div>
   
         </WobbleCard>

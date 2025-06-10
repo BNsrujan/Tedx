@@ -16,9 +16,10 @@ export default function Pinning() {
           { target: document.querySelector(".img-group-container") }
         );
 
-        // Progress bar animation
+        
         scroll(animate(".progress", { scaleX: [0, 1] }), {
           target: document.querySelector(".img-group-container"),
+          offset: ["start 30%", "end 80%"]
         });
       }
     );
