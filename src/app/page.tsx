@@ -12,14 +12,14 @@ import { WobbleCards } from "@/components/why";
 export default function Home() {
   return (
     <div className="bg-black">
-      <TEDxhidden/>
+      {/* <TEDxhidden/>
       <WobbleCards/>
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
-      <Timer />
+      <Timer /> */}
       <Ticket/>
-      <MarqueeDemo/>
+      {/* <MarqueeDemo/> */}
       {/* https://magicui.design/docs/components/hyper-text */}
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
       {/* https://ui.aceternity.com/components/world-map*/}

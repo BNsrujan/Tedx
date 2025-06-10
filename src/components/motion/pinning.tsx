@@ -1,28 +1,27 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { animate, scroll } from "motion";
 
 export default function Pinning() {
   useEffect(() => {
-    import("https://cdn.jsdelivr.net/npm/motion@12.16.0/+esm").then(
-      ({ animate, scroll }) => {
-        const items = document.querySelectorAll(".img-container");
+    const items = document.querySelectorAll(".img-container");
+    const container = document.querySelector(".img-group-container");
 
-        // Horizontal gallery animation during vertical scroll
-        scroll(
-          animate(".img-group", {
-            transform: ["none", `translateX(-${items.length - 1}00vw)`],
-          }),
-          { target: document.querySelector(".img-group-container") }
-        );
+    if (!container) return;
 
-        
-        scroll(animate(".progress", { scaleX: [0, 1] }), {
-          target: document.querySelector(".img-group-container"),
-          offset: ["start 30%", "end 80%"]
-        });
-      }
+    // Horizontal gallery animation during vertical scroll
+    scroll(
+      animate(".img-group", {
+        transform: ["none", `translateX(-${items.length - 1}00vw)`],
+      }),
+      { target: container }
     );
+
+    scroll(animate(".progress", { scaleX: [0, 1] }), {
+      target: container,
+      offset: ["start 30%", "end 80%"]
+    });
   }, []);
 
   return (

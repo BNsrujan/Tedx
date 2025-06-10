@@ -106,19 +106,24 @@ export default function Speaker() {
               {speakers.map((speaker, index) => (
                 <li
                   key={index}
-                  className="img-container flex w-screen h-screen flex-shrink-0 flex-col items-center justify-center"
+                  className="img-container flex w-screen h-screen flex-shrink-0 flex-col items-center justify-center gap-8 px-8"
                 >
-                  <Image
-                    src={speaker.image}
-                    alt={speaker.name}
-                    width={500}
-                    height={500}
-                    className="w-[400px] h-[600px] object-cover"
-                  />
-                  <h3 className="text-[50px] font-extrabold tracking-tight leading-[1.2] relative -bottom-[30px] inline-block m-0 font-mono">
-                    #{String(index + 1).padStart(3, "0")}
-                  </h3>
-                  <p className="text-white mt-4 text-xl">{speaker.name}</p>
+                  <div className="flex flex-col items-center gap-6 max-w-4xl">
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.name}
+                      width={500}
+                      height={500}
+                      className="w-[400px] h-[600px] object-cover rounded-lg shadow-2xl"
+                    />
+                    <div className="text-center">
+                      <h3 className="text-[50px] font-extrabold tracking-tight leading-[1.2] relative inline-block m-0 font-mono">
+                        #{String(index + 1).padStart(3, "0")}
+                      </h3>
+                      <h4 className="text-4xl font-bold mt-4 mb-6">{speaker.name}</h4>
+                      <p className="text-xl text-gray-300 leading-relaxed">{speaker.description}</p>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -145,82 +150,3 @@ export default function Speaker() {
   );
 }
 
-{/* <div className="flex-col justify-center content-center text-white py-12 px-4 max-w-7xl m-auto space-y-16 text-center">
-        <h2 className="text-6xl xl:text-9xl font-bold mb-4 tracking-widest max-w-4xl text-start">SPEAKERS</h2>
-
-        <div className="flex flex-col">
-         
-          <div className="flex flex-row items-center gap-8 max-w-4xl">
-          
-            <div className="relative w-64 h-72 rounded-lg overflow-hidden border-4 border-red-500">
-              <AnimatePresence initial={false} custom={direction} mode="wait">
-                <motion.div
-                  key={activeSpeaker.name}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 }
-                  }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={activeSpeaker.image}
-                    alt={activeSpeaker.name}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            Content Section
-            <div className="flex-1 text-left">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeSpeaker.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="space-y-4"
-                >
-                  <h3 className="text-3xl font-bold text-red-500">
-                    {activeSpeaker.name.toUpperCase()}
-                  </h3>
-                  <p className="text-lg text-gray-300">
-                    {activeSpeaker.description}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </div>
-        </div>
-
-        Thumbnails
-        <div className="mt-8 flex justify-start gap-6 flex-wrap">
-          {speakers.map((speaker) => (
-            <motion.button
-              key={speaker.name}
-              onClick={() => handleSpeakerChange(speaker)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className={`w-20 h-20 overflow-hidden border-2 transition-all duration-300 ${
-                speaker.name === activeSpeaker.name ? "border-red-0 scale-110" : "border-white"
-              }`}
-            >
-              <Image
-                src={speaker.image}
-                alt={speaker.name}
-                width={80}
-                height={80}
-                className="object-cover"
-              />
-            </motion.button>
-          ))}
-        </div>
-      </div> */}
