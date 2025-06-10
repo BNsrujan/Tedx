@@ -1,35 +1,37 @@
 "use client";
-import React from "react";
 
-export default function Ticket() {
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+export default function BookTicketPage() {
   return (
-    <section className="bg-black h-screen px-4 py-12 flex justify-center items-center min-h-[300px]">
-      <div className="w-full max-w-4xl">
-        <h2 className="text-white text-lg font-semibold uppercase mb-6">Save Your Spot</h2>
-        <div className="flex flex-col md:flex-row text-white rounded-md overflow-hidden">
-          {/* Left side of ticket */}
-          <div className="relative flex-1 bg-[#1f1f1f] px-6 py-8 border border-dashed border-white rounded-l-md">
-            <h1 className="text-4xl font-bold text-ted-red-600 mb-4">TEDxAIET</h1>
-            <p className="text-lg font-semibold">
-              Date: <span className="text-white">16 August 2025</span>
-            </p>
-            <p className="text-lg font-semibold">Venue</p>
+    <main className={`min-h-screen flex items-center justify-center bg-black ${orbitron.className}`}>
+      <div className="relative p-8 w-[340px] md:w-[500px] aspect-video bg-gradient-to-r from-purple-800 to-black rounded-2xl shadow-2xl border border-purple-700 text-white overflow-hidden transform hover:scale-105 transition-transform duration-300">
+        <h1 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-300 to-blue-500">
+          LUXURY ELEMENTS
+        </h1>
 
-            {/* Left ticket shape corner */}
-            <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 w-8 h-8 bg-black rounded-full z-10 border-4 border-black"></div>
-          </div>
-
-          {/* Right side of ticket */}
-          <div className="relative w-full md:w-[250px] flex items-center justify-center bg-[#2a2a2a] border border-dashed border-white rounded-r-md">
-            {/* Right ticket shape corner */}
-            <div className="hidden md:block absolute top-1/2 -left-4 transform -translate-y-1/2 w-8 h-8 bg-black rounded-full z-10 border-4 border-black"></div>
-
-            <button className="bg-red-600 text-white px-6 py-2 font-semibold rounded hover:bg-red-700 transition">
-              Save Your Spot
-            </button>
-          </div>
+        <div className="mt-6 space-y-2 text-sm md:text-base">
+          <p><span className="text-purple-300">TIME:</span> 16:45 PM</p>
+          <p><span className="text-purple-300">DATE:</span> 15 MAY 2021</p>
+          <p><span className="text-purple-300">PRIZE:</span> Rolex Yacht-Master, 40 Slate Dial</p>
+          <p><span className="text-purple-300">CHARITY:</span> McMillan</p>
         </div>
+
+        <div className="absolute bottom-4 right-4">
+          <button className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-sm uppercase tracking-wide">
+            Book Ticket
+          </button>
+        </div>
+
+        {/* Decorative Lines and Barcode */}
+        <div className="absolute top-0 right-0 h-full w-1 border-r border-dashed border-purple-400 opacity-40"></div>
+        <div className="absolute bottom-2 right-2 w-24 h-4 bg-gradient-to-r from-white to-purple-200 opacity-20 rotate-[15deg]"></div>
       </div>
-    </section>
+    </main>
   );
 }

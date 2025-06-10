@@ -1,24 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  weight: ["300"],
+  variable: "--font-inter",
   display: "swap",
-  preload: true,
-  fallback: ["system-ui", "sans-serif"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-  fallback: ["monospace"],
 });
 
 export const metadata: Metadata = {
@@ -50,9 +41,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="TedxAiet" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </html>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} font-light antialiased`}>
         <Navbar />
         <SmoothCursor />
         {children}
