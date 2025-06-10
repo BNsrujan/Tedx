@@ -18,9 +18,9 @@ export default function Navbar() {
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-20 text-gray-300 font-medium text-sm">
             <a href="#about" className="hover:text-red-600 transition">About</a>
-            <a href="about" className="hover:text-red-600 transition">Speakers</a>
-            <a href="about" className="hover:text-red-600 transition">Event</a>
-            <a href="about" className="hover:text-red-600 transition">Partners</a>
+            <a href="#speakers" className="hover:text-red-600 transition">Speakers</a>
+            <a href="#event" className="hover:text-red-600 transition">Event</a>
+            <a href="#partners" className="hover:text-red-600 transition">Partners</a>
           </div>
 
           {/* Ticket Button */}
