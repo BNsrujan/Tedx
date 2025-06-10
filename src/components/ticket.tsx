@@ -11,7 +11,7 @@ const orbitron = Orbitron({
 export default function BookTicketPage() {
   return (
     <main className={`relative min-h-screen flex items-center justify-center bg-black ${orbitron.className}`}>
-     <div className=" relative flex w-[900px] mx-auto mt-10 font-sans shadow-lg  overflow-hidden border border-gray-300">
+     <div className=" relative flex w-[900px] mx-auto mt-10 font-sans shadow-lg   border border-gray-300">
       
       
       <div className="bg-black text-white w-9/12 relative p-6 flex  justify-between">
@@ -55,9 +55,9 @@ export default function BookTicketPage() {
       </div>
 
       <div className="pointer-events-none absolute inset-x-6/9 top-0 w-0  border-l-[20px] border-r-[20px] border-t-[30px] border-l-transparent border-r-transparent border-b-black   h-20"></div>
-      <div className="pointer-events-none absolute inset-x-8/12 bottom-0 w-1/6  bg-red-400 h-20"></div>
-      <div className="pointer-events-none absolute inset-1/3 -left-5 w-1/6 bg-red-500 h-20"></div>
-      <div className="pointer-events-none absolute inset-y-1/3  right-0 w-1/6 bg-red-400 h-20 "></div>
+      <div className="pointer-events-none absolute inset-x-8/12 bottom-0  w-1/6  bg-red-400 h-20"></div>
+      <div className="pointer-events-none absolute  inset-6/16 rounded-full -left-10 w-14 bg-black h-14"></div>
+      <div className="pointer-events-none absolute inset-y-6/16 rounded-full -right-10 w-14 bg-black h-14 "></div>
     </div>
     </main>
   );

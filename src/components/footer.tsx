@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center lg:items-start">
           <Image src={'/logo-white-tedxaiet.png'} alt="logo" className="" width={200} height={200} />
           <p className="font-semibold text-center lg:text-left">
-            <span className="text-ted-red-400">x{" "}=</span> <span className="font-light">independently organized TED event</span>
+            <span className="text-ted-red-400">x{" "}=</span> <span className="font-light">Independently Organized TED Event</span>
           </p>
           <div className="flex gap-2 lg:gap-4 mt-4">
             <a
