@@ -77,13 +77,13 @@ export default function Footer() {
           <div className="text-center lg:text-left">
             <p className="font-bold mb-2">pages</p>
             <ul className="space-y-1 text-sm">
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">Home</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">About TED</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">TED Event Date</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">TED Event Schedule</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">TED speaker</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">TED Organisers</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">TED Community</li>
+              <li><a href="/" className="hover:text-ted-red-400 transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-ted-red-400 transition-colors">About TED</a></li>
+              <li><a href="#event" className="hover:text-ted-red-400 transition-colors">TED Event Date</a></li>
+              <li><a href="#event" className="hover:text-ted-red-400 transition-colors">TED Event Schedule</a></li>
+              <li><a href="#speakers" className="hover:text-ted-red-400 transition-colors">TED speaker</a></li>
+              <li><a href="#organizers" className="hover:text-ted-red-400 transition-colors">TED Organisers</a></li>
+              <li><a href="#community" className="hover:text-ted-red-400 transition-colors">TED Community</a></li>
             </ul>
           </div>
 
@@ -91,13 +91,9 @@ export default function Footer() {
           <div className="text-center lg:text-left">
             <p className="font-bold mb-2">Community</p>
             <ul className="space-y-1 text-sm">
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">TED</li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">
-                <span className="font-bold">TED Speakers</span>
-              </li>
-              <li className="hover:text-ted-red-400 cursor-pointer transition-colors">
-                <span className="font-bold">TEDx Organizers</span>
-              </li>
+              <li><a href="https://www.ted.com" target="_blank" rel="noopener noreferrer" className="hover:text-ted-red-400 transition-colors">TED</a></li>
+              <li><a href="#speakers" className="hover:text-ted-red-400 transition-colors"><span className="font-bold">TED Speakers</span></a></li>
+              <li><a href="#organizers" className="hover:text-ted-red-400 transition-colors"><span className="font-bold">TEDx Organizers</span></a></li>
             </ul>
           </div>
 
@@ -106,20 +102,19 @@ export default function Footer() {
             <div>
               <p className="font-bold mb-2">Events & Incentives</p>
               <ul className="space-y-1 text-sm">
-                <li className="hover:text-ted-red-400 cursor-pointer transition-colors">
-                  <span className="font-bold">Pre-Ted Event</span>
-                </li>
-                <li className="hover:text-ted-red-400 cursor-pointer transition-colors">
-                  <span className="font-bold">Athyudan</span>
-                </li>
-                <li className="hover:text-ted-red-400 cursor-pointer transition-colors">
-                  <span>TED</span>
-                </li>
+                <li><a href="#pre-event" className="hover:text-ted-red-400 transition-colors"><span className="font-bold">Pre-Ted Event</span></a></li>
+                <li><a href="#athyudan" className="hover:text-ted-red-400 transition-colors"><span className="font-bold">Athyudan</span></a></li>
+                <li><a href="#event" className="hover:text-ted-red-400 transition-colors"><span>TED</span></a></li>
               </ul>
             </div>
-            <button className="mt-6 bg-gray-200 text-black font-semibold px-4 py-2 rounded-md w-full sm:w-auto hover:bg-gray-300 transition-colors">
+            <a 
+              href="https://www.youtube.com/@tedxaiet" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-6 bg-gray-200 text-black font-semibold px-4 py-2 rounded-md w-full sm:w-auto hover:bg-gray-300 transition-colors"
+            >
               Watch this in you tube
-            </button>
+            </a>
           </div>
         </div>
       </div>

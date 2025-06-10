@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,20 +18,22 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-20 text-gray-300 font-medium text-sm">
-            <a href="#about" className="hover:text-red-600 transition">About</a>
-            <a href="#speakers" className="hover:text-red-600 transition">Speakers</a>
-            <a href="#event" className="hover:text-red-600 transition">Event</a>
-            <a href="#partners" className="hover:text-red-600 transition">Partners</a>
+
+            <Link href="#about" className="hover:text-red-600 transition">About</Link>
+            <Link href="#speakers" className="hover:text-red-600 transition">Speakers</Link>
+            <Link href="#event" className="hover:text-red-600 transition">Event</Link>
+            <Link href="#partners" className="hover:text-red-600 transition">Partners</Link>
+
           </div>
 
           {/* Ticket Button */}
           <div className="hidden md:block">
-            <a
-              href="#tickets"
+            <Link
+              href="/tickets"
               className="bg-ted-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
             >
               Book Tickets
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Icon */}
@@ -57,17 +60,17 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-black shadow-lg px-4 pt-4 pb-6 space-y-4 text-gray-300 font-medium text-center text-sm">
-          <a href="#about" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">About</a>
-          <a href="#speakers" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Speakers</a>
-          <a href="#event" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Event</a>
-          <a href="#partners" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Partners</a>
-          <a
-            href="#tickets"
+          <Link href="#about" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">About</Link>
+          <Link href="#speakers" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Speakers</Link>
+          <Link href="#event" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Event</Link>
+          <Link href="#partners" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Partners</Link>
+          <Link
+            href="/tickets"
             onClick={() => setIsOpen(false)}
             className="block bg-ted-red text-white text-center px-4 py-2 rounded-md hover:bg-red-700 transition"
           >
             Book Tickets
-          </a>
+          </Link>
         </div>
       )}
     </nav>

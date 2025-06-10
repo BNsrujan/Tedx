@@ -14,27 +14,32 @@ const speakers: Speaker[] = [
   {
     name: "Lt Gen A Arun",
     image: "/speaker/arun.png",
-    description: "Lieutenant General A Arun is a distinguished military officer with extensive experience in defense and strategic leadership."
+    description: "A soldier, storyteller, and leader—Lt Gen A Arun turns battle scars into life lessons, inspiring youth with courage, clarity, and a spark for service."
   },
-  {
-    name: "Amoghavarsha J. S.",
-    image: "/speaker/amogha.png",
-    description: "Amoghavarsha J. S. is a renowned expert in technology and innovation, bringing unique insights to the TEDx stage."
-  },
+  // {
+  //   name: "Amoghavarsha J. S.",
+  //   image: "/speaker/amogha.png",
+  //   description: "Amoghavarsha J. S. is a renowned expert in technology and innovation, bringing unique insights to the TEDx stage."
+  // },
   {
     name: "Janaki Anand",
     image: "/speaker/janki.jpeg",
-    description: "Janaki Anand is a celebrated figure in her field, known for her groundbreaking work and inspiring journey."
+    description: "Zooming into history on skateboard, Janaki Anand is India's youngest skateboarding prodigy, proving that big dreams roll faster with fearless passion and grit."
   },
   {
     name: "Dr. Achyuthan Eswar",
     image: "/speaker/achutank.jpeg",
-    description: "Dr. Achyuthan Eswar is a distinguished academic and researcher, bringing valuable perspectives to our event."
+    description: "Doctor turned food rebel! Dr. Achyuthan serves up plant-based power through Sampoorna Ahara, mixing tradition, science, and tasty transformation on every plate."
   },
   {
     name: "Arjun Deshpande",
     image: "/speaker/arjun.jpeg",
-    description: "Arjun Deshpande is an accomplished professional known for his innovative approach and impactful contributions."
+    description: "Disrupting pharma at 16, Arjun Deshpande built Generic Aadhaar to make medicines affordable, youth-led innovation that's healing India one pill at a time."
+  },
+  {
+    name: "Abhishek Mishra",
+    image: "/speaker/abhishek.jpeg",
+    description: "Creator of 'In Other Words', Abhishek decodes song lyrics and scenes with heart and depth making music more meaningful, one beautifully explained verse at a time."
   }
 ];
 
