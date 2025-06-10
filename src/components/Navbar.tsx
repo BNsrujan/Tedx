@@ -1,5 +1,6 @@
 "use client";
 
+import { HyperText } from "@/components/magicui/hyper-text";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute w-full bg-black shadow-md top-0 left-0 z-50">
+    <nav className="absolute w-full shadow-md top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -18,12 +19,10 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-20 text-gray-300 font-medium text-sm">
-
-            <Link href="#about" className="hover:text-red-600 transition">About</Link>
-            <Link href="#speakers" className="hover:text-red-600 transition">Speakers</Link>
-            <Link href="#event" className="hover:text-red-600 transition">Event</Link>
-            <Link href="#partners" className="hover:text-red-600 transition">Partners</Link>
-
+            <Link href="#about" className="hover:text-red-600 transition"><HyperText>About</HyperText></Link>
+            <Link href="#speakers" className="hover:text-red-600 transition"><HyperText>Speakers</HyperText></Link>
+            <Link href="#event" className="hover:text-red-600 transition"><HyperText>Event</HyperText></Link>
+            <Link href="#partners" className="hover:text-red-600 transition"><HyperText>Partners</HyperText></Link>
           </div>
 
           {/* Ticket Button */}

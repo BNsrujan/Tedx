@@ -49,10 +49,11 @@ export function ThreeDMarquees() {
       <div className="mx-auto sm:w-full">
         <ThreeDMarquee 
           images={images} 
-          className="opacity-30 h-[200px] sm:h-[250px] md:h-[600px]"
-        
+          className="opacity-30 h-[200px] sm:h-screen md:h-screen"
         />
       </div>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1/6 bg-gradient-to-b from-black"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-black"></div>
     </div>
   );
 }
