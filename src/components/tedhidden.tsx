@@ -19,9 +19,12 @@ export function TEDxhidden() {
               {mounted && (
                 <TypewriterEffect
                   words={[
-                    { text: "Ideas", className: "text-white" },
-                    { text: "Worth", className: "text-white" },
-                    { text: "Spreading", className: "text-ted-red" },
+                    { text: "An", className: "text-white" },
+                    { text: "Ideas.", className: "text-white" },
+                    { text: "A", className: "text-white" },
+                    { text: "Story.", className: "text-white" },
+                    { text: "A", className: "text-white" },
+                    { text: "Transformation", className: "text-ted-red" },
                   ]}
                   className="text-white text-5xl sm:text-5xl md:text-6xl lg:text-[6rem] xl:text-9xl leading-tight uppercase"
                   cursorClassName="bg-ted-red"

@@ -146,11 +146,7 @@
 
 
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* navbar */
 html {
   scroll-behavior: smooth;
 }
