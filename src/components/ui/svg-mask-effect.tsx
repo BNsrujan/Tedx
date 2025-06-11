@@ -11,8 +11,8 @@ interface MousePosition {
 export const MaskContainer = ({
   children,
   revealText,
-  size = 10,
-  revealSize = 600,
+  size = 18,
+  revealSize = 800,
   className,
 }: {
   children?: string | React.ReactNode;

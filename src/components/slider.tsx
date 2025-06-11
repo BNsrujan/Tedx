@@ -40,10 +40,10 @@ export function ThreeDMarquees() {
   return (
     <div className="h-screen relative flex justify-center items-center overflow-hidden">
       <div className="absolute flex w-full h-full justify-center items-center">
-        <h1 className=" relative text-white font-bold text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
-          <span className="text-ted-red">TED</span>
-          <span className="absolute text-ted-red font-bold text-[0.4em] ">x</span>{"     "}
-          <span className="font-medium">AIET</span>
+        <h1 className=" relative text-white font-bold leading-tight text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
+          <span className="text-ted-red font-black">TED</span>
+          <span className="absolute text-ted-red font-black text-[0.5em] ">x</span>{"     "}
+          <span className="font-light">AIET</span>
         </h1>
       </div>
       <div className="mx-auto sm:w-full">

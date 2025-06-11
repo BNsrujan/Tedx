@@ -91,7 +91,7 @@ export default function Speaker() {
   };
 
   return (
-    <section id="speakers" className="bg-black text-white">
+    <section id="speakers" className=" text-white">
       {/* Horizontal Scrolling Gallery */}
       <article className="w-[98vw]">
         <header className="h-[70vh] flex justify-center items-center">
@@ -106,21 +106,23 @@ export default function Speaker() {
               {speakers.map((speaker, index) => (
                 <li
                   key={index}
-                  className="img-container flex w-screen h-screen flex-shrink-0 flex-col items-center justify-center gap-8 px-8"
+                  className="img-container  flex w-screen h-screen flex-shrink-0 flex-col items-center justify-center gap-8 px-8"
                 >
-                  <div className="flex flex-col items-center gap-6 max-w-4xl">
+                  <div className="flex  items-center gap-6 max-w-7xl">
+                    <div className='flex justify-center items-center min-w-[600px] h-[600px]'>
                     <Image
                       src={speaker.image}
                       alt={speaker.name}
                       width={500}
                       height={500}
-                      className="w-[400px] h-[600px] object-cover rounded-lg shadow-2xl"
+                      className="w-600px] h-[600px] object-cover"
                     />
-                    <div className="text-center">
+                    </div>
+                    <div className="">
                       <h3 className="text-[50px] font-extrabold tracking-tight leading-[1.2] relative inline-block m-0 font-mono">
-                        #{String(index + 1).padStart(3, "0")}
+                        #{String(index + 1).padStart(3, "")}
                       </h3>
-                      <h4 className="text-4xl font-bold mt-4 mb-6">{speaker.name}</h4>
+                      <h4 className="text-6xl  font-bold mt-4 mb-6">{speaker.name}</h4>
                       <p className="text-xl text-gray-300 leading-relaxed">{speaker.description}</p>
                     </div>
                   </div>
@@ -130,19 +132,7 @@ export default function Speaker() {
           </div>
         </section>
 
-        <footer className="h-[70vh] flex justify-center items-center">
-          <p className="text-center">
-            Photos by{" "}
-            <a
-              target="_blank"
-              href="https://twitter.com/mattgperry"
-              rel="noopener noreferrer"
-              className="underline text-purple-700"
-            >
-              Matt Perry
-            </a>
-          </p>
-        </footer>
+       
       </article>
 
       <div className="progress fixed left-0 right-0 h-[5px] bg-[#9911ff] bottom-[50px] origin-left scale-x-0" />

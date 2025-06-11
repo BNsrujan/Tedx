@@ -32,12 +32,20 @@ export function TEDxhidden() {
               )}
             </div>
           }
-          className="min-h-screen w-full text-black text-center"
+          className="min-h-screen w-full   text-black text-center"
         >
-          <p className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-semibold leading-snug w-full px-4">
-            <span className="text-ted-red">TEDx</span>
-            <span className="text-black">AIET</span>
-          </p>
+          <div className="flex justify-center  items-center w-full h-screen">
+          <div className="absolute min-w-[800px] flex flex-col  h-full  justify-center items-center">
+            <h1 className="relative text-white font-bold  leading-tight w-full text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
+              <span className="text-ted-red font-black">TED</span>
+              <span className="absolute text-ted-red font-black text-[0.5em] ">
+                x
+              </span>
+              {"     "}
+              <span className="font-light text-black ">AIET</span>
+            </h1>
+          </div>
+          </div>
         </MaskContainer>
       </div>
     </div>

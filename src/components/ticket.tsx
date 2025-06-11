@@ -21,10 +21,9 @@ export default function BookTicketPage() {
             <div className="absolute inset-0 bg-[url('/tedx-pattern.png')] bg-cover mix-blend-overlay"></div>
           </div>
 
-          <div className="relative z-10">
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold text-red-500 mb-1">TEDx</h2>
-              <h1 className="text-4xl font-light mb-4">AIET</h1>
+          <div className="relative z-10 flex gap-6 ">
+            <div className="mb-6 h-full flex flex-col  content-between">
+             <Image src={"/logo-white.png"} alt="" width={180} height={180}/>
               <span className="inline-block bg-red-600 text-white px-4 py-1 text-sm font-bold tracking-wider mb-6">
                 VIP EXPERIENCE
               </span>
@@ -39,15 +38,16 @@ export default function BookTicketPage() {
                 <p className="font-bold text-lg">AIET CAMPUS</p>
                 <p className="text-gray-300 text-sm mt-4 mb-1">TIME</p>
                 <p className="font-bold text-lg">10:00 AM - 8:00 PM</p>
-              </div>
-
-              <div className="bg-white p-2 rounded">
+                <div className="bg-white w-29 p-2 rounded">
                 <img 
                   src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=TEDxAIET-VIP-001" 
                   alt="QR Code" 
                   className="w-24 h-24"
                 />
               </div>
+              </div>
+
+             
             </div>
           </div>
         </div>

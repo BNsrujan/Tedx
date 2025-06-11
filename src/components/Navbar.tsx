@@ -19,17 +19,17 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-20 text-gray-300 font-medium text-sm">
-            <Link href="#about" className="hover:text-red-600 transition"><HyperText>About</HyperText></Link>
-            <Link href="#speakers" className="hover:text-red-600 transition"><HyperText>Speakers</HyperText></Link>
-            <Link href="#event" className="hover:text-red-600 transition"><HyperText>Event</HyperText></Link>
-            <Link href="#partners" className="hover:text-red-600 transition"><HyperText>Partners</HyperText></Link>
+            <Link href="#about" className="  cursor-none hover:text-red-600 transition"><HyperText className=" cursor-none">About</HyperText></Link>
+            <Link href="#speakers" className="  cursor-none hover:text-red-600 transition"><HyperText>Speakers</HyperText></Link>
+            <Link href="#event" className="  cursor-none hover:text-red-600 transition"><HyperText>Event</HyperText></Link>
+            <Link href="#partners" className="  cursor-none hover:text-red-600 transition"><HyperText>Partners</HyperText></Link>
           </div>
 
           {/* Ticket Button */}
           <div className="hidden md:block">
             <Link
               href="/tickets"
-              className="bg-ted-red text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+              className="bg-ted-red text-white px-4 py-2 font-bold hover:bg-red-700 transition"
             >
               Book Tickets
             </Link>
@@ -66,7 +66,7 @@ export default function Navbar() {
           <Link
             href="/tickets"
             onClick={() => setIsOpen(false)}
-            className="block bg-ted-red text-white text-center px-4 py-2 rounded-md hover:bg-red-700 transition"
+            className="block bg-ted-red text-white text-center px-4 py-2 rounded-md cursor-none hover:bg-red-700 transition"
           >
             Book Tickets
           </Link>

@@ -5,11 +5,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import { Orbitron } from "next/font/google";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300"],
   variable: "--font-inter",
   display: "swap",
+});
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

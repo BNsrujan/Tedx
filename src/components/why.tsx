@@ -28,7 +28,7 @@ export function WobbleCards() {
             <p className="mt-2 md:mt-4 text-left text-xs sm:text-sm md:text-base text-neutral-200">
               TEDx events bring the spirit of TED&apos;s mission of ideas worth
               spreading to local communities around the globe.
-            </p>Insp
+            </p>
           </div>
         </WobbleCard>
 

@@ -16,7 +16,12 @@ interface MapProps {
 }
 
 export default function WorldMap({
-  dots = [],
+  dots = [
+    {
+      start: { lat: 20.5937, lng: 78.9629, label: "India" },
+      end: { lat: 20.5937, lng: 78.9629, label: "India" }
+    }
+  ],
   lineColor = "#0ea5e9",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
