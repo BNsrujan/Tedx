@@ -38,7 +38,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Abhishek Mishra",
-    image: "/speaker/abhishek.jpeg",
+    image: "/speaker/abhishek-mishra.jpeg",
     description: "Creator of 'In Other Words', Abhishek decodes song lyrics and scenes with heart and depth making music more meaningful, one beautifully explained verse at a time."
   }
 ];
