@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white px-4 lg:px-12 py-10 lg:py-12 lg:ml-20">
+    <footer className="bg-black text-white px-4 lg:px-12 py-10 lg:py-12 ">
       <div className="max-w-8xl mx-auto">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-48">
           {/* Logo and Social - Always centered */}
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center lg:items-start lg:pl-20">
             <div className="mb-4">
               <Image 
                 src={'/logo-white-tedxaiet.png'} 
@@ -47,9 +47,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links Sections - Stacked on mobile, grid on desktop */}
+      
           <div className="flex-1 flex flex-col items-center md:items-start">
-            {/* Mobile: Single column centered */}
+  
             <div className="w-full flex flex-col items-center space-y-8 md:hidden">
               <div className="text-center w-full">
                 <p className="font-bold mb-4 text-lg">Pages</p>
@@ -123,7 +123,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Desktop: 3-column layout */}
+          
             <div className="hidden md:grid md:grid-cols-3 w-full gap-8 lg:gap-12">
               <div className="text-left">
                 <p className="font-bold mb-4 text-lg">Pages</p>
@@ -201,9 +201,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom copyright - Always centered */}
         <div className="mt-12 lg:mt-16">
-          <hr className="border-gray-700 mx-auto" />
+          <hr className="border-gray-700 mx-auto w-full" />
           <div className="text-center text-sm text-gray-400 mt-6">
             © Copyright by TEDxAIET. This independent TEDx event is Operated under
             the license of TED.
