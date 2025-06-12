@@ -47,7 +47,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="TedxAiet" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </html>
-      <body className={`${inter.variable} font-light antialiased`}>
+      <body className={`${inter.variable} cursor-none font-light antialiased`}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

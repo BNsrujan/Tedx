@@ -19,7 +19,7 @@ export default function Home() {
       <Speaker/>
       <Timer />
       <Ticket/>
-      <MarqueeDemo/>
+      {/* <MarqueeDemo/> */}
       {/* https://magicui.design/docs/components/hyper-text */}
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
       {/* https://ui.aceternity.com/components/world-map*/}

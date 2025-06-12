@@ -12,9 +12,9 @@ export default function BookTicketPage() {
   return (
     <main className={`relative min-h-screen flex items-center justify-center bg-black ${orbitron.className} py-10 px-4`}>
       {/* Desktop View */}
-      <div className="hidden md:flex relative w-full max-w-3xl shadow-2xl border border-gray-700 rounded-lg overflow-hidden">
+      <div className="hidden md:flex relative w-full max-w-3xl shadow-2xl border border-gray-700 rounded-lg ">
         {/* Black TEDx Section */}
-        <div className="bg-black text-white w-3/4 p-8 relative flex flex-col justify-between">
+        <div className="bg-black text-white w-3/4 p-8 relative flex flex-col justify-between  border-r-3 border-dotted  border-red-500">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-transparent"></div>
@@ -33,11 +33,12 @@ export default function BookTicketPage() {
             <div className="flex justify-between items-end">
               <div>
                 <p className="text-gray-300 text-sm mb-1">DATE</p>
-                <p className="font-bold text-lg">FRIDAY, 12 MARCH 2024</p>
+                <p className="font-bold text-lg">SATURDAY, 16 AUG 2025</p>
                 <p className="text-gray-300 text-sm mt-4 mb-1">VENUE</p>
-                <p className="font-bold text-lg">AIET CAMPUS</p>
+                <p className="font-bold text-lg">V.S ACHYARYA HALL,</p>
+                <p className=" text-sm">VIDYAGIRI NEAR MANGALORE</p>
                 <p className="text-gray-300 text-sm mt-4 mb-1">TIME</p>
-                <p className="font-bold text-lg">10:00 AM - 8:00 PM</p>
+                <p className="font-bold text-lg">09:30 AM - 5:00 PM</p>
                 <div className="bg-white w-29 p-2 rounded">
                 <img 
                   src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=TEDxAIET-VIP-001" 
@@ -51,11 +52,13 @@ export default function BookTicketPage() {
             </div>
           </div>
         </div>
-
+        
         {/* White Ticket Section */}
-        <div className="bg-white text-black w-1/4 p-6 flex flex-col justify-between border-l border-gray-300 relative">
-          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-r-full"></div>
-          <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-l-full"></div>
+        <div className="bg-white text-black w-1/4 p-6 flex flex-col justify-between border-l border-gray-300 relative z-20">
+        <div className="absolute hidden sm:block -top-0 -left-8 transform -translate-y-1/2 w-16 h-8 bg-black rounded-b-full z-20"></div>
+        <div className="absolute hidden sm:block -bottom-8 -left-8 z-20 transform -translate-y-1/2 w-16 h-8 bg-black rounded-t-full"></div>
+          <div className="absolute md:hidden -left-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-r-full"></div>
+          <div className="absolute md:hidden -right-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-l-full"></div>
           
           <div>
             <h2 className="text-xl font-light mb-1 text-red-600">Ticket</h2>
@@ -65,6 +68,7 @@ export default function BookTicketPage() {
             </span>
           </div>
 
+          <div></div>
           <div>
             <div className="mb-4">
               <p className="text-xs text-gray-500 mb-1">HOLDER NAME</p>
@@ -134,7 +138,7 @@ export default function BookTicketPage() {
             </div>
           </div>
         </div>
-
+        <div className=" hidden md:flex border-r-red-500 h-full w-2"></div>
         {/* White Ticket Section */}
         <div className="bg-white text-black p-6 border-t-4 border-red-600 relative">
           <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-r-full"></div>
@@ -151,8 +155,8 @@ export default function BookTicketPage() {
           <div className="flex justify-between items-center">
             <div>
               <div className="mb-3">
-                <p className="text-xs text-gray-500 mb-1">HOLDER NAME</p>
-                <p className="font-bold text-sm">JOHN DOE</p>
+                {/* <p className="text-xs text-gray-500 mb-1">HOLDER NAME</p>
+                <p className="font-bold text-sm">JOHN DOE</p> */}
               </div>
               <div>
                 <p className="text-xs text-gray-500 mb-1">TICKET TYPE</p>
@@ -168,7 +172,7 @@ export default function BookTicketPage() {
                   className="w-12 h-12"
                 />
               </div>
-              <p className="text-xs text-gray-500">SCAN FOR ENTRY</p>
+              {/* <p className="text-xs text-gray-500">SCAN FOR ENTRY</p> */}
             </div>
           </div>
         </div>

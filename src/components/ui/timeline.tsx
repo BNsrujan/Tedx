@@ -21,7 +21,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 10%", "end 60%"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -29,7 +29,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-ted-red font-sans md:px-10 overflow-hidden"
+      className="w-full bg-ted-red font-sans md:px-10 overflow-y-auto"
       ref={containerRef}
     >
       <div ref={ref} className="relative max-w-[1800px] mx-auto pb-10">
@@ -38,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-start pt-3 md:pt-4 md:gap-4"
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div className="sticky  hidden sm:flex sm:flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               {/* Point */}
               <div className="h-6 w-6 absolute left-3 md:left-4 rounded-full bg-black flex items-center justify-center">
                 <div className="h-2.5 w-2.5 rounded-full bg-ted-red border-ted-red p-1" />
@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-6 w-full">
+            <div className="relative  pr-4 md:pl-6 w-full">
               {/* Title for mobile */}
               <h3 className="md:hidden block text-2xl mb-2 text-left font-bold text-white">
                 {item.title}
@@ -69,7 +69,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-6 left-9 top-0 overflow-hidden w-[3px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-800 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className=" hidden sm:flex absolute md:left-6 left-9 top-0 overflow-hidden w-[3px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-800 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
           <motion.div
             style={{

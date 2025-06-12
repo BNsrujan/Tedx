@@ -51,20 +51,20 @@ function Timer() {
   }, []);
 
   return (
-    <div className={`h-screen flex flex-col justify-center items-center  ${orbitron.className} `}>
-      <div className="flex flex-col justify-center items-center h-[600px] w-[1100px] bg-red-500">
-        <div className="text-center">
-          <h1 className="text-4xl font ">Time's Ticking</h1>
+    <div className={`min-h-screen flex flex-col justify-center items-center p-4 ${orbitron.className}`}>
+      <div className="flex flex-col justify-center items-center w-full max-w-[1100px] min-h-[700px] md:h-[700px] md:w-[1200px] bg-red-500 rounded p-4 sm:p-6 md:p-8">
+        <div className="text-center mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">Time's Ticking</h1>
         </div>
-        <div className="flex flex-wrap gap-4  md:gap-9 justify-center items-center  md:p-9 w-full text-white">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-8 w-full text-white">
           {["days", "hours", "minutes", "seconds"].map((unit, index) => (
-            <div className="text-center w-[120px] md:w-auto" key={index}>
-              <div className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">
+            <div className="text-center" key={index}>
+              <div className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold">
                 {timeLeft[unit as keyof typeof timeLeft]
                   .toString()
                   .padStart(2, "0")}
               </div>
-              <div className="text-sm md:text-xl font-semibold ">
+              <div className="text-xs sm:text-sm md:text-lg font-semibold mt-1">
                 {unit.charAt(0).toUpperCase() + unit.slice(1)}
               </div>
             </div>
