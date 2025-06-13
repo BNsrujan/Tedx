@@ -2,7 +2,7 @@
 import {Event} from "@/components/event";
 import { ThreeDMarquees } from "@/components/slider";
 import Speaker from "@/components/speaker"
-import MarqueeDemo from "@/components/sponser";
+// import MarqueeDemo from "@/components/sponser";
 import { TEDxhidden } from "@/components/tedhidden";
 import Ticket from "@/components/ticket";
 import Timer from "@/components/timer";

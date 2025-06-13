@@ -1,14 +1,11 @@
 "use client"
-import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export default function PricePage() {
-  const searchParams = useSearchParams()
   const [userType, setUserType] = useState<string>('')
 
   useEffect(() => {
-   
     const type = localStorage.getItem('userType')
     setUserType(type || '')
   }, [])

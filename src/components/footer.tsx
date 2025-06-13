@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -187,14 +188,14 @@ export default function Footer() {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href="https://www.youtube.com/@tedxaiet"
+                <Link
+                  href="www.youtube.com/@TEDx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gray-200 text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-300 transition-colors text-sm lg:text-base"
+                  className="inline-block bg-ted-red text-white font-semibold px-6 py-3  hover:bg-ted-600 transition-colors text-sm lg:text-base"
                 >
                   Watch on YouTube
-                </a>
+                </Link>
               </div>
             </div>
           </div>

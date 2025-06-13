@@ -1,8 +1,7 @@
 "use client";
-import { useState, useEffect } from 'react';
+import {  useEffect } from 'react';
 import Image from 'next/image';
 import { animate, scroll } from '@motionone/dom';
-import { motion, AnimatePresence } from 'framer-motion';
 
 type Speaker = {
   name: string;
@@ -16,11 +15,6 @@ const speakers: Speaker[] = [
     image: "/speaker/arun.png",
     description: "A soldier, storyteller, and leader—Lt Gen A Arun turns battle scars into life lessons, inspiring youth with courage, clarity, and a spark for service."
   },
-  // {
-  //   name: "Amoghavarsha J. S.",
-  //   image: "/speaker/amogha.png",
-  //   description: "Amoghavarsha J. S. is a renowned expert in technology and innovation, bringing unique insights to the TEDx stage."
-  // },
   {
     name: "Janaki Anand",
     image: "/speaker/janki.jpeg",
@@ -70,8 +64,7 @@ const MobileSpeakers = () => (
 );
 
 export default function Speaker() {
-  const [activeSpeaker, setActiveSpeaker] = useState<Speaker>(speakers[0]);
-  const [direction, setDirection] = useState(0);
+  // const [activeSpeaker] = useState<Speaker>(speakers[0]);
 
   useEffect(() => {
     const imgGroupContainer = document.querySelector('.img-group-container');
@@ -91,30 +84,6 @@ export default function Speaker() {
       });
     }
   }, []);
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
-  };
-
-  const handleSpeakerChange = (speaker: Speaker) => {
-    const currentIndex = speakers.findIndex(s => s.name === activeSpeaker.name);
-    const newIndex = speakers.findIndex(s => s.name === speaker.name);
-    setDirection(newIndex > currentIndex ? 1 : -1);
-    setActiveSpeaker(speaker);
-  };
 
   return (
     <section id="speakers" className="text-white">
