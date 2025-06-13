@@ -24,9 +24,8 @@ export default function Footer() {
             <div className="flex gap-3 lg:gap-4">
               {[
                 { href: "https://www.instagram.com/tedxaiet/", icon: "/logos/Instagram.svg", alt: "Instagram" },
-                { href: "https://www.linkedin.com/company/tedxaiet", icon: "/logos/LinkedIn.svg", alt: "LinkedIn" },
-                { href: "https://twitter.com/tedxaiet", icon: "/logos/X.svg", alt: "X" },
-                // { href: "https://www.youtube.com/@tedxaiet", icon: "/logos/YouTube.svg", alt: "YouTube" }
+                { href: "https://www.linkedin.com/in/tedxaiet/", icon: "/logos/LinkedIn.svg", alt: "LinkedIn" },
+                { href: "https://twitter.com/tedxaiet27260", icon: "/logos/X.svg", alt: "X" },
               ].map((social) => (
                 <a
                   key={social.alt}
