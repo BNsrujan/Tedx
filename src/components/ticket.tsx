@@ -5,6 +5,11 @@ import Image from "next/image";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "Arial", "sans-serif"],
+  adjustFontFallback: true,
+  variable: "--font-orbitron",
   weight: ["400", "700"],
 });
 

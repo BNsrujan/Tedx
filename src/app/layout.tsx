@@ -5,14 +5,16 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300"],
-  variable: "--font-inter",
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "Arial", "sans-serif"],
+  adjustFontFallback: true,
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "TedxAiet",
-  description: "international tedx conference",
+  title: "TEDx AIET",
+  description: "TEDx AIET - Ideas Worth Spreading",
 };
 
 export default function RootLayout({
@@ -21,25 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <html>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon/favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <meta name="apple-mobile-web-app-title" content="TedxAiet" />
+    <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-      </html>
-      <body className={`${inter.variable} cursor-none font-light antialiased`}>
+      </head>
+      <body className={`${inter.className} cursor-none font-light antialiased`}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

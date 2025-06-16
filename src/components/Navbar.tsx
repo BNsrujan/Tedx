@@ -12,7 +12,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute w-full top-0 left-0 z-50">
+    <nav className="absolute w-full top-0 left-0 z-50 uppercase">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

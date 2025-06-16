@@ -30,6 +30,7 @@ export function Event() {
       <div className="w-fill  h-1 bg-ted-red mb-6"></div>
       {eventData.map((item, index) => (
         <div key={index} className="flex gap-4 items-start  ">
+          <span className="text-ted-red text-3xl">•</span>
           <span className="text-white/80 min-w-[80px]">{item.title}</span>
           <div className="text-white">{item.content}</div>
         </div>
@@ -38,7 +39,7 @@ export function Event() {
   );
 
   return (
-    <div className="flex flex-col overflow-hidden min-h-screen">
+    <div id="event" className="flex flex-col overflow-hidden min-h-screen">
       {/* Mobile version */}
       <SimpleSchedule />
       
@@ -48,7 +49,7 @@ export function Event() {
           titleComponent={
             <>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-white px-4 sm:px-6 md:px-8">
-                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mt-1 leading-none">
+                <span className="text-4xl sm:text-5xl uppercase  md:text-6xl lg:text-7xl xl:text-8xl font-bold mt-1 leading-none">
                   Event Schedule
                 </span>
               </h1>

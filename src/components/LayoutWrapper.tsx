@@ -13,7 +13,7 @@ interface LayoutWrapperProps {
 
 export default function LayoutWrapper({
   children,
-  loadingTime = 2000,
+  loadingTime = 1000,
 }: LayoutWrapperProps) {
   const [loading, setLoading] = useState<boolean>(true);
 

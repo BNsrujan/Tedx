@@ -4,7 +4,7 @@ import { HyperText } from "@/components/magicui/hyper-text";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white px-4 lg:px-12 py-10 lg:py-12 ">
+    <footer className="bg-black cursor-none text-white px-4 lg:px-12 py-10 lg:py-12 ">
       <div className="max-w-8xl mx-auto">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-48">
@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             
-            <div className="flex gap-3 lg:gap-4">
+            <div className="flex gap-3 lg:gap-4  content-between">
               {[
                 { href: "https://www.instagram.com/tedxaiet/", icon: "/logos/Instagram.svg", alt: "Instagram" },
                 { href: "https://www.linkedin.com/in/tedxaiet/", icon: "/logos/LinkedIn.svg", alt: "LinkedIn" },
@@ -54,13 +54,11 @@ export default function Footer() {
                 <p className="font-bold mb-4 text-lg">Pages</p>
                 <ul className="space-y-2 text-sm">
                   {[
-                    { href: "/", text: "Home" },
-                    { href: "#about", text: "About TED" },
-                    { href: "#event", text: "TED Event Date" },
-                    { href: "#event", text: "TED Event Schedule" },
-                    { href: "#speakers", text: "TED speaker" },
-                    { href: "#organizers", text: "TED Organisers" },
-                    { href: "#community", text: "TED Community" }
+                    { href: "#about", text: "About TED & TEDx" },
+                    { href: "#event", text: "TEDx Event Schedule" },
+                    { href: "#speakers", text: "TEDx speaker" },
+                    { href: "#date", text: "TEDx Event Date" },
+   
                   ].map((link) => (
                     <li key={link.text}>
                       <a href={link.href} className="hover:text-ted-red transition-colors ">
@@ -93,7 +91,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="text-center w-full">
+              {/* <div className="text-center w-full">
                 <p className="font-bold mb-4 text-lg">Events & Incentives</p>
                 <ul className="space-y-2 text-sm mb-4">
                   {[
@@ -119,7 +117,7 @@ export default function Footer() {
                 >
                   <HyperText>Watch on YouTube</HyperText>
                 </a>
-              </div>
+              </div> */}
             </div>
 
           
@@ -128,13 +126,11 @@ export default function Footer() {
                 <p className="font-bold mb-4 text-lg">Pages</p>
                 <ul className="space-y-2 text-sm lg:text-base">
                   {[
-                    { href: "/", text: "Home" },
-                    { href: "#about", text: "About TED" },
-                    { href: "#event", text: "TED Event Date" },
-                    { href: "#event", text: "TED Event Schedule" },
-                    { href: "#speakers", text: "TED speaker" },
-                    { href: "#organizers", text: "TED Organisers" },
-                    { href: "#community", text: "TED Community" }
+                    { href: "#about", text: "About TEDx" },
+                    { href: "#event", text: "TEDx Event Date" },
+                    { href: "#event", text: "TEDx Event Schedule" },
+                    { href: "#speakers", text: "TEDx speaker" },
+            
                   ].map((link) => (
                     <li key={link.text}>
                       <a href={link.href} className="hover:text-ted-red transition-colors">
@@ -147,10 +143,10 @@ export default function Footer() {
 
               <div className="text-left">
                 <p className="font-bold mb-4 text-lg">Community</p>
-                <ul className="space-y-2 text-sm lg:text-base">
+                <ul className="space-y-2 text-sm   lg:text-base">
                   {[
                     { href: "https://www.ted.com", text: "TED", external: true },
-                    { href: "#speakers", text: "TED Speakers", bold: true },
+                    { href: "#speakers", text: "TEDx Speakers", bold: true },
                     { href: "#organizers", text: "TEDx Organizers", bold: true }
                   ].map((link) => (
                     <li key={link.text}>
@@ -168,25 +164,7 @@ export default function Footer() {
               </div>
 
               <div className="text-left">
-                <div className="mb-6">
-                  <p className="font-bold mb-4 text-lg">Events & Incentives</p>
-                  <ul className="space-y-2 text-sm lg:text-base">
-                    {[
-                      { href: "#pre-event", text: "Pre-Ted Event", bold: true },
-                      { href: "#athyudan", text: "Athyudan", bold: true },
-                      { href: "#event", text: "TED" }
-                    ].map((link) => (
-                      <li key={link.text}>
-                        <a
-                          href={link.href}
-                          className={`hover:text-ted-red transition-colors ${link.bold ? "font-bold" : ""}`}
-                        >
-                          <HyperText>{link.text}</HyperText>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                
                 <Link
                   href="www.youtube.com/@TEDx"
                   target="_blank"
