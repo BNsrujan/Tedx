@@ -184,7 +184,7 @@ export default function BookTicketPage() {
             <div className="text-center">
               <div className="bg-black   inline-block mb-1">
                 <Image
-                  src={"/QRcode/insta.png"}
+                  src={"/qr.png"}
                   alt="QR Code"
                   className="w-12 h-12"
                   width={180}

@@ -24,7 +24,7 @@ export default function PricePage() {
           
           <div className='bg-white p-4 inline-block'>
             <Image
-              src={userType === 'corporate' ? '/qr-corporate.png' : '/qr-student.png'}
+              src={userType === 'corporate' ? '/400r.png' : '/300r.png'}
               alt="Payment QR Code"
               width={300}
               height={300}

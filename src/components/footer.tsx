@@ -12,17 +12,15 @@ export default function Footer() {
           <div className="flex flex-col items-center lg:items-start lg:pl-20">
             <div className="mb-4">
               <Image 
-                src={'/logo-white-tedxaiet.png'} 
+                src={'/image.png'} 
                 alt="logo" 
                 width={200} 
                 height={200} 
-                className="w-40 lg:w-48"
+                
+                className="w-40 lg:w-48 -left-10"
               />
             </div>
-            <p className="font-semibold text-center lg:text-left mb-6">
-              <span className="text-ted-red-400">x{" "}=</span>{" "}
-              <span className="font-light">Independently Organized TED Event</span>
-            </p>
+            
             <div className="flex gap-3 lg:gap-4">
               {[
                 { href: "https://www.instagram.com/tedxaiet/", icon: "/logos/Instagram.svg", alt: "Instagram" },
