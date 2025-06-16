@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HyperText } from "@/components/magicui/hyper-text";
 
 export default function Footer() {
   return (
@@ -33,7 +34,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-80 p-2 bg-black border rounded-md border-black hover:border-red-400 transition-all duration-300"
+                  className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-red-400 transition-all "
                 >
                   <Image
                     src={social.icon}
@@ -64,8 +65,8 @@ export default function Footer() {
                     { href: "#community", text: "TED Community" }
                   ].map((link) => (
                     <li key={link.text}>
-                      <a href={link.href} className="hover:text-ted-red-400 transition-colors">
-                        {link.text}
+                      <a href={link.href} className="hover:text-ted-red transition-colors ">
+                        <HyperText>{link.text}</HyperText>
                       </a>
                     </li>
                   ))}
@@ -85,9 +86,9 @@ export default function Footer() {
                         href={link.href}
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
-                        className={`hover:text-ted-red-400 transition-colors ${link.bold ? "font-bold" : ""}`}
+                        className={`hover:text-ted-red transition-colors ${link.bold ? "font-bold" : ""}`}
                       >
-                        {link.text}
+                        <HyperText>{link.text}</HyperText>
                       </a>
                     </li>
                   ))}
@@ -105,9 +106,9 @@ export default function Footer() {
                     <li key={link.text}>
                       <a
                         href={link.href}
-                        className={`hover:text-ted-red-400 transition-colors ${link.bold ? "font-bold" : ""}`}
+                        className={`hover:text-ted-red transition-colors ${link.bold ? "font-bold" : ""}`}
                       >
-                        {link.text}
+                        <HyperText>{link.text}</HyperText>
                       </a>
                     </li>
                   ))}
@@ -116,9 +117,9 @@ export default function Footer() {
                   href="https://www.youtube.com/@tedxaiet"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gray-200 text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-300 transition-colors text-sm"
+                  className="inline-block bg-ted-red text-black font-semibold px-6 py-3  hover:bg-red-600 transition-colors text-sm"
                 >
-                  Watch on YouTube
+                  <HyperText>Watch on YouTube</HyperText>
                 </a>
               </div>
             </div>
@@ -138,8 +139,8 @@ export default function Footer() {
                     { href: "#community", text: "TED Community" }
                   ].map((link) => (
                     <li key={link.text}>
-                      <a href={link.href} className="hover:text-ted-red-400 transition-colors">
-                        {link.text}
+                      <a href={link.href} className="hover:text-ted-red transition-colors">
+                        <HyperText>{link.text}</HyperText>
                       </a>
                     </li>
                   ))}
@@ -159,9 +160,9 @@ export default function Footer() {
                         href={link.href}
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
-                        className={`hover:text-ted-red-400 transition-colors ${link.bold ? "font-bold" : ""}`}
+                        className={`hover:text-ted-red transition-colors ${link.bold ? "font-bold" : ""}`}
                       >
-                        {link.text}
+                        <HyperText>{link.text}</HyperText>
                       </a>
                     </li>
                   ))}
@@ -180,9 +181,9 @@ export default function Footer() {
                       <li key={link.text}>
                         <a
                           href={link.href}
-                          className={`hover:text-ted-red-400 transition-colors ${link.bold ? "font-bold" : ""}`}
+                          className={`hover:text-ted-red transition-colors ${link.bold ? "font-bold" : ""}`}
                         >
-                          {link.text}
+                          <HyperText>{link.text}</HyperText>
                         </a>
                       </li>
                     ))}
@@ -194,7 +195,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-block bg-ted-red text-white font-semibold px-6 py-3  hover:bg-ted-600 transition-colors text-sm lg:text-base"
                 >
-                  Watch on YouTube
+                  <HyperText>Watch on YouTube</HyperText>
                 </Link>
               </div>
             </div>

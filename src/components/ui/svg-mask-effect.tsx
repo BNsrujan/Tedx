@@ -14,12 +14,14 @@ export const MaskContainer = ({
   size = 18,
   revealSize = 700,
   className,
+  onHoverChange,
 }: {
   children?: string | React.ReactNode;
   revealText?: string | React.ReactNode;
   size?: number;
   revealSize?: number;
   className?: string;
+  onHoverChange?: (isHovered: boolean) => void;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: null, y: null });
@@ -40,6 +42,10 @@ export const MaskContainer = ({
       currentRef.removeEventListener("mousemove", updateMousePosition);
     };
   }, []);
+
+  useEffect(() => {
+    onHoverChange?.(isHovered);
+  }, [isHovered, onHoverChange]);
 
   const maskSize = isHovered ? revealSize : size;
 

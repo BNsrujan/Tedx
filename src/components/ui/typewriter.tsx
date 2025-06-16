@@ -8,6 +8,7 @@ export const TypewriterEffect = ({
   words,
   className,
   cursorClassName,
+  onHoverChange
 }: {
   words: {
     text: string;
@@ -15,6 +16,7 @@ export const TypewriterEffect = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  onHoverChange?: boolean;
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -42,7 +44,7 @@ export const TypewriterEffect = ({
         }
       );
     }
-  }, [isInView,animate]);
+  }, [isInView, animate]);
 
   const renderWords = () => {
     return (
@@ -82,17 +84,19 @@ export const TypewriterEffect = ({
           opacity: 0,
         }}
         animate={{
-          opacity: 1,
+          opacity: onHoverChange ? 0 : 1,
         }}
         transition={{
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: "reverse",
+          duration: 0.3,
+          ease: "easeInOut",
         }}
         className={cn(
-          "inline-block w-[4px] h-9 md:h-6 lg:h-10 xl:h-23 bg-blue-500",
+          "inline-block z-0 w-[4px] h-9 md:h-6 lg:h-10 xl:h-23",
           cursorClassName
         )}
+        style={{
+          display: onHoverChange ? ' hidden' : 'inline-block'
+        }}
       ></motion.span>
     </div>
   );
@@ -178,7 +182,7 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
+          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 ",
           cursorClassName
         )}
       ></motion.span>

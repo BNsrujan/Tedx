@@ -1,15 +1,18 @@
 "use client";
 
-import { HyperText } from "@/components/magicui/hyper-text";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar() {
+interface NavbarProps {
+  isHovered?: boolean;
+}
+
+export default function Navbar({ isHovered = false }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute w-full shadow-md top-0 left-0 z-50">
+    <nav className="absolute w-full top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -19,17 +22,25 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-20 text-gray-300 font-medium text-sm">
-            <Link href="#about" className="  cursor-none hover:text-red-600 transition"><HyperText className=" cursor-none">About</HyperText></Link>
-            <Link href="#speakers" className="  cursor-none hover:text-red-600 transition"><HyperText>Speakers</HyperText></Link>
-            <Link href="#event" className="  cursor-none hover:text-red-600 transition"><HyperText>Event</HyperText></Link>
-            <Link href="#partners" className="  cursor-none hover:text-red-600 transition"><HyperText>Partners</HyperText></Link>
+            <Link href="#about" className={`cursor-none hover:text-red-600 duration-500 transition ${isHovered ? 'text-black/70' : ''}`}>
+              About
+            </Link>
+            <Link href="#speakers" className={`cursor-none hover:text-red-600 duration-500 transition ${isHovered ? 'text-black/70' : ''}`}>
+              Speakers
+            </Link>
+            <Link href="#event" className={`cursor-none hover:text-red-600 duration-500 transition ${isHovered ? 'text-black/70' : ''}`}>
+              Event
+            </Link>
+            <Link href="#partners" className={`cursor-none hover:text-red-600 duration-500 transition ${isHovered ? 'text-black/70' : ''}`}>
+              Partners
+            </Link>
           </div>
 
           {/* Ticket Button */}
           <div className="hidden md:block">
             <Link
               href="/tickets"
-              className="bg-ted-red text-white px-4 py-2 font-bold hover:bg-red-700 transition"
+              className={`bg-ted-red text-white px-4 py-2 font-bold hover:bg-red-700 transition cursor-none ${isHovered ? 'text-black' : ''}`}
             >
               Book Tickets
             </Link>
@@ -37,7 +48,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 focus:outline-none">
+            <button onClick={() => setIsOpen(!isOpen)} className={`focus:outline-none ${isHovered ? 'text-black' : 'text-gray-300'}`}>
               {isOpen ? (
                 // Close Icon (SVG)
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none"
@@ -58,7 +69,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black shadow-lg px-4 pt-4 pb-6 space-y-4 text-gray-300 font-medium text-center text-sm">
+        <div className={`md:hidden bg-black shadow-lg px-4 pt-4 pb-6 space-y-4 font-medium text-center text-sm ${isHovered ? 'text-black' : 'text-gray-300'}`}>
           <Link href="#about" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">About</Link>
           <Link href="#speakers" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Speakers</Link>
           <Link href="#event" onClick={() => setIsOpen(false)} className="block hover:text-red-600 transition">Event</Link>

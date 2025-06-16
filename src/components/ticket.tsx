@@ -14,9 +14,9 @@ export default function BookTicketPage() {
       className={`relative min-h-screen flex items-center justify-center bg-black ${orbitron.className} py-10 px-4`}
     >
       {/* Desktop View */}
-      <div className="hidden md:flex relative w-full max-w-3xl h-full h-full border border-gray-700  ">
+      <div className="hidden md:flex relative w-full max-w-3xl h-full  border border-gray-700  ">
         {/* Black TEDx Section */}
-        <div className="bg-black text-white w-3/4 pt-8 px-8 relative flex flex-col justify-between  border-r-3 border-dotted  border-ted-red">
+        <div className="bg-black text-white w-3/4 pt-8 px-8 relative flex flex-col justify-between  border-r-3 border-dashed  border-ted-red">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-br from-red-1800/20 to-transparent"></div>
@@ -107,7 +107,7 @@ export default function BookTicketPage() {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden w-full max-w-sm shadow-2xl border border-gray-700 rounded-lg overflow-hidden">
+      <div className="md:hidden w-full max-w-sm border border-gray-700 ">
         {/* Black TEDx Section */}
         <div className="bg-black text-white p-6 relative">
           {/* Background Pattern */}
@@ -123,7 +123,7 @@ export default function BookTicketPage() {
               <span className="inline-block bg-red-600 text-white px-3 py-1 text-xs font-bold tracking-wider mb-4">
                 VIP EXPERIENCE
               </span>
-              <p className="text-red-400 font-bold text-lg mb-4">
+              <p className="text-ted-red font-bold text-lg mb-4">
                 ALL DAY ACCESS
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function BookTicketPage() {
                 <p className="text-gray-300 text-xs mb-1">DATE</p>
                 <p className="font-bold text-sm">FRIDAY, 12 MARCH 2024</p>
               </div>
-              <div className="bg-white p-1 rounded">
+              <div className="bg-white ">
                 <Image
                   src={"/QRcode/insta.png"}
                   alt="QR Code"
@@ -157,7 +157,7 @@ export default function BookTicketPage() {
         </div>
         <div className=" hidden md:flex border-r-red-1800 h-full w-2"></div>
         {/* White Ticket Section */}
-        <div className="bg-white text-black p-6 border-t-4 border-red-600 relative">
+        <div className="bg-white text-black p-6 border-t-3 border-red-600 border-dashed relative">
           <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-r-full"></div>
           <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-black rounded-l-full"></div>
 
@@ -182,7 +182,7 @@ export default function BookTicketPage() {
             </div>
 
             <div className="text-center">
-              <div className="bg-black p-1 rounded inline-block mb-1">
+              <div className="bg-black   inline-block mb-1">
                 <Image
                   src={"/QRcode/insta.png"}
                   alt="QR Code"
