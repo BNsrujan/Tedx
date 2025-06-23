@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { animate, scroll } from "@motionone/dom";
 
+
 type Speaker = {
   name: string;
   image: string;
@@ -42,13 +43,12 @@ const speakers: Speaker[] = [
   },
 ];
 
-// Simple mobile view component
 const MobileSpeakers = () => (
   <div className="md:hidden space-y-24 px-4 py-8">
     {speakers.map((speaker, index) => (
       <div
         key={index}
-        className="flex flex-col  items-center gap-6 border p-8 border-red-500"
+        className="flex flex-col items-center gap-6 border p-8 border-ted-red rounded"
       >
         <div className="w-[250px] h-[250px] relative">
           <Image
@@ -59,7 +59,7 @@ const MobileSpeakers = () => (
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="">
+        <div>
           <h3 className="text-2xl font-mono font-bold mb-2">
             #{String(index + 1).padStart(3, "")}
           </h3>
@@ -72,8 +72,7 @@ const MobileSpeakers = () => (
 );
 
 export default function Speaker() {
-  // const [activeSpeaker] = useState<Speaker>(speakers[0]);
-
+  
   useEffect(() => {
     const imgGroupContainer = document.querySelector(".img-group-container");
     const imgGroup = document.querySelector(".img-group");
@@ -96,9 +95,9 @@ export default function Speaker() {
   return (
     <section id="speakers" className="text-white">
       {/* Mobile Header */}
-      <header className="flex flex-col md:hidden  px-4 py-8">
-        <h1 className="text-3xl font-bold text-white  ">SPEAKERS</h1>
-        <div className="w-full h-1 bg-ted-red "></div>
+      <header className="flex flex-col md:hidden px-4 py-8">
+        <h1 className="text-3xl font-bold text-white">SPEAKERS</h1>
+        <div className="w-full h-1 bg-ted-red"></div>
       </header>
 
       {/* Mobile View */}
@@ -106,21 +105,26 @@ export default function Speaker() {
 
       {/* Desktop View */}
       <article className="w-[95vw] hidden md:block">
-        <header className="sticky top-0 w-full  h-screen    items-center p-[26px] md:p-0 ">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-white px-4 sm:px-6 md:px-8">
-            <span className="text-4xl uppercase sm:text-5xl  md:text-6xl lg:text-7xl xl:text-8xl font-bold mt-1 leading-none">
+        <header className="sticky top-0 w-full h-screen flex items-center justify-center p-[26px] md:p-0 text-center">
+          
+            
+          
+            <span className="text-4xl uppercase sm:text-5xl md:text-6xl lg:text-7xl xl:text-[12rem] font-bold mt-1 leading-none">
               Speakers
             </span>
-          </h1>
+         
         </header>
 
-        <section className="img-group-container h-[500vh]  relative">
-          <div className="sticky  top-15 overflow-hidden h-screen">
-            <ul className="img-group flex ">
+        <section
+         
+          className="img-group-container h-[500vh] relative"
+        >
+          <div className="sticky top-0 overflow-hidden h-screen">
+            <ul className="img-group flex">
               {speakers.map((speaker, index) => (
                 <li
                   key={index}
-                  className="img-container  flex w-screen h-screen flex-shrink-0 flex-col items-center justify-center gap-8 px-8"
+                  className="img-container flex w-screen h-screen flex-shrink-0 flex-col items-center justify-center gap-8 px-8"
                 >
                   <div className="flex flex-col border border-ted-red p-[38px] md:flex-row items-center gap-6 max-w-7xl">
                     <div className="flex justify-center items-start w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px]">
@@ -136,7 +140,7 @@ export default function Speaker() {
                       <h3 className="text-[30px] sm:text-[40px] md:text-[50px] font-extrabold tracking-tight leading-[1.2] relative inline-block m-0 font-mono">
                         #{String(index + 1).padStart(3, "")}
                       </h3>
-                      <h4 className="text-3xl sm:text-5xl md:text-6xl font-bold   mb-6">
+                      <h4 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
                         {speaker.name}
                       </h4>
                       <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
