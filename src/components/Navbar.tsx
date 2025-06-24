@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import TooltipButton from "./ui/tooltipbutton";
 
 interface NavbarProps {
   isHovered?: boolean;
@@ -71,16 +72,19 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
           </div>
 
           {/* Ticket Button */}
-          <div className="hidden md:block">
-            <Link
-              href="/tickets"
-              className={`bg-ted-red text-white px-6 py-2 font-semibold hover:bg-red-700 transition duration-200 ease-in-out rounded shadow hover:shadow-lg active:scale-95 ${
-                isHovered ? "text-black" : ""
-              }`}
-            >
-              Book Tickets
-            </Link>
-          </div>
+        <div className="hidden md:block">
+  <TooltipButton tooltip="Reserve your TEDx pass"
+  hoverText="BOOK TICKETS">
+    <Link
+      href="/tickets"
+      className={`text-white font-semibold ${
+        isHovered ? "text-black" : ""
+      }`}
+    >
+      Book Tickets
+    </Link>
+  </TooltipButton>
+</div>
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
