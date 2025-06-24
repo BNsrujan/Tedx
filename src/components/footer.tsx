@@ -4,7 +4,7 @@ import { HyperText } from "@/components/magicui/hyper-text";
 
 export default function Footer() {
   return (
-    <footer className="bg-black cursor-none text-white px-4 lg:px-12 py-10 lg:py-12 ">
+    <footer className="bg-black   cursor-none text-white px-4 lg:px-12 py-10 lg:py-12 ">
       <div className="max-w-8xl mx-auto">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-48">
@@ -133,7 +133,7 @@ export default function Footer() {
             
                   ].map((link) => (
                     <li key={link.text}>
-                      <a href={link.href} className="hover:text-ted-red transition-colors">
+                      <a href={link.href} className="hover:text-ted-red cursor-none transition-colors">
                         <HyperText>{link.text}</HyperText>
                       </a>
                     </li>

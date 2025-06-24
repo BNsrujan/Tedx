@@ -1,7 +1,8 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { animate, scroll } from "@motionone/dom";
+import { useScroll, useTransform, motion } from "motion/react";
 
 
 type Speaker = {
@@ -72,7 +73,18 @@ const MobileSpeakers = () => (
 );
 
 export default function Speaker() {
-  
+  const containerRef = useRef<HTMLDivElement>(null);
+  // Only for desktop header animation
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start -100vh", "end -100vh"],
+  });
+  const progress = useTransform(scrollYProgress, [0, 0.2, 1], [0, 1, 1]);
+  const left = useTransform(progress, [0, 1], ["50%", "2rem"]);
+  const top = useTransform(progress, [0, 1], ["50%", "2rem"]);
+  const translate = useTransform(progress, [0, 1], ["-50%,-50%", "0%, 0%"]);
+  const fontSizeProgress = useTransform(progress, [0, 1], ["12rem", "3rem"]);
+
   useEffect(() => {
     const imgGroupContainer = document.querySelector(".img-group-container");
     const imgGroup = document.querySelector(".img-group");
@@ -93,9 +105,9 @@ export default function Speaker() {
   }, []);
 
   return (
-    <section id="speakers" className="text-white">
+    <section id="speakers" className="text-white ">
       {/* Mobile Header */}
-      <header className="flex flex-col md:hidden px-4 py-8">
+      <header className=" flex flex-col  md:hidden px-4 py-8">
         <h1 className="text-3xl font-bold text-white">SPEAKERS</h1>
         <div className="w-full h-1 bg-ted-red"></div>
       </header>
@@ -105,19 +117,24 @@ export default function Speaker() {
 
       {/* Desktop View */}
       <article className="w-[95vw] hidden md:block">
-        <header className="sticky top-0 w-full h-screen flex items-center justify-center p-[26px] md:p-0 text-center">
-          
-            
-          
-            <span className="text-4xl uppercase sm:text-5xl md:text-6xl lg:text-7xl xl:text-[12rem] font-bold mt-1 leading-none">
-              Speakers
-            </span>
-         
+        <header className="sticky  top-10 w-full  flex items-center justify-center p-[26px] md:p-0 text-center">
+          <motion.span
+            style={{
+              position: "absolute",
+              left,
+              top,
+              fontSize: fontSizeProgress,
+              zIndex: 20,
+              translate,
+            }}
+            className="text-4xl h-screen uppercase sm:text-5xl md:text-6xl lg:text-7xl xl:text-[12rem] font-bold mt-1 leading-none origin-top-left"
+          >
+            Speakers
+          </motion.span>
         </header>
-
         <section
-         
-          className="img-group-container h-[500vh] relative"
+          ref={containerRef}
+          className="img-group-container mt-[100vh] h-[500vh] relative"
         >
           <div className="sticky top-0 overflow-hidden h-screen">
             <ul className="img-group flex">
