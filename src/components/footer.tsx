@@ -32,7 +32,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-red-400 transition-all "
+                  className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all "
                 >
                   <Image
                     src={social.icon}
@@ -51,7 +51,7 @@ export default function Footer() {
   
             <div className="w-full flex flex-col items-center space-y-8 md:hidden">
               <div className="text-center w-full">
-                <p className="font-bold mb-4 text-lg">Pages</p>
+                <p className="font-bold mb-4 text-lg text-ted-red ">Pages</p>
                 <ul className="space-y-2 text-sm">
                   {[
                     { href: "#about", text: "About TED & TEDx" },
@@ -70,7 +70,7 @@ export default function Footer() {
               </div>
 
               <div className="text-center w-full">
-                <p className="font-bold mb-4 text-lg">Community</p>
+                <p className="font-bold mb-4 text-lg text-ted-red">Community</p>
                 <ul className="space-y-2 text-sm">
                   {[
                     { href: "https://www.ted.com", text: "TED", external: true },
@@ -123,7 +123,7 @@ export default function Footer() {
           
             <div className="hidden md:grid md:grid-cols-3 w-full gap-8 lg:gap-12">
               <div className="text-left">
-                <p className="font-bold mb-4 text-lg">Pages</p>
+                <p className="font-bold mb-4 text-lg text-ted-red">Pages</p>
                 <ul className="space-y-2 text-sm lg:text-base">
                   {[
                     { href: "#about", text: "About TEDx" },
@@ -142,7 +142,7 @@ export default function Footer() {
               </div>
 
               <div className="text-left">
-                <p className="font-bold mb-4 text-lg">Community</p>
+                <p className="font-bold mb-4 text-lg text-ted-red">Community</p>
                 <ul className="space-y-2 text-sm   lg:text-base">
                   {[
                     { href: "https://www.ted.com", text: "TED", external: true },

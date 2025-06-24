@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
 import { Orbitron } from "next/font/google";
 
 const orbitron = Orbitron({
@@ -30,15 +29,9 @@ function Timer() {
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (difference % (1000 * 60 * 60)) / (1000 * 60)
-        );
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        console.log({ days, hours, minutes, seconds });
 
         setTimeLeft({ days, hours, minutes, seconds });
       } else {
@@ -47,42 +40,37 @@ function Timer() {
     };
 
     calculateTimeLeft();
-
     const timer = setInterval(calculateTimeLeft, 1000);
 
-    return () => {
-      clearInterval(timer);
-    };
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <div
-      className={`min-h-screen flex flex-col justify-center  items-center p-4 ${orbitron.className}`}
+      className={`min-h-screen flex flex-col justify-center items-center px-4 py-8 ${orbitron.className}`}
     >
-      <div className="flex flex-col justify-center items-center w-full max-w-[1100px] min-h-[300px] md:h-[700px] md:w-[1200px] bg-red-500  p-4 sm:p-6 md:p-8">
-        <div className="text-center mb-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl uppercase font-bold">
-            Time is Ticking
-          </h1>
-        </div>
-        <div className="grid  grid-cols-4 uppercase sm:grid-cols-4 gap-4 md:gap-9  md:w-full text-white">
+      <div className="flex flex-col justify-center items-center w-full max-w-[1200px] min-h-[300px] md:h-[700px] bg-ted-red rounded shadow-2xl p-6 md:p-12">
+        
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold uppercase text-white text-center mb-10 tracking-wide">
+          Time is Ticking
+        </h1>
+
+     
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full text-white">
           {["days", "hours", "minutes", "seconds"].map((unit, index) => (
-            <div key={index} className="flex  justify-between w-full  items-center">
-              <div className="flex flex-col justify-center">
-              <div className="text-3xl sm:text-5xl md:pl-6 flex text-center justify-center  md:text-7xl lg:text-8xl font-bold">
-                {timeLeft[unit as keyof typeof timeLeft]
-                  .toString()
-                  .padStart(2, "0")}
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center bg-white/10 rounded p-4 md:p-6 backdrop-blur-sm"
+            >
+             
+              <div className="text-5xl sm:text-6xl md:text-7xl font-bold mb-2">
+                {timeLeft[unit as keyof typeof timeLeft].toString().padStart(2, "0")}
               </div>
-              <div className="text-xs sm:text-sm md:text-lg flex  w-full justify-center text-center font-semibold mt-1">
-                {unit.charAt(0).toUpperCase() + unit.slice(1)}
+
+             
+              <div className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-semibold text-white/90">
+                {unit}
               </div>
-              </div>
-              {index < 3 && (
-                <div className="hidden sm:flex h-full justify-center  text-center text-4xl pb-9 md:text-6xl lg:text-7xl font-bold  items-center">
-                  :
-                </div>
-              )}
             </div>
           ))}
         </div>
