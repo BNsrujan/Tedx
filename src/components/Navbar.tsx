@@ -73,7 +73,8 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
 
           {/* Ticket Button */}
         <div className="hidden md:block">
-  <TooltipButton tooltip="Reserve your TEDx pass">
+  <TooltipButton tooltip="Reserve your TEDx pass"
+  hoverText="BOOK TICKETS">
     <Link
       href="/tickets"
       className={`text-white font-semibold ${
