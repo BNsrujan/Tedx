@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HyperText } from "@/components/magicui/hyper-text";
+import TooltipButton from "./ui/tooltipbutton";
 
 export default function Footer() {
   return (
@@ -165,14 +166,18 @@ export default function Footer() {
 
               <div className="text-left">
                 
-                <Link
-                  href="www.youtube.com/@TEDx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-ted-red text-white font-semibold px-6 py-3  hover:bg-ted-600 transition-colors text-sm lg:text-base"
-                >
-                  <HyperText>Watch on YouTube</HyperText>
-                </Link>
+                <TooltipButton tooltip="Watch our TEDx videos on YouTube"
+                hoverText="WATCH ON YOUTUBE">
+  <Link
+    href="https://www.youtube.com/@TEDx"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-ted-red text-white font-semibold hover:bg-ted-600 transition-colors text-sm lg:text-base"
+  >
+    WATCH ON YOUTUBE
+  </Link>
+</TooltipButton>
+
               </div>
             </div>
           </div>
