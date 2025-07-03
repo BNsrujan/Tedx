@@ -64,10 +64,10 @@ export default function Footer() {
                 <p className="font-bold mb-4 text-lg text-ted-red ">Pages</p>
                 <ul className="space-y-2 text-sm">
                   {[
-                    { href: "#about", text: "About TED & TEDx" },
-                    { href: "#event", text: "TEDx Event Schedule" },
-                    { href: "#speakers", text: "TEDx speaker" },
-                    { href: "#date", text: "TEDx Event Date" },
+                    { href: "/#about", text: "About TED & TEDx" },
+                    { href: "/#event", text: "TEDx Event Schedule" },
+                    { href: "/#speakers", text: "TEDx speaker" },
+                    { href: "/#date", text: "TEDx Event Date" },
                   ].map((link) => (
                     <li key={link.text}>
                       <a
@@ -90,7 +90,6 @@ export default function Footer() {
                       text: "TED",
                       external: true,
                     },
-                    { href: "#speakers", text: "TED Speakers", bold: true },
                     {
                       href: "#organizers",
                       text: "TEDx Organizers",
@@ -113,33 +112,6 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* <div className="text-center w-full">
-                <p className="font-bold mb-4 text-lg">Events & Incentives</p>
-                <ul className="space-y-2 text-sm mb-4">
-                  {[
-                    { href: "#pre-event", text: "Pre-Ted Event", bold: true },
-                    { href: "#athyudan", text: "Athyudan", bold: true },
-                    { href: "#event", text: "TED" }
-                  ].map((link) => (
-                    <li key={link.text}>
-                      <a
-                        href={link.href}
-                        className={`hover:text-ted-red transition-colors ${link.bold ? "font-bold" : ""}`}
-                      >
-                        <HyperText>{link.text}</HyperText>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="https://www.youtube.com/@tedxaiet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-ted-red text-black font-semibold px-6 py-3  hover:bg-red-600 transition-colors text-sm"
-                >
-                  <HyperText>Watch on YouTube</HyperText>
-                </a>
-              </div> */}
             </div>
 
             <div className="hidden md:grid md:grid-cols-3 w-full gap-8 lg:gap-12">
@@ -147,10 +119,10 @@ export default function Footer() {
                 <p className="font-bold mb-4 text-lg text-ted-red">Pages</p>
                 <ul className="space-y-2 text-sm lg:text-base">
                   {[
-                    { href: "#about", text: "About TEDx" },
-                    { href: "#event", text: "TEDx Event Date" },
-                    { href: "#event", text: "TEDx Event Schedule" },
-                    { href: "#speakers", text: "TEDx speaker" },
+                    { href: "/#about", text: "About TEDx" },
+                    { href: "/#event", text: "TEDx Event Date" },
+                    { href: "/#event", text: "TEDx Event Schedule" },
+                    { href: "/#speakers", text: "TEDx speaker" },
                   ].map((link) => (
                     <li key={link.text}>
                       <a
@@ -173,9 +145,8 @@ export default function Footer() {
                       text: "TED",
                       external: true,
                     },
-                    { href: "#speakers", text: "TEDx Speakers", bold: true },
                     {
-                      href: "#organizers",
+                      href: "/organizers",
                       text: "TEDx Organizers",
                       bold: true,
                     },
@@ -202,6 +173,8 @@ export default function Footer() {
                   hoverText="WATCH ON YOUTUBE"
                   hoverLink="https://www.youtube.com/ted"
                   className=" cursor-none"
+              target="_blank"
+
                 >
                   <Link
                     href="https://www.youtube.com/ted"

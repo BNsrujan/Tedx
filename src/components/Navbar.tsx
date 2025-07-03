@@ -32,13 +32,20 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 py-2">
-            <Image src="/logo-white.png" alt="logo.png" width={150} height={100} />
+            <Link href={"/"} >
+            <Image
+              src="/logo-white.png"
+              alt="logo.png"
+              width={150}
+              height={100}
+            />
+            </Link>
           </div>
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex space-x-16 text-gray-300 font-medium text-[15px] tracking-wide">
             <Link
-              href="#about"
+              href="/#about"
               className={`cursor-none hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
@@ -46,7 +53,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               About
             </Link>
             <Link
-              href="#speakers"
+              href="/#speakers"
               className={`cursor-none hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
@@ -54,7 +61,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               Speakers
             </Link>
             <Link
-              href="#event"
+              href="/#event"
               className={`cursor-none hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
@@ -62,7 +69,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               Event
             </Link>
             <Link
-              href="#partners"
+              href="/#partners"
               className={`cursor-none hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
@@ -72,19 +79,22 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
           </div>
 
           {/* Ticket Button */}
-        <div className="hidden md:block">
-  <TooltipButton tooltip="Reserve your TEDx pass"
-  hoverText="BOOK TICKETS">
-    <Link
-      href="/tickets"
-      className={`text-white font-semibold ${
-        isHovered ? "text-black" : ""
-      }`}
-    >
-      Book Tickets
-    </Link>
-  </TooltipButton>
-</div>
+          <div className="hidden md:block">
+            <TooltipButton
+              tooltip="Reserve your TEDx pass"
+              hoverText="BOOK TICKETS"
+              hoverLink="/tickets"
+            >
+              <Link
+                href="/tickets"
+                className={`text-white font-semibold ${
+                  isHovered ? "text-black" : ""
+                }`}
+              >
+                Book Tickets
+              </Link>
+            </TooltipButton>
+          </div>
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
@@ -140,7 +150,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
           }`}
         >
           <Link
-            href="#about"
+            href="/#about"
             onClick={() => setIsOpen(false)}
             className="block hover:text-ted-red transition duration-300"
           >

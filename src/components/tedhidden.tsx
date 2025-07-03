@@ -28,8 +28,8 @@ export function TEDxhidden() {
                   <div className="hidden lg:block">
                     <TypewriterEffect
                       words={[
-                        { text: "An", className: "text-white" },
-                        { text: "Idea.", className: "text-white" },
+                        { text: "An", className: "text-white " },
+                        { text: "Idea.", className: "text-white " },
                         { text: "A", className: "text-white" },
                         { text: "Story.", className: "text-white" },
                         { text: "A", className: "text-white" },
