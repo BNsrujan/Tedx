@@ -174,7 +174,7 @@ const MobileSpeakers = () => (
       <div
         key={index}
         className="flex flex-col items-center gap-6 border p-8 border-ted-red rounded"
-      >
+      >c
         <div className="w-[250px] h-[250px] relative">
           <Image
             src={speaker.image}
@@ -306,7 +306,7 @@ export default function Speaker() {
                       <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                         {speaker.description}
                       </p>
-                      <div className=" absolute top-0  right-0 flex gap-3 lg:gap-4   content-between cursor-none">
+                      <div className=" absolute  bottom-0 right-0 flex gap-3 lg:gap-4   content-between cursor-none">
                         {speaker.links && speaker.links.map((link) => (
                           <a
                             key={link.alt}

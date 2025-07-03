@@ -32,16 +32,16 @@ export function Event() {
         {eventData.map((item, index) => (
           <div
             key={index}
-            className="flex items-start gap-3 rounded border border-white/10 bg-white/5 p-3"
+            className="flex items-start gap-3 rounded border border-white/10 bg-white/5 p-2   content-center"
           >
             <div className="flex flex-col items-center justify-center">
               <span className="text-ted-red text-[28px] leading-none">•</span>
             </div>
 
-            <div className="flex flex-col">
-              <span className="text-white/70 text-sm font-medium">{item.title}</span>
+            <div className="flex text-center h-full justify-center items-center">
+              <span className="text-white/70 text-sm font-medium text-center">{item.title}</span>
               {item.content && (
-                <div className="text-white text-base mt-0.5">{item.content}</div>
+                <div className="text-white pl-4 text-center text-base ">{item.content}</div>
               )}
             </div>
           </div>
