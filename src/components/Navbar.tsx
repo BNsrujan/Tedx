@@ -79,15 +79,6 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
           </div>
 
           {/* Ticket Button */}
-<<<<<<< HEAD
-        <div className="hidden md:block">
-  <Link href="/tickets">
-  <TooltipButton tooltip="Reserve your TEDx pass" hoverText="BOOK TICKETS">
-    <span className="text-white font-semibold">Book Tickets</span>
-  </TooltipButton>
-</Link>
-</div>
-=======
           <div className="hidden md:block">
             <TooltipButton
               tooltip="Reserve your TEDx pass"
@@ -104,7 +95,6 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               </Link>
             </TooltipButton>
           </div>
->>>>>>> 7f78583704743b7dea7537473fbcfff947723f17
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden">

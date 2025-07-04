@@ -168,29 +168,12 @@ export default function Footer() {
               </div>
 
               <div className="text-left">
-<<<<<<< HEAD
-                
-                
-  <Link
-    href="https://www.youtube.com/@TEDx"
-    target="_blank"
-    rel="noopener noreferrer"
-    
-  >
-    <TooltipButton tooltip="Watch our TEDx videos on YouTube"
-                hoverText="WATCH ON YOUTUBE">
-    <span className="inline-block bg-ted-red text-white font-semibold hover:bg-ted-600 transition-colors text-sm lg:text-base">WATCH ON YOUTUBE</span>
-  
-</TooltipButton>
-</Link>
-=======
                 <TooltipButton
                   tooltip="Watch our TEDx videos on YouTube"
                   hoverText="WATCH ON YOUTUBE"
                   hoverLink="https://www.youtube.com/ted"
                   className=" cursor-none"
               target="_blank"
->>>>>>> 7f78583704743b7dea7537473fbcfff947723f17
 
                 >
                   <Link
