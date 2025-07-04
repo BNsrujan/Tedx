@@ -19,6 +19,7 @@ export default function TicketsPage() {
     phone: '',
     type: 'corporate'
   });
+  
   const [otp, setOtp] = useState('');
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [error, setError] = useState('');
@@ -42,6 +43,7 @@ export default function TicketsPage() {
     try {
       setLoading(true);
       setError('');
+
       const response = await fetch('/api/send-otp', {
         method: 'POST',
         headers: {
@@ -50,8 +52,10 @@ export default function TicketsPage() {
         body: JSON.stringify(formData),
       });
 
+      console.log(JSON.stringify(formData));
       const data = await response.json();
-
+      console.log(data)
+      
       if (!response.ok) {
         throw new Error(data.error || 'Failed to send OTP');
       }
