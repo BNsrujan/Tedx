@@ -189,6 +189,7 @@ export function SmoothCursor({
         zIndex: 100,
         pointerEvents: "none",
         willChange: "transform",
+
       }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
@@ -197,6 +198,7 @@ export function SmoothCursor({
         stiffness: 400,
         damping: 30,
       }}
+      className="hidden sm:flex"
     >
       {cursor}
     </motion.div>
