@@ -10,8 +10,8 @@ function generateOTP() {
 }
 
 export async function POST(request: Request) {
-    console.log('🔥 API /api/send-otp called');
-          console.log('EMAIL_USER:', process.env.EMAIL_USER);
+    console.log('🔥 API /api/send-otp called roter');
+      console.log('EMAIL_USER:', process.env.EMAIL_USER);
       console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
 
   try {
