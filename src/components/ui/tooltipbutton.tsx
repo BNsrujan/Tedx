@@ -10,6 +10,7 @@ interface TooltipButtonProps {
   hoverText?: string;
   hoverLink?: string;
   className?: string;
+  target?:string;
 }
 
 export default function TooltipButton({
@@ -18,12 +19,13 @@ export default function TooltipButton({
   hoverText,
   hoverLink,
   className,
+  target,
 }: TooltipButtonProps) {
   return (
     <div
       data-tooltip={tooltip}
       className={cn(
-        "relative min-w-[160px] h-10 bg-ted-red text-white text-center transition-all duration-300 overflow-hidden group cursor-pointer",
+        "relative min-w-[160px] cursor-none h-10 bg-ted-red text-white text-center transition-all duration-300 overflow-hidden group ",
         className
       )}
     >
@@ -39,9 +41,9 @@ export default function TooltipButton({
       </div>
 
       {/* Hover slide-up text */}
-      <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 translate-y-full group-hover:translate-y-0">
+      <div className="absolute inset-0 flex cursor-none items-center justify-center transition-all duration-300 translate-y-full group-hover:translate-y-0">
         {hoverLink ? (
-          <Link href={hoverLink} className="font-bold text-white" target="_blank">
+          <Link href={hoverLink} className="font-bold text-white" target={target} >
             {hoverText}
           </Link>
         ) : (

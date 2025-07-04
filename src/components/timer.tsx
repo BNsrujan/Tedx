@@ -6,7 +6,7 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   display: "swap",
   preload: true,
-  fallback: ["system-ui", "Arial", "sans-serif"],
+  // fallback: ["system-ui", "Arial", "sans-serif"],
   adjustFontFallback: true,
   variable: "--font-orbitron",
   weight: ["400", "700"],
@@ -51,7 +51,7 @@ function Timer() {
     >
       <div className="flex flex-col justify-center items-center w-full max-w-[1200px] min-h-[300px] md:h-[700px] bg-ted-red rounded shadow-2xl p-6 md:p-12">
         
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold uppercase text-white text-center mb-10 tracking-wide">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold uppercase text-black text-center mb-10 tracking-wide">
           Time is Ticking
         </h1>
 

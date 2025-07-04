@@ -29,10 +29,15 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
+<<<<<<< HEAD
       <body className={`${inter.className} cursor-none font-light antialiased`}>
         <SmoothScrollProvider>
           <LayoutWrapper>{children}</LayoutWrapper>
         </SmoothScrollProvider>
+=======
+      <body className={`${inter.className} cursor-none  font-light antialiased`}>
+        <LayoutWrapper>{children}</LayoutWrapper>
+>>>>>>> 7f78583704743b7dea7537473fbcfff947723f17
       </body>
     </html>
   );
