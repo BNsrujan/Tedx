@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import SmoothScrollProvider from "@/components/smoothscroolprovider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,9 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={inter.variable}>
       <head>
@@ -31,7 +30,9 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body className={`${inter.className} cursor-none font-light antialiased`}>
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <SmoothScrollProvider>
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

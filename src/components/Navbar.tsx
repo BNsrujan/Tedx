@@ -28,7 +28,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
         isScrolled || isOpen ? "bg-black/70 backdrop-blur-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 p-2 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 py-2">
@@ -73,17 +73,11 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
 
           {/* Ticket Button */}
         <div className="hidden md:block">
-  <TooltipButton tooltip="Reserve your TEDx pass"
-  hoverText="BOOK TICKETS">
-    <Link
-      href="/tickets"
-      className={`text-white font-semibold ${
-        isHovered ? "text-black" : ""
-      }`}
-    >
-      Book Tickets
-    </Link>
+  <Link href="/tickets">
+  <TooltipButton tooltip="Reserve your TEDx pass" hoverText="BOOK TICKETS">
+    <span className="text-white font-semibold">Book Tickets</span>
   </TooltipButton>
+</Link>
 </div>
 
           {/* Mobile Menu Icon */}

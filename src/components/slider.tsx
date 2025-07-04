@@ -38,7 +38,7 @@ export function ThreeDMarquees() {
   ];
 
   return (
-    <div className="h-screen relative flex justify-center items-center overflow-hidden">
+    <div className="h-screen relative flex justify-center items-center overflow-hidden space-y-6">
       <div className="absolute flex w-full h-full justify-center items-center">
         <h1 className=" relative text-white font-bold leading-tight text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]">
           <span className="text-ted-red font-black">TED</span>
