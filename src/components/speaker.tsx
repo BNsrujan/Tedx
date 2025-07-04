@@ -174,7 +174,7 @@ const MobileSpeakers = () => (
       <div
         key={index}
         className="flex flex-col items-center gap-6 border p-8 border-ted-red rounded"
-      >c
+      >
         <div className="w-[250px] h-[250px] relative">
           <Image
             src={speaker.image}
