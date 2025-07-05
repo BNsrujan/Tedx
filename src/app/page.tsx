@@ -16,17 +16,45 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Whatistedx from "@/components/whatistedx";
 
+
 export default function Home() {
   return (
     <div className="bg-black">
-      <TEDxhidden />
-      <WobbleCards />
 
-      <Whatistedx />
-      <Marquee />
-      <ThreeDMarquees />
-      <Event />
-      <Speaker />
+
+     
+
+
+      
+     
+
+     
+
+      
+
+    
+
+     
+      
+  
+     
+
+      
+
+
+
+ 
+ 
+
+      <TEDxhidden/>
+      <WobbleCards/>
+             
+      
+      <Whatistedx/>
+        <Marquee />
+      <ThreeDMarquees/>
+      <Event/>
+      <Speaker/>
       <Timer />
       <Ticket />
       {/* <IntroSection /> */}
