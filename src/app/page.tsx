@@ -1,8 +1,14 @@
-import {Event} from "@/components/event";
+
+"use client";
+
+import { Event } from "@/components/event";
+
 import { ThreeDMarquees } from "@/components/slider";
-import Speaker from "@/components/speaker"
-// import MarqueeDemo from "@/components/sponser";
+import Speaker from "@/components/speaker";
+
 import { TEDxhidden } from "@/components/tedhidden";
+
+import Marquee from "@/components/secondmarquee";
 import Ticket from "@/components/ticket";
 import Timer from "@/components/timer";
 import { WobbleCards } from "@/components/why";
@@ -11,18 +17,47 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Whatistedx from "@/components/whatistedx";
 
-
 export default function Home() {
   return (
     <div className="bg-black">
+
+
+     
+
+
+      
+     
+
+     
+
+      
+
+    
+
+     
+      
+  
+     
+
+      
+
+
+
+ 
+ 
+
       <TEDxhidden/>
       <WobbleCards/>
+             
+      
       <Whatistedx/>
+        <Marquee />
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
       <Timer />
       <Ticket/>
+           {/* <IntroSection /> */}
       {/* <MarqueeDemo/> */}
       {/* https://magicui.design/docs/components/hyper-text */}
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
@@ -33,6 +68,7 @@ export default function Home() {
           {/* Book a Ticket */}
         </Button>
       </Link>
+
     </div>
   );
 }
