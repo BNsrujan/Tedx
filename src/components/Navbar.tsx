@@ -37,7 +37,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               src="/logo-white.png"
               alt="logo.png"
               width={150}
-              height={100}
+              height={150}
             />
             </Link>
           </div>
