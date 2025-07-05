@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Whatistedx from "@/components/whatistedx";
 
+
 export default function Home() {
   return (
     <div className="bg-black">
@@ -48,10 +49,12 @@ export default function Home() {
 
       <TEDxhidden/>
       <WobbleCards/>
+
              
       
       <Whatistedx/>
         <Marquee />
+
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
