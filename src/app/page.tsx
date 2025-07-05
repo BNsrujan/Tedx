@@ -9,6 +9,7 @@ import { WobbleCards } from "@/components/why";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Whatistedx from "@/components/whatistedx";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <div className="bg-black">
       <TEDxhidden/>
       <WobbleCards/>
+      <Whatistedx/>
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>

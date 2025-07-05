@@ -23,13 +23,23 @@ export default function PricePage() {
           </p>
           
           <div className='bg-white p-4 inline-block'>
-            <Image
-              src={userType === 'corporate' ? '/400r.png' : '/300r.png'}
+            {userType === 'corporate' ? 
+           <Image
+           src={"/400r.svg"}
+           alt="Payment QR Code"
+           width={300}
+           height={300}
+           className='w-[300px] h-[300px]'
+         /> :  
+         <Image
+              src={"/300r.png"}
               alt="Payment QR Code"
               width={300}
               height={300}
               className='w-[300px] h-[300px]'
             />
+          }
+            
           </div>
 
           <div className='space-y-2'>
