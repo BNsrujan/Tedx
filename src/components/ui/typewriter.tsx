@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const TypewriterEffect = ({
   words,
@@ -22,14 +22,15 @@ export const TypewriterEffect = ({
   const wordsArray = words.map((word) => {
     return {
       ...word,
-      text: word.text.split(""),
+      text: word.text.split(" "),
     };
   });
 
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+  const [hasAnimated, setHasAnimated] = useState(false);
   useEffect(() => {
-    if (isInView) {
+    if (isInView && !hasAnimated) {
       animate(
         "span",
         {
@@ -43,8 +44,9 @@ export const TypewriterEffect = ({
           ease: "easeInOut",
         }
       );
+      setHasAnimated(true);
     }
-  }, [isInView, animate]);
+  }, [isInView, animate, hasAnimated]);
 
   const renderWords = () => {
     return (

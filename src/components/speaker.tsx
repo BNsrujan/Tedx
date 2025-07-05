@@ -42,9 +42,58 @@ const speakers: Speaker[] = [
   },
 ];
 
+
 export default function Speakers() {
   useEffect(() => {
     const items = document.querySelectorAll(".img-container");
+
+const MobileSpeakers = () => (
+  <div className="md:hidden space-y-24 px-4 py-8">
+    {speakers.map((speaker, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center gap-6 border p-8 border-ted-red rounded"
+      >
+        <div className="w-[250px] h-[250px] relative">
+          <Image
+            src={speaker.image}
+            alt={speaker.name}
+            width={250}
+            height={250}
+            className="w-full h-full object-contain grayscale"
+          />
+        </div>
+        <div className=" relative ">
+          <h3 className="text-2xl font-mono font-bold mb-1">
+            #{String(index + 1).padStart(1, "")}
+          </h3>
+          <h4 className="text-3xl font-bold mb-3">{speaker.name}</h4>
+          <p className="text-gray-300 leading-relaxed">{speaker.description}</p>
+          <div className="  justify-end flex gap-3 lg:gap-4   content-between cursor-none">
+            {speaker.links && speaker.links.map((link) => (
+              <a
+                key={link.alt}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all cursor-none "
+              >
+                <Image
+                  src={link.icon}
+                  alt={link.alt}
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 lg:w-6 lg:h-6 cursor-none"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
 
 
     scroll(
