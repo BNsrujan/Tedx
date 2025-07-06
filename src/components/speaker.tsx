@@ -52,7 +52,7 @@ const MobileSpeakers = () => (
     {speakers.map((speaker, index) => (
       <div
         key={index}
-        className="flex flex-col items-center gap-6 border p-8 border-ted-red rounded"
+        className="flex flex-col items-center gap-6 border p-8 border-ted-red "
       >
         <div className="w-[250px] h-[250px] relative">
           <Image
@@ -127,9 +127,9 @@ const MobileSpeakers = () => (
         {speakers.map((speaker, index) => (
           <div
             key={index}
-            className="border border-ted-red rounded p-12 bg-black/30 backdrop-blur-sm"
+            className="border border-ted-red  p-12 bg-black/30 backdrop-blur-sm"
           >
-            <div className="w-full h-64 relative rounded-full overflow-hidden border-2 border-ted-red mb-4">
+            <div className="w-full h-64 relative  overflow-hidden mb-4">
               <Image
                 src={speaker.image}
                 alt={speaker.name}
@@ -150,13 +150,13 @@ const MobileSpeakers = () => (
 
     
       <div className="hidden md:block">
-        <div className="top-15 left-0 w-full flex items-center justify-center py-6 z-50">
-          <h1 className="desktop-heading text-8xl lg:text-9xl font-bold uppercase">
+        <div className="top-0 left-0 w-full flex items-center justify-center z-50">
+          <h1 className="desktop-heading text-8xl lg:text-9xl font-bold uppercase -mb-14">
             Speakers
           </h1>
         </div>
         <div className="img-group-container h-[300vh] pt-[80px] relative">
-          <div className="sticky top-0 overflow-hidden h-screen">
+          <div className="sticky top-10 overflow-hidden h-screen">
             <ul className="img-group flex h-full">
               {speakers.map((speaker, index) => (
                 <li
@@ -164,7 +164,7 @@ const MobileSpeakers = () => (
                   className="img-container w-screen flex-shrink-0 flex items-center justify-center px-18"
                 >
                   <div className="flex items-center gap-16 max-w-6xl w-full border border-ted-red p-16">
-                    <div className="relative w-96 h-96 rounded-full overflow-hidden border-4 border-ted-red">
+                    <div className="relative w-96 h-96 overflow-hidden">
                       <Image
                         src={speaker.image}
                         alt={speaker.name}

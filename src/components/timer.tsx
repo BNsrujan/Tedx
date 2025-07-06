@@ -49,7 +49,7 @@ function Timer() {
     <div
       className={`min-h-screen flex flex-col justify-center items-center px-4 py-8 ${orbitron.className}`}
     >
-      <div className="flex flex-col justify-center items-center w-full max-w-[1200px] min-h-[300px] md:h-[700px] bg-ted-red rounded shadow-2xl p-6 md:p-12">
+      <div className="flex flex-col justify-center items-center w-full max-w-[1200px] min-h-[300px] md:h-[800px] bg-ted-red rounded shadow-2xl p-6 md:p-12">
         
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold uppercase text-black text-center mb-10 tracking-wide">
           Time is Ticking

@@ -14,6 +14,7 @@ export async function POST(request: Request) {
       console.log('EMAIL_USER:', process.env.EMAIL_USER);
       console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
 
+      
   try {
     const { email, name, phone, type } = await request.json();
     console.log('📥 Received:', { email, name, phone, type });
