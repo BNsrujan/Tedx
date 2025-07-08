@@ -45,10 +45,12 @@ export function TEDxhidden() {
                   <div className="lg:hidden flex flex-col items-center">
                     <TypewriterEffect
                       words={[
-                        { text: "An Idea.", className: "text-white " },
-                         { text: "A Story.", className: "text-white " },
-                        { text: "A ", className: "text-white " },
-                         { text: "Transformation", className: "text-ted-red " },
+                        { text: "An", className: "text-white " },
+                        { text: "Idea.", className: "text-white " },
+                        { text: "A", className: "text-white" },
+                        { text: "Story.", className: "text-white" },
+                        { text: "A", className: "text-white" },
+                        { text: "Transformation", className: "text-ted-red" },
                        
                       ]}
                       onHoverChange={isHovered}

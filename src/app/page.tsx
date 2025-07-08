@@ -25,10 +25,10 @@ export default function Home() {
       {/* https://magicui.design/docs/components/hyper-text */}
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
       {/* https://ui.aceternity.com/components/world-map*/}
-      <Link href="/tickets" className="fixed bottom-4 right-4 z-50 md:hidden" aria-label="Book a Ticket">
-        <Button className="bg-ted-red text-white shadow-lg rounded-sm px-4 py-6 text-lg font-bold flex items-center gap-2">
-          <Image src="/vip.png" alt="VIP Ticket" width={28} height={28} className="w-7 h-7" />
-          {/* Book a Ticket */}
+      <Link href="/tickets" className="fixed bottom-0 w-full   z-50 md:hidden" aria-label="Book a Ticket">
+        <Button className="bg-ted-red text-white  w-full py-2  text-lg font-bold flex items-center gap-2">
+          {/* <Image src="/vip.png" alt="VIP Ticket" width={28} height={28} className="w-7 h-7" /> */}
+          Book a Ticket
         </Button>
       </Link>
     </div>
