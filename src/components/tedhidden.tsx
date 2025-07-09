@@ -42,19 +42,22 @@ export function TEDxhidden() {
                   
                   </div>
                   {/* Mobile view (base to md) - three lines */}
-                  <div className="lg:hidden flex flex-col items-center">
+                  <div className="lg:hidden flex flex-col items-center w-full max-w-full break-words">
                     <TypewriterEffect
                       words={[
                         { text: "An", className: "text-white " },
                         { text: "Idea.", className: "text-white " },
+
+
                         { text: "A", className: "text-white" },
                         { text: "Story.", className: "text-white" },
+
                         { text: "A", className: "text-white" },
                         { text: "Transformation", className: "text-ted-red" },
-                       
+
                       ]}
                       onHoverChange={isHovered}
-                      className="text-white text-5xl sm:text-5xl md:text-6xl leading-tight uppercase"
+                      className="text-white text-4xl sm:text-4xl md:text-6xl leading-tight uppercase"
                       cursorClassName="bg-ted-red"
                     />
                    </div>

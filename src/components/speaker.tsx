@@ -57,23 +57,12 @@ const speakers: Speaker[] = [
       },
     ],
   },
- // {
+  // {
   //   name: "Suyog Shetty",
   //   image: "/speaker/suyog_shetty.jpg",
   //   description:
   //     "He is the co-founder and CEO of Niveus Solutions, a top cloud engineering company. He has led the firm to win several awards, including 2024's Breakthrough Partner of the Year  Asia Pacific.",
-  //   links: [
-  //     {
-  //       href: "https://www.linkedin.com/in/suyog-shetty-79693730",
-  //       icon: "/logos/LinkedIn.svg",
-  //       alt: "LinkedIn",
-  //     },
-  //     {
-  //       href: "https://www.instagram.com/suyogshetty03",
-  //       icon: "/logos/Instagram.svg",
-  //       alt: "Instagram",
-  //     },
-  //   ],
+  //   links: [],
   // },
   {
     name: "Arjun Deshpande",
@@ -165,7 +154,24 @@ const speakers: Speaker[] = [
       },
     ],
   },
- 
+  {
+    name: "Suyog Shetty",
+    image: "/speaker/suyog_shetty.jpg",
+    description:
+      "He is the co-founder and CEO of Niveus Solutions, a top cloud engineering company. He has led the firm to win several awards, including 2024's Breakthrough Partner of the Year  Asia Pacific.",
+    links: [
+      {
+        href: "https://www.linkedin.com/in/suyog-shetty-79693730",
+        icon: "/logos/LinkedIn.svg",
+        alt: "LinkedIn",
+      },
+      {
+        href: "https://www.instagram.com/suyogshetty03",
+        icon: "/logos/Instagram.svg",
+        alt: "Instagram",
+      },
+    ],
+  },
 ];
 
 const MobileSpeakers = () => (
@@ -306,7 +312,7 @@ export default function Speaker() {
                       <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                         {speaker.description}
                       </p>
-                      <div className=" absolute  bottom-0 right-0 flex gap-3 lg:gap-4   content-between cursor-none">
+                      <div className=" absolute top-0  right-0 flex gap-3 lg:gap-4   content-between cursor-none">
                         {speaker.links && speaker.links.map((link) => (
                           <a
                             key={link.alt}

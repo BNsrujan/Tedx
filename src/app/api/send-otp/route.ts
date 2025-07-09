@@ -10,8 +10,14 @@ function generateOTP() {
 }
 
 export async function POST(request: Request) {
+    console.log('🔥 API /api/send-otp called roter');
+      console.log('EMAIL_USER:', process.env.EMAIL_USER);
+      console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
+
+      
   try {
     const { email, name, phone, type } = await request.json();
+    console.log('📥 Received:', { email, name, phone, type });
 
     if (!email) {
       return NextResponse.json(
@@ -70,6 +76,8 @@ export async function POST(request: Request) {
       `,
     });
 
+      console.log('EMAIL_USER:', process.env.EMAIL_USER);
+      console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
     return NextResponse.json({ message: 'OTP sent successfully' });
   } catch (error) {
     console.error('Error sending OTP:', error);

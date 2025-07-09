@@ -57,7 +57,7 @@ export default function BookTicketPage() {
 
                 <div className="bg-white">
                   <Image
-                    src={"/QRcode/insta.png"}
+                    src={"/QRcode/insta.svg"}
                     alt="QR Code"
                     className="w-24 h-24 p-0 border-black border-2"
                     width={180}
@@ -96,7 +96,7 @@ export default function BookTicketPage() {
             </div>
             <div className="bg-black p-1 rounded inline-block">
               <Image
-                src={"/QRcode/insta.png"}
+                src={"/QRcode/insta.svg"}
                 alt="QR Code"
                 className="w-16 h-16"
                 width={180}
@@ -123,8 +123,13 @@ export default function BookTicketPage() {
 
           <div className="relative z-10">
             <div className="mb-4">
-              <h2 className="text-xl font-bold text-red-1800 mb-1 ">TEDx</h2>
-              <h1 className="text-2xl font-light mb-3">AIET</h1>
+            <Image
+                  src={"/logo-white.png"}
+                  alt=""
+                  width={180}
+                  height={180}
+                  className="-ml-4"
+                />
               <span className="inline-block bg-red-600 text-white px-3 py-1 text-xs font-bold tracking-wider mb-4">
                 VIP EXPERIENCE
               </span>
@@ -140,7 +145,7 @@ export default function BookTicketPage() {
               </div>
               <div className="bg-white ">
                 <Image
-                  src={"/QRcode/insta.png"}
+                  src={"/QRcode/insta.svg"}
                   alt="QR Code"
                   className="w-16 h-16"
                   width={180}
@@ -189,7 +194,7 @@ export default function BookTicketPage() {
             <div className="text-center">
               <div className="bg-black   inline-block mb-1">
                 <Image
-                  src={"/qr.png"}
+                  src={"/QRcode/insta.svg"}
                   alt="QR Code"
                   className="w-12 h-12"
                   width={180}
