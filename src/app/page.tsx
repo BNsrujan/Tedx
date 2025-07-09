@@ -25,12 +25,12 @@ export default function Home() {
       <WobbleCards/>
              
       
-      <Whatistedx/>
-        <Marquee />
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
+        <Marquee />
       <Timer />
+      <Whatistedx/>
       <Ticket />
       {/* <IntroSection /> */}
       {/* <MarqueeDemo/> */}
