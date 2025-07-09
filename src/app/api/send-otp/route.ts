@@ -10,57 +10,64 @@ function generateOTP() {
 }
 
 export async function POST(request: Request) {
-    console.log('🔥 API /api/send-otp called roter');
-      console.log('EMAIL_USER:', process.env.EMAIL_USER);
-      console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
+  console.log('🔥 API /api/send-otp called roter');
+  console.log('EMAIL_USER:', process.env.EMAIL_USER);
+  console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
 
-      
+  let email, name, phone, type, otp, expiresAt;
   try {
-    const { email, name, phone, type } = await request.json();
+    ({ email, name, phone, type } = await request.json());
     console.log('📥 Received:', { email, name, phone, type });
-
     if (!email) {
       return NextResponse.json(
         { error: 'Email is required' },
         { status: 400 }
       );
     }
+    otp = generateOTP();
+    expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes from now
+  } catch (err) {
+    console.error('❌ Error parsing request body:', err);
+    return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
+  }
 
-    const otp = generateOTP();
-    const expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes from now
-
+  try {
     // Store OTP in database
-    await db.insert(otps).values({
-      email,
-      otp,
-      expiresAt,
-    });
+    await db.insert(otps).values({ email, otp, expiresAt });
+    console.log('✅ OTP inserted into DB');
+  } catch (err) {
+    console.error('❌ Error inserting OTP into DB:', err);
+    return NextResponse.json({ error: 'Database error (OTP)' }, { status: 500 });
+  }
 
+  try {
     // Create or update user
-    await db.insert(users).values({
-      email,
-      name,
-      phone,
-      type,
-    }).onConflictDoUpdate({
+    await db.insert(users).values({ email, name, phone, type }).onConflictDoUpdate({
       target: users.email,
-      set: {
-        name,
-        phone,
-        type,
-      },
+      set: { name, phone, type },
     });
+    console.log('✅ User upserted into DB');
+  } catch (err) {
+    console.error('❌ Error upserting user into DB:', err);
+    return NextResponse.json({ error: 'Database error (user)' }, { status: 500 });
+  }
 
-    // Create transporter
-    const transporter = nodemailer.createTransport({
+  let transporter;
+  try {
+    transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
       },
     });
+    console.log('✅ Nodemailer transporter created');
+  } catch (err) {
+    console.error('❌ Error creating nodemailer transporter:', err);
+    return NextResponse.json({ error: 'Email configuration error' }, { status: 500 });
+  }
 
-    // Send email
+  try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
@@ -75,17 +82,13 @@ export async function POST(request: Request) {
         </div>
       `,
     });
-
-      console.log('EMAIL_USER:', process.env.EMAIL_USER);
-      console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
-    return NextResponse.json({ message: 'OTP sent successfully' });
-  } catch (error) {
-    console.error('Error sending OTP:', error);
-    return NextResponse.json(
-      { error: 'Failed to send OTP' },
-      { status: 500 }
-    );
+    console.log('✅ Email sent');
+  } catch (err) {
+    console.error('❌ Error sending email:', err);
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
+
+  return NextResponse.json({ message: 'OTP sent successfully' });
 }
 
 export async function PUT(request: Request) {

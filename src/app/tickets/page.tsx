@@ -43,10 +43,7 @@ export default function TicketsPage() {
     try {
       setLoading(true);
       setError('');
-
-
-    console.log("🔥 /api/send-otp called");
-
+      console.log("🔥 /api/send-otp called");
       const response = await fetch('/api/send-otp', {
         method: 'POST',
         headers: {
@@ -54,16 +51,18 @@ export default function TicketsPage() {
         },
         body: JSON.stringify(formData),
       });
-    console.log("🔥 /api/send-otp sent");
-
+      console.log("🔥 /api/send-otp sent");
       console.log(JSON.stringify(formData));
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error('Server error: Received invalid response. Please try again later.');
+      }
       console.log(data)
-      
       if (!response.ok) {
         throw new Error(data.error || 'Failed to send OTP');
       }
-
       setShowOtpInput(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to send OTP');
@@ -83,17 +82,16 @@ export default function TicketsPage() {
         },
         body: JSON.stringify({ email: formData.email, otp }),
       });
-
-      const data = await response.json();
-
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error('Server error: Received invalid response. Please try again later.');
+      }
       if (!response.ok) {
         throw new Error(data.error || 'Failed to verify OTP');
       }
-
-      // Store user type in localStorage before redirecting
       localStorage.setItem('userType', formData.type);
-      
-      // If OTP is verified, proceed to price page
       router.push('/price');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to verify OTP');
