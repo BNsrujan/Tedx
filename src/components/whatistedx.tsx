@@ -17,7 +17,7 @@ const faqs = [
   {
     title: "what is TEDx?",
     content:
-      "A team of volunteers passionate about sharing ideas organizes each TEDx event within their community..",
+      "A team of volunteers passionate about sharing ideas organizes each TEDx event within their community.",
   },
   {
     title: "Can anyone attend a TEDx event?",
