@@ -231,7 +231,7 @@ export default function Speaker() {
   const progress = useTransform(scrollYProgress, [0, 0.2, 1], [0, 1, 1]);
   const left = useTransform(progress, [0, 1], ["25%", "2rem"]);
   const top = useTransform(progress, [0, 1], ["25%", "2rem"]);
-  const translate = useTransform(progress, [0, 1], ["-10%,-10%", "0%, 0%"]);
+  const translate = useTransform(progress, [0, 1], ["-25%,-25%", "0%, 0%"]);
   const fontSizeProgress = useTransform(progress, [0, 1], ["12rem", "3rem"]);
 
   useEffect(() => {
