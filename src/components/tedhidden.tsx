@@ -35,9 +35,7 @@ export function TEDxhidden() {
                         { text: "A", className: "text-white" },
                         { text: "Transformation", className: "text-ted-red" },
                       ]}
-                      onHoverChange={isHovered}
                       className="text-white text-5xl sm:text-5xl md:text-6xl lg:text-[6rem] xl:text-9xl leading-tight uppercase"
-                      cursorClassName="bg-ted-red"
                     />
                   
                   </div>
@@ -56,9 +54,7 @@ export function TEDxhidden() {
                         { text: "Transformation", className: "text-ted-red" },
 
                       ]}
-                      onHoverChange={isHovered}
                       className="text-white text-4xl sm:text-4xl md:text-6xl leading-tight uppercase"
-                      cursorClassName="bg-ted-red"
                     />
                    </div>
                 </div>

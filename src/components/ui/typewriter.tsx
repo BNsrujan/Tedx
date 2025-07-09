@@ -6,17 +6,13 @@ import { useEffect, useState } from "react";
 
 export const TypewriterEffect = ({
   words,
-  className,
-  cursorClassName,
-  onHoverChange
+  className
 }: {
   words: {
     text: string;
     className?: string;
   }[];
   className?: string;
-  cursorClassName?: string;
-  onHoverChange?: boolean;
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
