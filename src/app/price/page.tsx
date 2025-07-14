@@ -102,7 +102,7 @@ export default function PricePage() {
                 : 'Student Ticket Price: ₹300'}
             </p>
             <p className='text-sm text-gray-500'>
-              After payment, you will receive a confirmation email
+              Have questions about payment? Contact us here: +91 96220 30738
             </p>
           </div>
         </div>

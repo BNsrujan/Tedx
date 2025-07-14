@@ -28,14 +28,12 @@ const faqs = [
 
 export default function Whatistedx() {
   return (
-    <section className="max-w-4xl mx-auto px-6 py-20">
+    <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Heading */}
       <div className="text-center mb-14">
       
-        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-extrabold tracking-tight flex items-baseline justify-center gap-2">
-          <span className="text-ted-red font-black">TED</span>
-          <span className="absolute text-ted-red font-black text-[0.5em]">x</span>{" "}
-          <span className="font-light text-white ml-4">AIET</span>
+        <h2 className="text-5xl sm:text-6xl md:text-4xl lg:text-6xl  text-white font-extrabold tracking-tight flex items-baseline justify-center gap-2">
+          Frequently Asked Questions
         </h2>
       </div>
 

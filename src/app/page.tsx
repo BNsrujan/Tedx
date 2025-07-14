@@ -26,7 +26,9 @@ export default function Home() {
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
+        <Marquee />
       <Timer />
+      <Whatistedx/>
       <Ticket />
       
       {/* <IntroSection /> */}
