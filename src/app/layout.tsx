@@ -16,6 +16,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "TEDx AIET",
   description: "TEDx AIET - Ideas Worth Spreading",
+  icons: {
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/icon.svg",
+    apple: "/favicon/apple-touch-icon.png",
+  },
+  manifest: "/favicon/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -23,6 +29,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={inter.variable}>
+
       <head>
         <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml" />

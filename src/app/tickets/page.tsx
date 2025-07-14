@@ -94,6 +94,7 @@ export default function TicketsPage() {
         throw new Error(data.error || 'Failed to verify OTP');
       }
       localStorage.setItem('userType', formData.type);
+      localStorage.setItem('userEmail', formData.email);
       router.push('/price');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to verify OTP');

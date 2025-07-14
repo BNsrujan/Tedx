@@ -19,19 +19,16 @@ import Whatistedx from "@/components/whatistedx";
 export default function Home() {
   return (
     <div className="bg-black">
-
-
       <TEDxhidden/>
       <WobbleCards/>
-             
-      
       <Whatistedx/>
-        <Marquee />
+      <Marquee />
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
       <Timer />
       <Ticket />
+      
       {/* <IntroSection /> */}
       {/* <MarqueeDemo/> */}
       {/* https://magicui.design/docs/components/hyper-text */}
