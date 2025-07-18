@@ -10,6 +10,8 @@ export const users = pgTable('users', {
   isVerified: boolean('is_verified').default(false),
   hasPaid: boolean('has_paid').default(false),
   transactionPhotoUrl: text('transaction_photo_url'),
+  lastPaymentId: text('last_payment_id'),
+  lastPaymentDate: timestamp('last_payment_date'),
 });
 
 export const otps = pgTable('otps', {
