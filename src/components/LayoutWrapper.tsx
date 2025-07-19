@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Helix } from 'ldrs/react'
 import 'ldrs/react/Helix.css'
+
 interface LayoutWrapperProps {
   children: React.ReactNode;
   loadingTime?: number;
@@ -13,7 +14,7 @@ interface LayoutWrapperProps {
 
 export default function LayoutWrapper({
   children,
-  loadingTime = 1000,
+  loadingTime = 500,
 }: LayoutWrapperProps) {
   const [loading, setLoading] = useState<boolean>(true);
 

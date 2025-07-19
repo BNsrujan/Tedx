@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import SmoothScrollProvider from "@/components/smoothscroolprovider";
-
+import Script from "next/script";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -28,6 +28,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+    <>
     <html lang="en" className={inter.variable}>
 
       <head>
@@ -37,10 +38,14 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body className={`${inter.className} cursor-none font-light antialiased`}>
+        
         <SmoothScrollProvider>
           <LayoutWrapper>{children}</LayoutWrapper>
         </SmoothScrollProvider>
+      
       </body>
     </html>
+    <Script src="https://checkout.razorpay.com/v1/checkout.js"/>
+    </>
   );
 }

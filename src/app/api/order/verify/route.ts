@@ -1,4 +1,3 @@
-
 import crypto from "crypto";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
@@ -39,5 +38,4 @@ export async function POST(req: Request) {
         .where(eq(users.email, email));
 
     return NextResponse.json({ message: "payment success", error: false }, { status: 200 });
-}
-
+} 
