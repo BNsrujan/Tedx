@@ -23,10 +23,27 @@ export default function PricePage() {
   };
 
   const handleUpload = async () => {
-    if (!file) return;
+    if (!file) {
+      setError('Please select a file first');
+      return;
+    }
+    
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      setError('Please select an image file');
+      return;
+    }
+    
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      setError('File size must be less than 5MB');
+      return;
+    }
+    
     setUploading(true);
     setError('');
     setSuccess(false);
+    
     try {
       // Upload to Vercel Blob
       const uploadRes = await fetch('/api/upload', {
@@ -37,26 +54,60 @@ export default function PricePage() {
         },
         body: file,
       });
-      if (!uploadRes.ok) throw new Error('Failed to upload image');
+      
+      if (!uploadRes.ok) {
+        let errorMessage = `Upload failed with status: ${uploadRes.status}`;
+        try {
+          const errorData = await uploadRes.json();
+          if (errorData.error) {
+            errorMessage = errorData.error;
+          }
+        } catch (parseError) {
+          console.error('Failed to parse error response:', parseError);
+        }
+        throw new Error(errorMessage);
+      }
+      
       const blob = await uploadRes.json();
+      
+      if (!blob.url) {
+        throw new Error('No URL returned from upload');
+      }
+      
       const photoUrl = blob.url;
+      
       // Save URL to DB
       const email = localStorage.getItem('userEmail');
-      if (!email) throw new Error('User email not found');
+      if (!email) {
+        throw new Error('User email not found. Please log in again.');
+      }
+      
       const saveRes = await fetch('/api/transaction-photo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, photoUrl }),
       });
-      if (!saveRes.ok) throw new Error('Failed to save photo URL');
+      
+      if (!saveRes.ok) {
+        const errorData = await saveRes.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to save photo URL');
+      }
+      
       setSuccess(true);
+      setFile(null); // Clear the file input
+      
+      // Reset file input
+      const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+      if (fileInput) fileInput.value = '';
+      
     } catch (err) {
+      console.error('Upload error:', err);
       if (err instanceof Error) {
         setError(err.message);
       } else {
-        setError('Upload failed');
+        setError('Upload failed. Please try again.');
       }
-     } finally {
+    } finally {
       setUploading(false);
     }
   };
