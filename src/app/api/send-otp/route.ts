@@ -10,14 +10,11 @@ function generateOTP() {
 }
 
 export async function POST(request: Request) {
-  console.log('🔥 API /api/send-otp called');
-  console.log('EMAIL_USER:', process.env.EMAIL_USER);
-  console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '✔️ Set' : '❌ Not Set');
+
 
   let email, name, phone, type, otp, expiresAt;
   try {
     ({ email, name, phone, type } = await request.json());
-    console.log('📥 Received:', { email, name, phone, type });
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
@@ -36,9 +33,8 @@ export async function POST(request: Request) {
       expiresAt,
       isUsed: false // Ensure you include this if your schema requires it
     });
-    console.log('✅ OTP inserted into DB');
   } catch (err) {
-    console.error('❌ Error inserting OTP into DB:', err);
+    console.error(err)
     return NextResponse.json({ error: 'Database error (OTP)' }, { status: 500 });
   }
 
@@ -47,7 +43,6 @@ export async function POST(request: Request) {
       target: users.email,
       set: { name, phone, type },
     });
-    console.log('✅ User upserted into DB');
   } catch (err) {
     console.error('❌ Error upserting user into DB:', err);
     return NextResponse.json({ error: 'Database error (user)' }, { status: 500 });
@@ -62,7 +57,6 @@ export async function POST(request: Request) {
         pass: process.env.EMAIL_PASSWORD,
       },
     });
-    console.log('✅ Nodemailer transporter created');
   } catch (err) {
     console.error('❌ Error creating nodemailer transporter:', err);
     return NextResponse.json({ error: 'Email configuration error' }, { status: 500 });
@@ -83,7 +77,6 @@ export async function POST(request: Request) {
         </div>
       `
     });
-    console.log('✅ Email sent');
   } catch (err) {
     console.error('❌ Error sending email:', err);
     return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
@@ -100,7 +93,6 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: 'Email and OTP are required' }, { status: 400 });
     }
 
-    // Use select instead of findFirst
     const [validOtp] = await db.select()
       .from(otps)
       .where(

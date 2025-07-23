@@ -13,7 +13,8 @@ export async function POST(req: Request) {
       .set({ transactionPhotoUrl: photoUrl })
       .where(eq(users.email, email));
     return NextResponse.json({ message: 'Transaction photo URL saved' });
-  } catch (error) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error ) {
     return NextResponse.json({ error: 'Failed to save transaction photo URL' }, { status: 500 });
   }
 } 

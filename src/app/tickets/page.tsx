@@ -45,7 +45,6 @@ export default function TicketsPage() {
     try {
       setLoading(true);
       setError('');
-      console.log("🔥 /api/send-otp called");
       const response = await fetch('/api/send-otp', {
         method: 'POST',
         headers: {
@@ -53,7 +52,6 @@ export default function TicketsPage() {
         },
         body: JSON.stringify(formData),
       });
-      console.log("🔥 /api/send-otp sent");
       console.log(JSON.stringify(formData));
       let data;
       try {

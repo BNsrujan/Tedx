@@ -50,9 +50,13 @@ export default function PricePage() {
       });
       if (!saveRes.ok) throw new Error('Failed to save photo URL');
       setSuccess(true);
-    } catch (err: any) {
-      setError(err.message || 'Upload failed');
-    } finally {
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Upload failed');
+      }
+     } finally {
       setUploading(false);
     }
   };
@@ -88,8 +92,8 @@ export default function PricePage() {
           </div>
           {/* Upload Button and Input */}
           <div className='flex flex-col items-center gap-2 mt-4'>
-            <Input type='file' accept='image/*' onChange={handleFileChange} className='w-full max-w-xs' />
-            <Button onClick={handleUpload} disabled={!file || uploading} className='w-full max-w-xs bg-red-500 text-white'>
+            <Input type='file' accept='image/*' onChange={handleFileChange} className='w-full max-w-xs bg-black font-semibold' />
+            <Button onClick={handleUpload} disabled={!file || uploading} className='w-full max-w-xs bg-red-500  text-white'>
               {uploading ? 'Uploading...' : 'Upload the transaction photo'}
             </Button>
             {success && <p className='text-green-400 text-sm'>Photo uploaded successfully!</p>}
