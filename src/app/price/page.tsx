@@ -119,10 +119,11 @@ export default function PricePage() {
           {userType === 'corporate' ? 'Corporate Ticket' : 'Student Ticket'}
         </h1>
         <div className='space-y-4'>
-          <p className='text-lg text-gray-300'>
+          <p className={`${success ? "hidden" : "block" } text-lg text-gray-300`}>
             Please scan the QR code below to complete your payment
           </p>
-          <div className='bg-white p-4 inline-block'>
+          <h1  className={`${success ? "block" : "hidden"} font-bold text-2xl`}>Once your transaction is verified, your ticket will be sent to your email. Thank you for being a part of TEDxAIET!</h1>
+          <div className={`bg-white p-4  flex justify-center ${success ? "hidden" : "block"}`}>
             {userType === 'corporate' ? (
               <Image
                 src={'/400r.svg'}

@@ -281,7 +281,7 @@ export default function Speaker() {
                       />
                     </div>
                     <div className="relative text-center md:text-left  h-full  flex flex-col justify-center">
-                      <h3 className="text-2xl font-mono font-bold mb-1 text-ted-red">
+                      <h3 className="text-5xl font-mono font-bold mb-1 text-ted-red">
                         #{String(index + 1).padStart(1, "")}
                       </h3>
                       <h4 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
