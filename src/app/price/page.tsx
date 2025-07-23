@@ -64,7 +64,7 @@ export default function PricePage() {
   return (
     <div className='min-h-screen flex flex-col justify-center items-center w-full bg-black text-white p-4'>
       <div className='w-full max-w-md space-y-8 text-center'>
-        <h1 className='text-4xl font-bold text-red-500'>
+        <h1 className='text-4xl font-bold text-red-500 pt-[70px]'>
           {userType === 'corporate' ? 'Corporate Ticket' : 'Student Ticket'}
         </h1>
         <div className='space-y-4'>
@@ -92,6 +92,7 @@ export default function PricePage() {
           </div>
           {/* Upload Button and Input */}
           <div className='flex flex-col items-center gap-2 mt-4'>
+            <h1>Upload the Transaction ScreenShot</h1>
             <Input type='file' accept='image/*' onChange={handleFileChange} className='w-full max-w-xs bg-black font-semibold' />
             <Button onClick={handleUpload} disabled={!file || uploading} className='w-full max-w-xs bg-red-500  text-white'>
               {uploading ? 'Uploading...' : 'Upload the transaction photo'}

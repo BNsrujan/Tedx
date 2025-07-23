@@ -40,6 +40,24 @@ const speakers: Speaker[] = [
     ],
   },
   {
+    name: "Suyog Shetty",
+    image: "/speaker/suyog_shetty.jpg",
+    description:
+      "He is the co-founder and CEO of Niveus Solutions, a top cloud engineering company. He has led the firm to win several awards, including 2024's Breakthrough Partner of the Year  Asia Pacific.",
+    links: [
+      {
+        href: "https://www.linkedin.com/in/suyog-shetty-79693730",
+        icon: "/logos/LinkedIn.svg",
+        alt: "LinkedIn",
+      },
+      {
+        href: "https://www.instagram.com/suyogshetty03",
+        icon: "/logos/Instagram.svg",
+        alt: "Instagram",
+      },
+    ],
+  },
+  {
     name: "Satish Patla",
     image: "/speaker/satish_patla.jpg",
     description:
@@ -57,31 +75,8 @@ const speakers: Speaker[] = [
       },
     ],
   },
-  // {
-  //   name: "Suyog Shetty",
-  //   image: "/speaker/suyog_shetty.jpg",
-  //   description:
-  //     "He is the co-founder and CEO of Niveus Solutions, a top cloud engineering company. He has led the firm to win several awards, including 2024's Breakthrough Partner of the Year  Asia Pacific.",
-  //   links: [],
-  // },
-  {
-    name: "Arjun Deshpande",
-    image: "/speaker/arjun.jpeg",
-    description:
-      "Disrupting pharma at 16, Arjun Deshpande built Generic Aadhaar to make medicines affordable, youth-led innovation that's healing India one pill at a time.",
-    links: [
-      {
-        href: "https://www.linkedin.com/in/arjun-deshpande-50393b178",
-        icon: "/logos/LinkedIn.svg",
-        alt: "LinkedIn",
-      },
-      {
-        href: "https://www.instagram.com/arjun.deshpande_official",
-        icon: "/logos/Instagram.svg",
-        alt: "Instagram",
-      },
-    ],
-  },
+
+
   {
     name: "Abhishek Mishra",
     image: "/speaker/abhishek-mishras.jpeg",
@@ -154,24 +149,7 @@ const speakers: Speaker[] = [
       },
     ],
   },
-  {
-    name: "Suyog Shetty",
-    image: "/speaker/suyog_shetty.jpg",
-    description:
-      "He is the co-founder and CEO of Niveus Solutions, a top cloud engineering company. He has led the firm to win several awards, including 2024's Breakthrough Partner of the Year  Asia Pacific.",
-    links: [
-      {
-        href: "https://www.linkedin.com/in/suyog-shetty-79693730",
-        icon: "/logos/LinkedIn.svg",
-        alt: "LinkedIn",
-      },
-      {
-        href: "https://www.instagram.com/suyogshetty03",
-        icon: "/logos/Instagram.svg",
-        alt: "Instagram",
-      },
-    ],
-  },
+
 ];
 
 const MobileSpeakers = () => (
