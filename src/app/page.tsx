@@ -18,7 +18,7 @@ import Whatistedx from "@/components/whatistedx";
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <div className="bg-black flex flex-col  justify-center content-center">
       <TEDxhidden/>
       <WobbleCards/>
       <ThreeDMarquees/>
@@ -35,8 +35,8 @@ export default function Home() {
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
       {/* https://ui.aceternity.com/components/world-map*/}
 
-      <Link href="/tickets" className="fixed bottom-0 w-full   z-50 md:hidden" aria-label="Book a Ticket">
-        <Button className="bg-ted-red text-white  w-full py-2  text-lg font-bold flex items-center gap-2">
+      <Link href="/tickets" className="fixed bottom-2 px-4 w-full  z-50 md:hidden" aria-label="Book a Ticket">
+        <Button className="bg-ted-red text-white  w-full py-6  rounded-sm text-lg font-bold flex items-center ">
           Book a Ticket
         </Button>
       </Link>

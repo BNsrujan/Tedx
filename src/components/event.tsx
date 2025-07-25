@@ -5,7 +5,7 @@ import { Timeline } from "@/components/ui/timeline";
 
 export function Event() {
   const eventData = [
-    { title: "09:30 AM", content: <p className="font-bold min-w-20">Inauguration & TEDx Rules</p> },
+    { title: "09:30 AM", content: <p className="font-bold min-w-20">Inauguration </p> },
     { title: "10:00 AM", content: <p className="font-bold min-w-20">Speaker 1</p> },
     { title: "10:25 AM", content: <p className="font-bold min-w-20">Speaker 2</p> },
     { title: "11:00 AM", content: <p className="font-bold min-w-20">Speaker 3</p> },

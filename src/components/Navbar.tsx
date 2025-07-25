@@ -180,7 +180,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
           <Link
             href="/tickets"
             onClick={() => setIsOpen(false)}
-            className="block bg-ted-red text-white text-center px-5 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
+            className="block bg-ted-red text-white text-center px-5 py-4 rounded-sm font-semibold hover:bg-red-700 transition"
           >
             Book Tickets
           </Link>

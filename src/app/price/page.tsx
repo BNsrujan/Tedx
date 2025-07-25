@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Lottie from "lottie-react";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import * as animationData from "@/components/lotties/SuccessTick.json";
 export default function PricePage() {
   const [userType, setUserType] = useState<string>("");
@@ -11,11 +11,19 @@ export default function PricePage() {
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
 
   useEffect(() => {
     const type = localStorage.getItem("userType");
     setUserType(type || "");
   }, []);
+
+  // Control Lottie animation when success state changes
+  useEffect(() => {
+    if (success && lottieRef.current) {
+      lottieRef.current.play();
+    }
+  }, [success]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -122,26 +130,27 @@ export default function PricePage() {
         <h1 className="text-4xl font-bold text-red-500 pt-[70px]">
           {userType === "corporate" ? "Corporate Ticket" : "Student Ticket"}
         </h1>
-        <div className="space-y-4">
+        <div className="space-y-4 flex justify-center items-center flex-col w-full">
           <p
             className={`${success ? "hidden" : "block"} text-lg text-gray-300`}
           >
             Please scan the QR code below to complete your payment
           </p>
-          <div className={` ${success ? "block" : "hidden"}`}>
+          <div className={` ${success ? "block" : "hidden"} flex justify-center contain-content`}>
             <Lottie
+              lottieRef={lottieRef}
               animationData={animationData}
               loop={false}
-              autoplay={true}
-              style={{ height: 400, width: 400 }}
+              autoplay={false}
+              style={{ height: 100, width: 100 }}
             />
           </div>
           <h1 className={`${success ? "block" : "hidden"} font-bold text-2xl`}>
-            Once your transaction is verified, your ticket will be sent to your
-            email. Thank you
+            After verification, your ticket will be sent to your
+            email.
           </h1>
           <div
-            className={`bg-white p-4  flex justify-center ${success ? "hidden" : "block"
+            className={`bg-white   w-[300px] flex justify-center ${success ? "hidden" : "block"
               }`}
           >
             {userType === "corporate" ? (
