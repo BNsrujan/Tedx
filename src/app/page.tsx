@@ -14,7 +14,7 @@ import { WobbleCards } from "@/components/why";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Whatistedx from "@/components/whatistedx";
-
+import MarqueeDemo from "@/components/sponser";
 
 export default function Home() {
   return (
@@ -26,11 +26,12 @@ export default function Home() {
       <Speaker/>
         <Marquee />
       <Timer />
+      <MarqueeDemo/>
+
       <Whatistedx/>
       <Ticket />
       
       {/* <IntroSection /> */}
-      {/* <MarqueeDemo/> */}
       {/* https://magicui.design/docs/components/hyper-text */}
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
       {/* https://ui.aceternity.com/components/world-map*/}
