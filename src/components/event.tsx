@@ -10,14 +10,13 @@ export function Event() {
     { title: "10:25 AM", content: <p className="font-bold min-w-20">Speaker 2</p> },
     { title: "11:00 AM", content: <p className="font-bold min-w-20">Speaker 3</p> },
     { title: "11:25 AM", content: <p className="font-bold min-w-20">Speaker 4</p> },
-    { title: "12:00 PM", content: <p className="font-bold min-w-20">Interactive Session 1</p> },
+    { title: "12:00 PM", content: <p className="font-bold min-w-20">Networking session</p> },
     { title: "12:40 PM", content: <p className="font-bold min-w-20">Lunch Break</p> },
     { title: "02:00 PM", content: <p className="font-bold min-w-20">Speaker 5</p> },
     { title: "02:25 PM", content: <p className="font-bold min-w-20">Speaker 6</p> },
     { title: "03:00 PM", content: <p className="font-bold min-w-20">Speaker 7</p> },
-    { title: "03:25 PM", content: <p className="font-bold min-w-20">Speaker 8</p> },
-    { title: "03:50 PM", content: <p className="font-bold min-w-20">Interactive Session 2</p> },
-    { title: "04:30 PM", content: <p className="font-bold min-w-20">Valedictory Ceremony</p> },
+    { title: "03:25 PM", content: <p className="font-bold min-w-20">Interactive session</p> },
+    { title: "04:10 PM", content: <p className="font-bold min-w-20">Valedictory Ceremony</p> },
   ];
 
 

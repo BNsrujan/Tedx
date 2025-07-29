@@ -58,7 +58,7 @@ const speakers: Speaker[] = [
     ],
   },
   {
-    name: "Satish Patla",
+    name: "Patla Sathish Shetty",
     image: "/speaker/satish_patla.jpg",
     description:
       "Patla Satish Shetty, known as Yaksha Dhruva, is a celebrated Yakshagana Bhagavatha from the Tenkutittu tradition and lead singer of the Kateel Mela. He has performed globally and actively supports Yakshagana artists through his foundation.",
