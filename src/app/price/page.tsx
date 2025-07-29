@@ -201,7 +201,7 @@ export default function PricePage() {
                 : "Student Ticket Price: ₹300"}
             </p>
             <p className="text-sm text-gray-500">
-              Have questions about payment? Contact us here: +91 96220 30738
+              Have questions about payment? Contact us here: +91 63634 52392
             </p>
           </div>
         </div>
