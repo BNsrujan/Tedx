@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TEDxAIET Registration Confirmation</title>
+  </head>
+  <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #ffffff;">
+    <table width="100%" cellpadding="0" cellspacing="0" align="center" style="background-color: #ffffff;">
+      <tr>
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" style="border: 1px solid #919191; width: 600px; max-width: 100%;">
+            <!-- Header with Logo -->
+                <tr style="border-bottom: 2px solid #000000;">
+                  <td align="center" style="padding: 10px 0; border-bottom: 2px solid #000000">
+                    <span style="font-size: 32px; font-weight:900;  letter-spacing: -2px; color: #e62b1e; font-family: Arial, sans-serif;">TED</span>
+                    <sup style="font-size: 18px; font-weight: 900;  letter-spacing: -2px; color: #e62b1e; vertical-align: top;">x</sup>
+                    <span style="font-size: 32px; font-weight: 400; color: #000000; font-family: Arial, sans-serif;">AIET</span>
+                  </td>
+                </tr>
+
+            <!-- Content -->
+            <tr>
+              <td style="padding: 30px; color: #000000;">
+                <p style="font-size: 16px; margin: 0 0 10px;">Dear <strong>{{ $json.Name }}</strong>,</p>
+                <p style="font-size: 15px; margin: 0 0 15px;">Thank you for registering for the <strong>TEDxAIET</strong>.</p>
+
+                <table width="100%" style="font-size: 15px; margin: 20px 0;">
+                  <tr>
+                    <td style="padding: 4px 0; width: 35%; font-weight: bold;">Ticket ID:</td>
+                    <td >
+                      <span style="color: red; font-weight: bold;">#A1{{ $json.stage_id }}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 4px 0; font-weight: bold;">Date:</td>
+                    <td>16<sup>th</sup> Aug 2025</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 4px 0; font-weight: bold;">Venue:</td>
+                    <td>V.S Acharya hall, Alva's Vidyagiri Campus, Moodbidri</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 4px 0; font-weight: bold;">Time:</td>
+                    <td>9:30 AM – 04:30 PM</td>
+                  </tr>
+                </table>
+
+                <p style="font-size: 15px; margin: 0 0 30px;">Please carry the ticket ID as confirmation during entry.</p>
+
+                <!-- Team & Contact Info -->
+                <table width="100%" style="font-size: 15px; margin-top: 20px;">
+                  <tr>
+                    <td colspan="2" style="padding-bottom: 10px;">
+                      Warm regards,<br />
+                      <strong>TEDxAIET Team</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 35%; font-weight: bold;">Feel free to connect:</td>
+                    <td>
+                      <a href="https://www.instagram.com/tedxaiet" target="_blank" style="color: #E1306C; text-decoration: none;">
+                        @tedxaiet
+                      </a>
+                    </td>
+                  </tr>
+                
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="background-color: #e0e0e0; text-align: center; padding: 12px; font-size: 12px; color: #555;">
+                © 2025 TED<sup style="font-size: 10px;">x</sup>AIET. All rights reserved.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

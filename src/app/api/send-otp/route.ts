@@ -69,7 +69,7 @@ export async function POST(request: Request) {
       subject: 'Your TEDx AIET Verification Code',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <img src="https://i.postimg.cc/Cd3yvzy0/tedx-logo.png" alt="TEDx AIET Logo" style="width:100%; max-width: 300px; margin: 20px auto; display: block;" />
+          <img src="https://i.postimg.cc/JzbkCzM6/logo-black.png" alt="TEDx AIET Logo" style="width:100%; max-width: 300px; margin: 20px auto; display: block;" />
           <p>Your verification code is:</p>
           <h1 style="color: #e62b1e; font-size: 32px; letter-spacing: 5px;">${otp}</h1>
           <p>This code will expire in 10 minutes.</p>
