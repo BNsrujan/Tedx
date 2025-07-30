@@ -52,7 +52,7 @@ export default function BookTicketPage() {
                   <p className="font-bold text-lg">V.S ACHYARYA HALL,</p>
                   <p className=" text-sm">VIDYAGIRI NEAR MANGALORE</p>
                   <p className="text-gray-300 text-sm pt-4 ">TIME</p>
-                  <p className="font-bold text-lg">09:30 AM - 5:00 PM</p>
+                  <p className="font-bold text-lg">09:30 AM - 4:30 PM</p>
                 </div>
 
                 <div className="bg-white">
@@ -161,7 +161,7 @@ export default function BookTicketPage() {
 
             <div>
               <p className="text-gray-300 text-xs mb-1">TIME</p>
-              <p className="font-bold text-sm">10:00 AM - 8:00 PM</p>
+              <p className="font-bold text-sm">09:30 AM - 4:30 PM</p>
             </div>
           </div>
         </div>
