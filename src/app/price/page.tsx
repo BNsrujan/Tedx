@@ -128,7 +128,7 @@ export default function PricePage() {
     <div className="min-h-screen flex flex-col justify-center items-center w-full bg-black text-white p-4">
       <div className="w-full max-w-md space-y-8 text-center">
         <h1 className="text-4xl font-bold text-red-500 pt-[70px]">
-          {userType === "corporate" ? "Corporate Ticket" : "Student Ticket"}
+          {userType === "Premium" ? "Premium Ticket" : "Standard Ticket"}
         </h1>
         <div className="space-y-4 flex justify-center items-center flex-col w-full">
           <p
@@ -153,7 +153,7 @@ export default function PricePage() {
             className={`bg-white   w-[300px] flex justify-center ${success ? "hidden" : "block"
               }`}
           >
-            {userType === "corporate" ? (
+            {userType === "Premium" ? (
               <Image
                 src={"/400r.svg"}
                 alt="Payment QR Code"
@@ -196,9 +196,9 @@ export default function PricePage() {
           </div>
           <div className="space-y-2">
             <p className="text-gray-400">
-              {userType === "corporate"
-                ? "Corporate Ticket Price: ₹400"
-                : "Student Ticket Price: ₹300"}
+              {userType === "Premium"
+                ? "Premium Ticket Price: ₹400"
+                : "Standard Ticket Price: ₹300"}
             </p>
             <p className="text-sm text-gray-500">
               Have questions about payment? Contact us here: +91 63634 52392

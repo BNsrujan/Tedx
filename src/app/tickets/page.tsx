@@ -1,54 +1,54 @@
-"use client"
+"use client";
 
-
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
-import { Input } from '@/components/ui/input'
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
+import PriceComponent from "@/components/pricing-list";
 
 export default function TicketsPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    type: 'corporate'
+    name: "",
+    email: "",
+    phone: "",
+    type: "Standard",
   });
-  
-  const [otp, setOtp] = useState('');
+
+  const [otp, setOtp] = useState("");
   const [showOtpInput, setShowOtpInput] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   };
 
   const handleTypeChange = (value: string) => {
     setFormData({
       ...formData,
-      type: value
+      type: value,
     });
   };
 
   const sendOTP = async () => {
     try {
       setLoading(true);
-      setError('');
-      const response = await fetch('/api/send-otp', {
-        method: 'POST',
+      setError("");
+      const response = await fetch("/api/send-otp", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -57,15 +57,17 @@ export default function TicketsPage() {
       try {
         data = await response.json();
       } catch {
-        throw new Error('Server error: Received invalid response. Please try again later.');
+        throw new Error(
+          "Server error: Received invalid response. Please try again later."
+        );
       }
-      console.log(data)
+      console.log(data);
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send OTP');
+        throw new Error(data.error || "Failed to send OTP");
       }
       setShowOtpInput(true);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send OTP');
+      setError(err instanceof Error ? err.message : "Failed to send OTP");
     } finally {
       setLoading(false);
     }
@@ -74,11 +76,11 @@ export default function TicketsPage() {
   const verifyOTP = async () => {
     try {
       setLoading(true);
-      setError('');
-      const response = await fetch('/api/send-otp', {
-        method: 'PUT',
+      setError("");
+      const response = await fetch("/api/send-otp", {
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email: formData.email, otp }),
       });
@@ -86,16 +88,18 @@ export default function TicketsPage() {
       try {
         data = await response.json();
       } catch {
-        throw new Error('Server error: Received invalid response. Please try again later.');
+        throw new Error(
+          "Server error: Received invalid response. Please try again later."
+        );
       }
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to verify OTP');
+        throw new Error(data.error || "Failed to verify OTP");
       }
-      localStorage.setItem('userType', formData.type);
-      localStorage.setItem('userEmail', formData.email);
-      router.push('/price');
+      localStorage.setItem("userType", formData.type);
+      localStorage.setItem("userEmail", formData.email);
+      router.push("/price");
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to verify OTP');
+      setError(err instanceof Error ? err.message : "Failed to verify OTP");
     } finally {
       setLoading(false);
     }
@@ -111,17 +115,21 @@ export default function TicketsPage() {
   };
 
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center w-full bg-black text-white p-4'>
-      <div className='w-full max-w-md space-y-6'>
-        <h1 className='text-4xl font-bold text-red-500 text-center mb-8'>
+    <div className="min-h-screen flex flex-col justify-center items-center w-full bg-black text-white ">
+      <div>
+        <PriceComponent />
+      </div>
+      <div className="w-full px-4 sm:px-6 md:px-0 max-w-md mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-red-500 text-center mb-8">
           Ticket Registration
         </h1>
-        
-        <form onSubmit={handleSubmit} className='space-y-6'>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
           {!showOtpInput ? (
             <>
-              <div className='space-y-2'>
-                <label htmlFor="name" className='block text-sm font-medium'>
+              {/* Name */}
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-sm font-medium">
                   Name
                 </label>
                 <Input
@@ -130,12 +138,13 @@ export default function TicketsPage() {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className='bg-black border-gray-700 text-white'
+                  className="bg-black border-gray-700 text-white w-full"
                 />
               </div>
 
-              <div className='space-y-2'>
-                <label htmlFor="email" className='block text-sm font-medium'>
+              {/* Email */}
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-sm font-medium">
                   Email
                 </label>
                 <Input
@@ -144,12 +153,13 @@ export default function TicketsPage() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className='bg-black border-gray-700 text-white'
+                  className="bg-black border-gray-700 text-white w-full"
                 />
               </div>
 
-              <div className='space-y-2'>
-                <label htmlFor="phone" className='block text-sm font-medium'>
+              {/* Phone */}
+              <div className="space-y-2">
+                <label htmlFor="phone" className="block text-sm font-medium">
                   Phone Number
                 </label>
                 <Input
@@ -158,28 +168,30 @@ export default function TicketsPage() {
                   required
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className='bg-black border-gray-700 text-white'
+                  className="bg-black border-gray-700 text-white w-full"
                 />
               </div>
 
-              <div className='space-y-2'>
-                <label htmlFor="type" className='block text-sm font-medium'>
+              {/* Type */}
+              <div className="space-y-2">
+                <label htmlFor="type" className="block text-sm font-medium">
                   Type
                 </label>
-                <Select defaultValue="corporate" onValueChange={handleTypeChange}>
-                  <SelectTrigger className='bg-black border-gray-700 text-white'>
+                <Select defaultValue="Premium" onValueChange={handleTypeChange}>
+                  <SelectTrigger className="bg-black border-gray-700 text-white w-full">
                     <SelectValue placeholder="Select type" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="corporate">Corporate</SelectItem>
-                    <SelectItem value="student">Student</SelectItem>
+                    <SelectItem value="Standard">Standard</SelectItem>
+                    <SelectItem value="Premium">Premium</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
             </>
           ) : (
-            <div className='space-y-2'>
-              <label htmlFor="otp" className='block text-sm font-medium'>
+            // OTP input
+            <div className="space-y-2">
+              <label htmlFor="otp" className="block text-sm font-medium">
                 Enter Verification Code
               </label>
               <Input
@@ -190,24 +202,28 @@ export default function TicketsPage() {
                 onChange={(e) => setOtp(e.target.value)}
                 placeholder="Enter 6-digit code"
                 maxLength={6}
-                className='bg-black border-gray-700 text-white'
+                className="bg-black border-gray-700 text-white w-full"
               />
             </div>
           )}
 
-          {error && (
-            <p className="text-red-500 text-sm">{error}</p>
-          )}
+          {/* Error Message */}
+          {error && <p className="text-red-500 text-sm">{error}</p>}
 
-          <Button 
+          {/* Submit Button */}
+          <Button
             type="submit"
-            className='w-full bg-red-500 hover:bg-red-600 text-white py-3'
+            className="w-full bg-red-500 hover:bg-red-600 text-white py-3"
             disabled={loading}
           >
-            {loading ? 'Processing...' : showOtpInput ? 'Verify & Continue' : 'Send Verification Code'}
+            {loading
+              ? "Processing..."
+              : showOtpInput
+              ? "Verify & Continue"
+              : "Send Verification Code"}
           </Button>
         </form>
       </div>
     </div>
-  )
+  );
 }
