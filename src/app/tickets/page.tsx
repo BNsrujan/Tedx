@@ -183,7 +183,7 @@ export default function TicketsPage() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Premium">Premium</SelectItem>
-                    <SelectItem value="Standard">Standard</SelectItem>
+                    <SelectItem value="Standard">Standard (only for students )</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

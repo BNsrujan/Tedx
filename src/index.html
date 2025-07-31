@@ -4,76 +4,74 @@
     <meta charset="UTF-8" />
     <title>TEDxAIET Registration Confirmation</title>
   </head>
-  <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #ffffff;">
-    <table width="100%" cellpadding="0" cellspacing="0" align="center" style="background-color: #ffffff;">
-      <tr>
+  <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;  background-color: white;">
+    <table width="100%" cellpadding="0" cellspacing="0" align="center" style="background-color: white ;">
+      <tr style="">
         <td align="center">
-          <table width="600" cellpadding="0" cellspacing="0" style="border: 1px solid #919191; width: 600px; max-width: 100%;">
-            <!-- Header with Logo -->
-                <tr style="border-bottom: 2px solid #000000;">
-                  <td align="center" style="padding: 10px 0; border-bottom: 2px solid #000000">
-                    <span style="font-size: 32px; font-weight:900;  letter-spacing: -2px; color: #e62b1e; font-family: Arial, sans-serif;">TED</span>
-                    <sup style="font-size: 18px; font-weight: 900;  letter-spacing: -2px; color: #e62b1e; vertical-align: top;">x</sup>
-                    <span style="font-size: 32px; font-weight: 400; color: #000000; font-family: Arial, sans-serif;">AIET</span>
-                  </td>
-                </tr>
+          <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; width: 600px; max-width: 100%;  overflow: hidden;  border:1px solid black;">
 
-            <!-- Content -->
+            <!-- Header -->
             <tr>
-              <td style="padding: 30px; color: #000000;">
-                <p style="font-size: 16px; margin: 0 0 10px;">Dear <strong>{{ $json.Name }}</strong>,</p>
-                <p style="font-size: 15px; margin: 0 0 15px;">Thank you for registering for the <strong>TEDxAIET</strong>.</p>
+              <td align="center" style="padding: 24px; background-color: #000000;">
+                <span style="font-size: 36px; font-weight:900; color: #e62b1e;">TED</span>
+                <sup style="font-size: 20px; font-weight: 900; color: #e62b1e;">x</sup>
+                <span style="font-size: 36px; font-weight: 400; color: #ffffff;">AIET</span>
+              </td>
+            </tr>
 
-                <table width="100%" style="font-size: 15px; margin: 20px 0;">
+            <!-- Body -->
+            <tr>
+              <td style="padding: 32px; background-color: #ffffff; color: #111;">
+                <p style="font-size: 16px; margin: 0 0 12px;">Dear <strong>{{ $json.Name }}</strong>,</p>
+                <p style="font-size: 15px; margin: 0 0 20px; line-height: 1.6;">
+                  You're now officially registered for <strong>TEDxAIET</strong>! 
+                </p>
+
+                <!-- Ticket Box -->
+                <table width="100%" cellpadding="12" cellspacing="0" style="background-color: #f2f2f2; border: 1px solid #cccccc; border-radius: 6px; margin: 24px 0;">
                   <tr>
-                    <td style="padding: 4px 0; width: 35%; font-weight: bold;">Ticket ID:</td>
-                    <td >
-                      <span style="color: red; font-weight: bold;">#A1{{ $json.stage_id }}</span>
-                    </td>
+                    <td style="width: 35%; font-weight: bold;">Ticket ID:</td>
+                    <td><span style="color: #e62b1e; font-weight: bold;">#A1{{ $json.stage_id }}</span></td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 0; font-weight: bold;">Date:</td>
+                    <td style="font-weight: bold;"> Date:</td>
                     <td>16<sup>th</sup> Aug 2025</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 0; font-weight: bold;">Venue:</td>
-                    <td>V.S Acharya hall, Alva's Vidyagiri Campus, Moodbidri</td>
+                    <td style="font-weight: bold;"> Venue:</td>
+                    <td>V.S Acharya Hall, Alva's Vidyagiri Campus, Moodbidri</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 0; font-weight: bold;">Time:</td>
+                    <td style="font-weight: bold;">Time:</td>
                     <td>9:30 AM – 04:30 PM</td>
                   </tr>
                 </table>
 
-                <p style="font-size: 15px; margin: 0 0 30px;">Please carry the ticket ID as confirmation during entry.</p>
+                <p style="font-size: 15px; margin-bottom: 28px;">
+                  Please carry the ticket ID as confirmation during entry.
+                </p>
 
-                <!-- Team & Contact Info -->
-                <table width="100%" style="font-size: 15px; margin-top: 20px;">
-                  <tr>
-                    <td colspan="2" style="padding-bottom: 10px;">
-                      Warm regards,<br />
-                      <strong>TEDxAIET Team</strong>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 35%; font-weight: bold;">Feel free to connect:</td>
-                    <td>
-                      <a href="https://www.instagram.com/tedxaiet" target="_blank" style="color: #E1306C; text-decoration: none;">
-                        @tedxaiet
-                      </a>
-                    </td>
-                  </tr>
-                
-                </table>
+                <!-- Contact -->
+                <p style="margin: 0 0 20px;">Warm regards,<br />
+                  <strong>The TEDxAIET Team</strong>
+                </p>
+
+                <p style="font-size: 14px;">
+                  🔗 <strong>Connect with us:</strong><br />
+                  <a href="https://www.instagram.com/tedxaiet" target="_blank" style="color: #e62b1e; text-decoration: none;">
+                    @tedxaiet on Instagram
+                  </a>
+                </p>
               </td>
             </tr>
 
             <!-- Footer -->
             <tr>
-              <td style="background-color: #e0e0e0; text-align: center; padding: 12px; font-size: 12px; color: #555;">
+              <td style="background-color: #bbbbbb; text-align: center; padding: 16px; font-size: 12px; color: #000000;">
                 © 2025 TED<sup style="font-size: 10px;">x</sup>AIET. All rights reserved.
               </td>
             </tr>
+
           </table>
         </td>
       </tr>
