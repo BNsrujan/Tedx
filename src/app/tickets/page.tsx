@@ -19,7 +19,7 @@ export default function TicketsPage() {
     name: "",
     email: "",
     phone: "",
-    type: "Standard",
+    type: "Premium",
   });
 
   const [otp, setOtp] = useState("");
@@ -117,7 +117,7 @@ export default function TicketsPage() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center w-full bg-black text-white ">
       <div>
-        <PriceComponent />
+        {! showOtpInput && (<PriceComponent />)}
       </div>
       <div className="w-full px-4 sm:px-6 md:px-0 max-w-md mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-red-500 text-center mb-8">
@@ -182,8 +182,8 @@ export default function TicketsPage() {
                     <SelectValue placeholder="Select type" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Standard">Standard</SelectItem>
                     <SelectItem value="Premium">Premium</SelectItem>
+                    <SelectItem value="Standard">Standard</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
