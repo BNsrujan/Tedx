@@ -261,9 +261,9 @@ export default function Speaker() {
         </header>
         <section
           ref={containerRef}
-          className="img-group-container mt-[100vh] h-[700vh] relative"
+          className=" relative img-group-container mt-[100vh] h-[700vh] "
         >
-          <div className="sticky top-0 overflow-hidden h-screen">
+          <div className="sticky top-10 overflow-hidden h-screen">
             <ul className="img-group flex">
               {speakers.map((speaker, index) => (
                 <li
