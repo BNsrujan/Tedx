@@ -244,7 +244,7 @@ export default function Speaker() {
 
       {/* Desktop View */}
       <article className="w-[95vw] hidden md:block">
-        <header className="sticky  top-10 w-full h-[100vh]  flex items-center justify-center p-[26px] md:p-0 text-center">
+        <header className="sticky  top-15 w-full h-[100vh]  flex items-center justify-center p-[26px] md:p-0 text-center">
           <motion.span
             style={{
               position: "absolute",

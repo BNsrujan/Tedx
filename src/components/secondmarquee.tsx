@@ -6,15 +6,15 @@ export default function SecondMarquee() {
     <Marquee className="overflow-hidden whitespace-nowrap py-4 mt-8 mb-16 md:mb-32 border-y border-neutral-800">
       <div className="animate-marquee flex gap-16 text-white text-lg sm:text-xl font-medium uppercase tracking-widest">
         <span className="hover:animate-pulse hover:text-red-500 transition duration-300">
-           Inspiring Talks
+        Networking opportunities
         </span>
         <span className="opacity-50">|</span>
         <span className="hover:animate-pulse hover:text-red-500 transition duration-300">
-           Ideas Worth Spreading
+            Ideas Worth Spreading
         </span>
         <span className="opacity-50">|</span>
         <span className="hover:animate-pulse hover:text-red-500 transition duration-300">
-           Global Speakers
+            Speakers from across India
         </span>
         <span className="opacity-50">|</span>
         <span className="hover:animate-pulse hover:text-red-500 transition duration-300">
@@ -22,12 +22,12 @@ export default function SecondMarquee() {
         </span>
         <span className="opacity-50">|</span>
         <span className="hover:animate-pulse hover:text-red-500 transition duration-300">
-           AIET Mijar
+           TEDxAIET
         </span>
         <span className="opacity-50">|</span>
         <span className="hover:animate-pulse hover:text-red-500 transition duration-300">
            Book Your Seats
-        </span>
+        </span> |
       </div>
     </Marquee>
   );

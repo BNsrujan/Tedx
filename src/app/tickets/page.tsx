@@ -116,15 +116,16 @@ export default function TicketsPage() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center w-full bg-black text-white ">
+      <h1 className="text-3xl sm:text-5xl font-bold text-red-500 text-center mb-3 mt-30 md:mt-52">
+          Ticket Registration
+        </h1>
       <div>
         {! showOtpInput && (<PriceComponent />)}
       </div>
-      <div className="w-full px-4 sm:px-6 md:px-0 max-w-md mb-12">
-        <h1 className="text-3xl sm:text-4xl font-bold text-red-500 text-center mb-8">
-          Ticket Registration
-        </h1>
+      <div className="w-full px-4 sm:px-6 md:px-0 max-w-3xl mb-60">
+        
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 ">
           {!showOtpInput ? (
             <>
               {/* Name */}
@@ -138,7 +139,7 @@ export default function TicketsPage() {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="bg-black border-gray-700 text-white w-full"
+                  className="bg-black border-gray-700 text-white md:h-12 w-full"
                 />
               </div>
 
@@ -153,7 +154,7 @@ export default function TicketsPage() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="bg-black border-gray-700 text-white w-full"
+                  className="bg-black border-gray-700 text-white md:h-12 w-full"
                 />
               </div>
 
@@ -168,7 +169,7 @@ export default function TicketsPage() {
                   required
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="bg-black border-gray-700 text-white w-full"
+                  className="bg-black border-gray-700 text-white md:h-12 w-full"
                 />
               </div>
 
@@ -178,7 +179,7 @@ export default function TicketsPage() {
                   Type
                 </label>
                 <Select defaultValue="Premium" onValueChange={handleTypeChange}>
-                  <SelectTrigger className="bg-black border-gray-700 text-white w-full">
+                  <SelectTrigger className="bg-black border-gray-700 text-white md:h-12 w-full">
                     <SelectValue placeholder="Select type" />
                   </SelectTrigger>
                   <SelectContent>
@@ -213,7 +214,7 @@ export default function TicketsPage() {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-red-500 hover:bg-red-600 text-white py-3"
+            className="w-full bg-ted-red hover:bg-red-600 text-white md:py-7 md:mt-4"
             disabled={loading}
           >
             {loading

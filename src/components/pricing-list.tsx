@@ -2,7 +2,7 @@ import { Check } from "lucide-react"
 
 export default function PriceComponent() {
   return (
-    <div className="bg-black md:p-8 my-16 ">
+    <div className="bg-black md:p-8 my-4 pb-5">
       <div className=" md:max-w-7xl mx-auto ">
         {/* Limited Seats Notice */}
         <div className="mb-6">
@@ -12,12 +12,13 @@ export default function PriceComponent() {
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-2 gap-5 w-full ">
           {/* Standard Card */}
+          
           <div className=" relative bg-white text-black p-8 md:p-16 h-full w-full ">
             <div className="space-y-6">
               <div>
               <div className="flex justify-between items-baseline-last mb-2">
                 <h2 className="text-3xl md:text-7xl font-light mb-2 tracking-tighter ">Standard</h2>
-                <h3 className="font-bold">₹300</h3>
+                <h3 className="font-light text-2xl md:text-4xl">₹300</h3>
                 </div>
                 <hr className="fill-black"/>
                 <p className="text-sm opacity-90 py-2">For Attendees</p>
@@ -49,11 +50,13 @@ export default function PriceComponent() {
           </div>
 
           {/* Premium Card */}
+          
           <div className=" relative bg-ted-red text-white p-8 md:p-16 h-full w-full">
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between items-baseline-last mb-2">
-                <h2 className="text-3xl md:text-7xl font-light mb-2 tracking-tighter">Premium</h2> <h4 className="font-bold ">₹400</h4>
+                <h2 className="text-3xl md:text-7xl font-light mb-2 tracking-tighter">Premium</h2> 
+                <h4 className="font-light text-2xl md:text-4xl ">₹400</h4>
                 </div>
                 <hr className="fill-white"/>
                 <p className="text-sm py-2">For Attendees</p>

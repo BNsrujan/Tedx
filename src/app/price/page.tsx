@@ -5,17 +5,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import * as animationData from "@/components/lotties/SuccessTick.json";
+import { Check } from "lucide-react";
+import { useRouter } from "next/navigation";
 export default function PricePage() {
+
   const [userType, setUserType] = useState<string>("");
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const lottieRef = useRef<LottieRefCurrentProps>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const type = localStorage.getItem("userType");
     setUserType(type || "");
+
+    const email = localStorage.getItem("email");
+    console.log(email);
+    if(!email ){
+      router.push("/tickets")
+    }
   }, []);
 
   // Control Lottie animation when success state changes
@@ -125,7 +135,87 @@ export default function PricePage() {
 
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center w-full bg-black text-white p-4">
+    <div className="min-h-screen flex  flex-wrap-reverse  justify-center items-center gap-24 w-full bg-black text-white p-4">
+      <div  className="">
+        {userType === "Premium" ? (
+        
+          <div className=" relative bg-ted-red text-white p-8 md:p-16 h-full w-full">
+          <div className="space-y-6">
+            <div>
+              <div className="flex justify-between items-baseline-last mb-2">
+              <h2 className="text-3xl md:text-7xl font-light mb-2 tracking-tighter">Premium</h2> 
+              <h4 className="font-light text-2xl md:text-4xl ">₹400</h4>
+              </div>
+              <hr className="fill-white"/>
+              <p className="text-sm py-2">For Attendees</p>
+            </div>
+
+            <div className="space-y-4 text-xl md:text-2xl  tracking-tight flex justify-center flex-col w-full">
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 flex-shrink-0 " />
+                <span>Speaker Interaction</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 flex-shrink-0 " />
+                <span>Speakers from across India</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 flex-shrink-0 " />
+                <span>Networking opportunities</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 flex-shrink-0 " />
+                <span>1 Grand meal</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 flex-shrink-0 " />
+                <span>Exclusive TEDxAIET merchandise</span>
+              </div>
+            </div>
+
+            <div className="pt-8">
+              <p className=" absolute bottom-8 md:bottom-16 text-sm  font-bold ">For Students and Corporates</p>
+            </div>
+          </div>
+        </div>
+        ):(
+          <div className=" relative bg-white text-black p-8 md:p-16 h-full w-full ">
+            <div className="space-y-6">
+              <div>
+              <div className="flex justify-between items-baseline-last mb-2">
+                <h2 className="text-3xl md:text-7xl font-light mb-2 tracking-tighter ">Standard</h2>
+                <h3 className="font-light text-2xl md:text-4xl">₹300</h3>
+                </div>
+                <hr className="fill-black"/>
+                <p className="text-sm opacity-90 py-2">For Attendees</p>
+              </div>
+
+              <div className="space-y-4 text-xl md:text-2xl tracking-tight flex justify-center  flex-col w-full">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 flex-shrink-0" />
+                  <span>Speaker Interaction</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 flex-shrink-0" />
+                  <span>Speakers from across India</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 flex-shrink-0" />
+                  <span>Networking opportunities</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 flex-shrink-0" />
+                  <span>1 Grand meal</span>
+                </div>
+              </div>
+
+              <div className="pt-8 h-full flex  items-end">
+                <p className=" absolute bottom-8 md:bottom-16 text-sm  font-bold ">For Students only</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
       <div className="w-full max-w-md space-y-8 text-center">
         <h1 className="text-4xl font-bold text-red-500 pt-[70px]">
           {userType === "Premium" ? "Premium Ticket" : "Standard Ticket"}
@@ -172,34 +262,31 @@ export default function PricePage() {
             )}
           </div>
           {/* Upload Button and Input */}
-          <div className="flex flex-col items-center gap-2 mt-4">
+          <div className="flex flex-col items-center gap-4 mt-4 w-full">
             <h1>Upload the Transaction ScreenShot</h1>
             <Input
               type="file"
               accept="image/*"
               onChange={handleFileChange}
-              className="w-full max-w-xs bg-black font-semibold"
+              className="w-full max-w-lg bg-black font-semibold"
+              placeholder="Choose you file "
             />
             <Button
               onClick={handleUpload}
               disabled={!file || uploading}
-              className="w-full max-w-xs bg-red-500  text-white"
+              className="w-full max-w-lg py-6 bg-red-500  text-white"
             >
               {uploading ? "Uploading..." : "Upload the transaction photo"}
             </Button>
             {success && (
-              <p className="text-green-400 text-sm">
+              <p className="text-green-400 text-lg">
                 Photo uploaded successfully!
               </p>
             )}
             {error && <p className="text-red-400 text-sm">{error}</p>}
           </div>
+
           <div className="space-y-2">
-            <p className="text-gray-400">
-              {userType === "Premium"
-                ? "Premium Ticket Price: ₹400"
-                : "Standard Ticket Price: ₹300"}
-            </p>
             <p className="text-sm text-gray-500">
               Have questions about payment? Contact us here: +91 63634 52392
             </p>

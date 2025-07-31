@@ -63,7 +63,7 @@ export default function MarqueeDemo() {
 
   return (
     <div className="relative h-screen flex w-full flex-col items-center justify-center   overflow-hidden py-10">
-    <h3 className="text-5xl sm:text-6xl md:text-4xl lg:text-6xl  text-white font-extrabold tracking-tight flex items-baseline justify-center gap-2 mb-10">Sponsor</h3>
+    <h3 className="text-5xl sm:text-6xl md:text-4xl lg:text-6xl uppercase  text-white font-extrabold tracking-tight flex items-baseline justify-center gap-2 mb-10">Sponsor</h3>
     <div className=" relative max-w-7xl w-full">
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 z-10 bg-gradient-to-r from-black"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 z-10 bg-gradient-to-l from-black"></div>
