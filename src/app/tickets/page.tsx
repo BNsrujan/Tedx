@@ -127,6 +127,13 @@ export default function TicketsPage() {
       );
       return;
     }
+  
+    if (!showOtpInput) {
+      await sendOTP();
+    } else {
+      await verifyOTP();
+    }
+    
   };
   
 

@@ -21,7 +21,7 @@ export default function PricePage() {
     const type = localStorage.getItem("userType");
     setUserType(type || "");
 
-    const email = localStorage.getItem("email");
+    const email = localStorage.getItem("userEmail");
     console.log(email);
     if(!email ){
       router.push("/tickets")
