@@ -12,9 +12,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import PriceComponent from "@/components/pricing-list";
+import * as z from "zod";
+
+
+const user = z.object({
+  name: z.string().min(1, { message: "Name is required" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  phone: z.string().length(10,{message:"Phone number must be 10 digits long "}),
+  type: z.enum(["Premium", "Standard"]),
+})
+
 
 export default function TicketsPage() {
+
   const router = useRouter();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -107,12 +119,22 @@ export default function TicketsPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+  
+    const result = user.safeParse(formData);
+    if (!result.success) {
+      setError(
+        result.error?.issues.map((issue) => issue?.message).join(", ")
+      );
+      return;
+    }
+  
     if (!showOtpInput) {
       await sendOTP();
     } else {
       await verifyOTP();
     }
   };
+  
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center w-full bg-black text-white ">
