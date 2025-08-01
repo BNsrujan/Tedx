@@ -142,12 +142,10 @@ export default function TicketsPage() {
       <h1 className="text-3xl sm:text-5xl font-bold text-red-500 text-center mb-3 mt-30 md:mt-52">
           Ticket Registration
         </h1>
-      <div>
+      <div className="">
         {! showOtpInput && (<PriceComponent />)}
       </div>
       <div className="w-full px-4 sm:px-6 md:px-0 max-w-3xl mb-60">
-        
-
         <form onSubmit={handleSubmit} className="space-y-6 ">
           {!showOtpInput ? (
             <>

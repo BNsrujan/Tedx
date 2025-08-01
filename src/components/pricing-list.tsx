@@ -2,7 +2,7 @@ import { Check } from "lucide-react"
 
 export default function PriceComponent() {
   return (
-    <div className="bg-black md:p-8 my-4 pb-5">
+    <div className="bg-black md:p-8 mx-4 md:mx-0 my-4 pb-5">
       <div className=" md:max-w-7xl mx-auto ">
         {/* Limited Seats Notice */}
         <div className="mb-6">
