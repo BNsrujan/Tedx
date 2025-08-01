@@ -24,7 +24,7 @@ export function Event() {
     <div className="md:hidden px-4 py-10 space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-white mb-1">Event Schedule</h1>
-        <div className="w-full h-1 bg-ted-red mb-4"></div>
+        <div className="w-full h-1 bg-ted-red mb-7"></div>
       </div>
 
       <div className="space-y-4">
@@ -33,7 +33,7 @@ export function Event() {
             key={index}
             className="flex items-start gap-3 rounded border border-white/10 bg-white/5 p-2   content-center"
           >
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center h-full">
               <span className="text-ted-red text-[28px] leading-none">•</span>
             </div>
 

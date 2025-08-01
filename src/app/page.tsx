@@ -24,10 +24,9 @@ export default function Home() {
       <ThreeDMarquees/>
       <Event/>
       <Speaker/>
-        <Marquee />
+      <Marquee />
       <Timer />
       <MarqueeDemo/>
-
       <Whatistedx/>
       <Ticket />
       

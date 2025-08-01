@@ -47,7 +47,7 @@ function Timer() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col justify-center items-center px-4 py-8 ${orbitron.className}`}
+      className={`w-full md:min-h-screen flex flex-col justify-center items-center px-4 py-8 ${orbitron.className}`}
     >
       <div className="flex flex-col justify-center items-center w-full max-w-[1200px] min-h-[300px] md:h-[800px] bg-ted-red rounded shadow-2xl p-6 md:p-12">
         
