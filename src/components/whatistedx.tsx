@@ -14,7 +14,7 @@ const faqs = [
       "TED stands for Technology, Entertainment, and Design, and it is a nonprofit organization that promotes new ideas and work in a wide variety of human endeavor.",
   },
   {
-    title: "what is TEDx?",
+    title: "What is TEDx?",
     content:
       "A team of volunteers passionate about sharing ideas organizes each TEDx event within their community.",
   },
