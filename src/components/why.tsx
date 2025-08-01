@@ -7,11 +7,8 @@ export function WobbleCards() {
   return (
     <section id="about" className=" py-16 mb-10">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-4 md:px-6">
-       
         <WobbleCard
-
           containerClassName="col-span-1 lg:col-span-2 h-full bg-red-700 relative overflow-hidden"
-
         >
           <video
             src="/cardimages/Tedx-video.mp4"

@@ -40,18 +40,9 @@ const SponsorCard = ({ img }: { img: string }) => {
 
 export default function MarqueeDemo() {
   const [mounted, setMounted] = useState(false);
-  const [ismobile,setismobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const checkMobile = () => {
-      if(typeof window !== "undefined"){
-        setismobile(window.innerWidth <= 768)
-      }
-    }
-    checkMobile();
-    window.addEventListener("resize",checkMobile);
-    return () => window.removeEventListener("resize",checkMobile);  
   }, []);
 
   if (!mounted) {
