@@ -85,7 +85,8 @@ export async function POST(request: Request) {
         <div style="text-align: center; padding: 15px; background-color: #000000;">
             <img src="${
               process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
-            }/logo-white.svg" alt="TEDxAIET" style="max-width: 200px; height: auto;"/>
+            }/logo-white.png" alt="TEDxAIET" style="max-width: 200px; height: auto; display: block; margin: 0 auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"/>
+            <div style="display: none; color: white; font-size: 24px; font-weight: bold; padding: 20px;">TEDx AIET</div>
         </div>
         <div style="text-align: center; padding: 20px; border: 2px solid #e62b1e;  background-color: #f9f9f9;">
           <h2 style="color: #333; margin-bottom: 20px;">Your Verification Code</h2>
