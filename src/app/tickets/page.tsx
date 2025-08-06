@@ -226,6 +226,7 @@ export default function TicketsPage() {
                 maxLength={6}
                 className="bg-black border-gray-700 text-white w-full"
               />
+              <h1 className="text-sm text-gray-500 mt-2">An OTP will be sent to your email. Be sure to check your spam</h1>
             </div>
           )}
 
