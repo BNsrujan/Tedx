@@ -87,10 +87,7 @@ html, body {
 input, textarea, button, select {
   cursor: none !important;
 }
-html, body {
-  cursor: none !important;
-  pointer-events: none;
-}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
