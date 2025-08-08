@@ -26,7 +26,8 @@ export const MaskContainer = ({
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: null, y: null });
   const containerRef = useRef<HTMLDivElement>(null);
-  
+  const [ismobile,setIsmobile] = useState(false)
+
   const updateMousePosition = (e: MouseEvent) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -34,11 +35,19 @@ export const MaskContainer = ({
   };
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsmobile(window.innerWidth <= 768);
+    }
+    checkMobile();
+  
     const currentRef = containerRef.current;
     if (!currentRef) return;
     
+    
     currentRef.addEventListener("mousemove", updateMousePosition);
     return () => {
+
+
       currentRef.removeEventListener("mousemove", updateMousePosition);
     };
   }, []);
@@ -47,8 +56,11 @@ export const MaskContainer = ({
     onHoverChange?.(isHovered);
   }, [isHovered, onHoverChange]);
 
-  const maskSize = isHovered ? revealSize : size;
+  const maskSize = isHovered && !ismobile
+    ? revealSize : !ismobile ? size : 0;
 
+  
+  
   return (
     <motion.div
       ref={containerRef}
@@ -62,7 +74,7 @@ export const MaskContainer = ({
     >
       {isHovered && <div
         className={`absolute inset-0 z-0 h-full w-full  transition-all duration-700  ${
-          isHovered ? "bg-black opacity-50 blur-md  " : "blur-0"
+          isHovered && !ismobile ? "bg-black opacity-50 blur-md  " : "blur-0"
         }`}
       />}
 

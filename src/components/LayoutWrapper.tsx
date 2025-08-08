@@ -37,7 +37,6 @@ export default function LayoutWrapper({
   return (
     <>
       <Navbar />
-      {/* {isClient && !isMobile && <SmoothCursor isActive={!isMobile} />} */}
       {children}
       <Footer />
     </>

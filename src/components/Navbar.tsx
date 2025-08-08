@@ -101,7 +101,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`focus:outline-none ${
-                isHovered ? "text-black" : "text-gray-300"
+                isHovered ? "text-white" : "text-gray-300"
               }`}
             >
               {isOpen ? (
