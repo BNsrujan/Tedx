@@ -46,7 +46,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
           <div className="hidden md:flex space-x-16 text-gray-300 font-medium text-[15px] tracking-wide">
             <Link
               href="/#about"
-              className={`cursor-none hover:text-ted-red transition duration-300 ${
+              className={`  hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
             >
@@ -54,7 +54,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             </Link>
             <Link
               href="/#speakers"
-              className={`cursor-none hover:text-ted-red transition duration-300 ${
+              className={`  hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
             >
@@ -62,7 +62,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             </Link>
             <Link
               href="/#event"
-              className={`cursor-none hover:text-ted-red transition duration-300 ${
+              className={`  hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
             >
@@ -70,7 +70,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             </Link>
             <Link
               href="/#sponsors"
-              className={`cursor-none hover:text-ted-red transition duration-300 ${
+              className={`  hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
             >

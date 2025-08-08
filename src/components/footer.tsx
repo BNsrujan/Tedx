@@ -5,23 +5,23 @@ import TooltipButton from "./ui/tooltipbutton";
 
 export default function Footer() {
   return (
-    <footer className="bg-black cursor-none text-white px-4 lg:px-12 py-10 lg:py-12 ">
-      <div className="max-w-8xl mx-auto cursor-none">
+    <footer className="bg-black   text-white px-4 lg:px-12 py-10 lg:py-12 ">
+      <div className="max-w-8xl mx-auto  ">
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-48 cursor-none">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-48  ">
           {/* Logo and Social - Always centered */}
-          <div className="flex flex-col items-center lg:items-start lg:pl-20 cursor-none">
-            <div className="mb-4 cursor-none">
+          <div className="flex flex-col items-center lg:items-start lg:pl-20  ">
+            <div className="mb-4  ">
               <Image
                 src={"/image.png"}
                 alt="logo"
                 width={200}
                 height={200}
-                className="w-40 lg:w-48 -left-10 cursor-none"
+                className="w-40 lg:w-48 -left-10  "
               />
             </div>
 
-            <div className="flex gap-3 lg:gap-4  content-between cursor-none">
+            <div className="flex gap-3 lg:gap-4  content-between  ">
               {[
                 {
                   href: "https://www.instagram.com/tedxaiet/",
@@ -44,14 +44,14 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all cursor-none "
+                  className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all   "
                 >
                   <Image
                     src={social.icon}
                     alt={social.alt}
                     width={24}
                     height={24}
-                    className="w-5 h-5 lg:w-6 lg:h-6 cursor-none"
+                    className="w-5 h-5 lg:w-6 lg:h-6  "
                   />
                 </a>
               ))}
@@ -127,7 +127,7 @@ export default function Footer() {
                     <li key={link.text}>
                       <a
                         href={link.href}
-                        className="hover:text-ted-red cursor-none transition-colors"
+                        className="hover:text-ted-red   transition-colors"
                       >
                         <HyperText>{link.text}</HyperText>
                       </a>
@@ -172,7 +172,7 @@ export default function Footer() {
                   tooltip="Watch our TEDx videos on YouTube"
                   hoverText="WATCH ON YOUTUBE"
                   hoverLink="https://www.youtube.com/ted"
-                  className=" cursor-none"
+                  className="  "
               target="_blank"
 
                 >
@@ -180,7 +180,7 @@ export default function Footer() {
                     href="https://www.youtube.com/ted"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-ted-red text-white font-semibold hover:bg-ted-600 cursor-none transition-colors text-sm lg:text-base"
+                    className="inline-block bg-ted-red text-white font-semibold hover:bg-ted-600   transition-colors text-sm lg:text-base"
                   >
                     WATCH ON YOUTUBE
                   </Link>

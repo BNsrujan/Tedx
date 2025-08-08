@@ -174,21 +174,21 @@ const MobileSpeakers = () => (
           </h3>
           <h4 className="text-3xl font-bold mb-3">{speaker.name}</h4>
           <p className="text-gray-300 leading-relaxed">{speaker.description}</p>
-          <div className="  justify-end flex gap-3 lg:gap-4   content-between cursor-none">
+          <div className="  justify-end flex gap-3 lg:gap-4   content-between  ">
             {speaker.links && speaker.links.map((link) => (
               <a
                 key={link.alt}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all cursor-none "
+                className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all   "
               >
                 <Image
                   src={link.icon}
                   alt={link.alt}
                   width={24}
                   height={24}
-                  className="w-5 h-5 lg:w-6 lg:h-6 cursor-none"
+                  className="w-5 h-5 lg:w-6 lg:h-6  "
                 />
               </a>
             ))}
@@ -290,21 +290,21 @@ export default function Speaker() {
                       <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                         {speaker.description}
                       </p>
-                      <div className=" absolute top-0  right-0 flex gap-3 lg:gap-4   content-between cursor-none">
+                      <div className=" absolute top-0  right-0 flex gap-3 lg:gap-4   content-between  ">
                         {speaker.links && speaker.links.map((link) => (
                           <a
                             key={link.alt}
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all cursor-none "
+                            className="hover:opacity-80 p-2 bg-black border  duration-500 border-black hover:border-ted-red transition-all   "
                           >
                             <Image
                               src={link.icon}
                               alt={link.alt}
                               width={24}
                               height={24}
-                              className="w-5 h-5 lg:w-6 lg:h-6 cursor-none"
+                              className="w-5 h-5 lg:w-6 lg:h-6  "
                             />
                           </a>
                         ))}

@@ -78,15 +78,10 @@
   }
 }
 
-html, body, * {
-  cursor: none !important;
-}
-html, body {
-  cursor: none !important;
-}
-input, textarea, button, select {
-  cursor: none !important;
-}
+
+
+
+
 
 :root {
   --radius: 0.625rem;

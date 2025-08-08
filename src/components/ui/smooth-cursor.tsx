@@ -16,6 +16,7 @@ export interface SmoothCursorProps {
     mass: number;
     restDelta: number;
   };
+  isActive?: boolean;
 }
 
 const DefaultCursorSVG: FC = () => {
@@ -88,6 +89,7 @@ export function SmoothCursor({
     mass: 1,
     restDelta: 0.001,
   },
+  isActive = true,
 }: SmoothCursorProps) {
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });
   const velocity = useRef<Position>({ x: 0, y: 0 });
@@ -109,6 +111,8 @@ export function SmoothCursor({
   });
 
   useEffect(() => {
+    if (!isActive) return;
+
     const updateVelocity = (currentPos: Position) => {
       const currentTime = Date.now();
       const deltaTime = currentTime - lastUpdateTime.current;
@@ -174,7 +178,11 @@ export function SmoothCursor({
       document.body.style.cursor = "auto";
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [cursorX, cursorY, rotation, scale]);
+  }, [cursorX, cursorY, rotation, scale, isActive]);
+
+  if (!isActive) {
+    return null;
+  }
 
   return (
     <motion.div
@@ -189,7 +197,7 @@ export function SmoothCursor({
         zIndex: 100,
         pointerEvents: "none",
         willChange: "transform",
-
+        display: isActive ? "flex" : "none",
       }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
@@ -198,7 +206,7 @@ export function SmoothCursor({
         stiffness: 400,
         damping: 30,
       }}
-      className="hidden sm:flex"
+      className="flex"
     >
       {cursor}
     </motion.div>
