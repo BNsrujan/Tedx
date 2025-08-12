@@ -169,7 +169,7 @@ export default function PricePage() {
               </div>
               <div className="flex items-center gap-3">
                 <Check className="w-5 h-5 flex-shrink-0 " />
-                <span>Exclusive TEDxAIET merchandise</span>
+                <span>Exclusive TEDxAIET goodies</span>
               </div>
             </div>
 
