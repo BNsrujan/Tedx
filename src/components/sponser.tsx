@@ -32,7 +32,7 @@ const SponsorCard = ({ img }: { img: string }) => {
           src={img}
           alt="Sponsor Logo"
           className={cn(
-            "object-contain  w-full h-36 md:h-28 transition-opacity duration-300 ",
+            "object-contain  w-full h-40 md:h-32 transition-opacity duration-300 ",
             isLoaded ? "opacity-100" : "opacity-0"
           )}
           onLoad={() => setIsLoaded(true)}
@@ -69,8 +69,8 @@ export default function MarqueeDemo() {
         Sponsors
       </h3>
       <div className=" relative max-w-7xl w-full">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 z-10 bg-gradient-to-r from-black"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 z-10 bg-gradient-to-l from-black"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 z-10 bg-gradient-to-r from-black"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 z-10 bg-gradient-to-l from-black"></div>
         <Marquee pauseOnHover className="[--duration:30s] gap-10  w-full">
           {firstRow.map((sponsor, i) => (
             <SponsorCard key={i} img={sponsor.img} />
