@@ -245,7 +245,7 @@ export default function PricePage() {
           >
             {userType === "Premium" ? (
               <Image
-                src={"/400r.svg"}
+                src={"/400srujan.jpeg"}
                 alt="Payment QR Code"
                 width={300}
                 height={300}
@@ -253,7 +253,7 @@ export default function PricePage() {
               />
             ) : (
               <Image
-                src={"/300r.png"}
+                src={"/300srujan.jpeg"}
                 alt="Payment QR Code"
                 width={300}
                 height={300}
