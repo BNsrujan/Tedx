@@ -27,7 +27,7 @@ const SponsorCard = ({ img }: { img: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <div className=" md:h-60 ">
-      <div className=" h-full w-full flex grayscale hover:grayscale-0 duration-1000 items-center justify-center rounded-xl  backdrop-blur-sm p-4">
+      <div className=" h-full w-full flex  hover:grayscale-0 duration-1000 items-center justify-center rounded-xl  backdrop-blur-sm p-4">
         <Image
           src={img}
           alt="Sponsor Logo"
