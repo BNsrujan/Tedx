@@ -63,7 +63,7 @@ export default function MarqueeDemo() {
   return (
     <div
       id="sponsors"
-      className="relative h-screen flex w-full flex-col items-center justify-center   overflow-hidden py-10"
+      className="relative h-[800px] flex w-full flex-col items-center justify-center   overflow-hidden py-10"
     >
       <h3 className="text-5xl sm:text-6xl md:text-4xl lg:text-6xl uppercase  text-white font-extrabold tracking-tight flex items-baseline justify-center gap-2 mb-10">
         Sponsors
