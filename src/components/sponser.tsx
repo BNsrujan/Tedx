@@ -11,6 +11,7 @@ import Image from "next/image";
 const sponsors = [
   { img: "/sponser/canara.png" },
   { img: "/sponser/alvas.png" },
+  {img:"/"},
 ];
 
 const firstRow = sponsors.slice(0, sponsors.length );
