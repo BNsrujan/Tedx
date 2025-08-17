@@ -86,7 +86,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               hoverLink="/tickets"
             >
               <Link
-                href="/tickets"
+                href="/"
                 className={`text-white font-semibold ${
                   isHovered ? "text-black" : ""
                 }`}
@@ -178,7 +178,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             Sponsors
           </Link>
           <Link
-            href="/tickets"
+            href="/"
             onClick={() => setIsOpen(false)}
             className="block bg-ted-red text-white text-center px-5 py-4 rounded-sm font-semibold hover:bg-red-700 transition"
           >

@@ -35,7 +35,7 @@ export default function Home() {
       {/* {https://ui.aceternity.com/components/lamp-effect} */}
       {/* https://ui.aceternity.com/components/world-map*/}
 
-      <Link href="/tickets" className="fixed bottom-2 px-4 w-full  z-50 md:hidden" aria-label="Book a Ticket">
+      <Link href="/" className="fixed bottom-2 px-4 w-full  z-50 md:hidden" aria-label="Book a Ticket">
         <Button className="bg-ted-red text-white  w-full py-6  rounded-sm text-lg font-bold flex items-center ">
           Book a Ticket
         </Button>
