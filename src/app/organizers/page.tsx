@@ -205,6 +205,15 @@ const OrganizerData: OrganizerData[] = [
         image: "/Organiser/Volunteers/srujann.png",
         name: "sujan",
       },
+      {
+        image: "/Organiser/Volunteers/Adithi.png",
+        name: "Adithi",
+      },
+      {
+        image: "/Organiser/Volunteers/Niriksha.png",
+        name: "Niriksha",
+      },
+      
     ],
   },
 ];

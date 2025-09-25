@@ -171,13 +171,13 @@ export default function Footer() {
                 <TooltipButton
                   tooltip="Watch our TEDx videos on YouTube"
                   hoverText="WATCH ON YOUTUBE"
-                  hoverLink="https://www.youtube.com/ted"
+                  hoverLink="https://www.youtube.com/results?search_query=tedxaiet"
                   className="  "
               target="_blank"
 
                 >
                   <Link
-                    href="https://www.youtube.com/ted"
+                    href="https://www.youtube.com/results?search_query=tedxaiet"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-ted-red text-white font-semibold hover:bg-ted-600   transition-colors text-sm lg:text-base"
