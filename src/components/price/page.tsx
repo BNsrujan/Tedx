@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,7 @@ export default function PricePage() {
     if(!email ){
       router.push("/tickets")
     }
-  }, []);
+  }, );
 
   // Control Lottie animation when success state changes
   useEffect(() => {

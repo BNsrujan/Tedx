@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { strict } from "node:assert";
 
 interface OrganizerData {
   Team: string;
@@ -62,7 +61,6 @@ const OrganizerData: OrganizerData[] = [
   {
     Team: "Promotion Marketing",
     Profile: [
-      
       {
         image: "/Organiser/Promotion&Marketing/AdvithSuvarn.png",
         name: "Advith Suvarn",
@@ -75,6 +73,11 @@ const OrganizerData: OrganizerData[] = [
         image: "/Organiser/Promotion&Marketing/Suraksha.png",
         name: "Suraksha",
       },
+      {
+        image:"/Organiser/Promotion&Marketing/Kshama.png",
+        name:"Kshama"
+      },
+    
       {
         image: "/Organiser/Promotion&Marketing/Tejesvin.png",
         name: "Tejesvin",
@@ -100,6 +103,67 @@ const OrganizerData: OrganizerData[] = [
     ],
   },
   {
+    Team: "Stage Management",
+    Profile: [
+      {   
+      image: "/Organiser/StageManagment/swanjit.png",
+      name: "Swanjit",
+      },
+      {
+        image: "/Organiser/StageManagment/Adithya.png",
+        name: "Adithya",
+      },
+      {
+        image: "/Organiser/StageManagment/ayukshi.png",
+        name: "Arpita",
+      },
+      {
+        image: "/Organiser/StageManagment/pranit.png",
+        name: "Pranit",
+      },
+    ]
+  },
+  {
+    Team: "MC",
+    Profile: [
+      {
+        image: "/Organiser/MC/Aaradhyaprabhakar.png",
+        name: "Aaradhya Prabhakar",
+      },
+      {
+        image: "/Organiser/MC/adyashetty.png",
+        name: "Adya Shetty",
+      },
+      {
+        image: "/Organiser/MC/Aeona.png",
+        name: "Aeona",
+      },
+      {
+        image: "/Organiser/MC/Harshini.png",
+        name: "Harshini",
+      },{
+        image: "/Organiser/MC/Sharvari.png",
+        name: "Sharvari",
+      },
+      {
+        image: "/Organiser/MC/stella.png",
+        name: "Stella",
+      }
+    ]
+  },
+  {
+    Team: "Web Development",
+    Profile: [
+      {
+        image: "/Organiser/technical/prasana.png",
+        name: "Prasana",
+      },{
+        image: "/Organiser/technical/srujan.png",
+        name: "srujan",
+      }
+    ]
+  },
+  {
     Team: "Social Media",
     Profile: [
       {
@@ -122,14 +186,24 @@ const OrganizerData: OrganizerData[] = [
         image: "/Organiser/SocialMedia/Sakshi.png",
         name: "Sakshi",
       },
+      
     ],
   },
+
   {
     Team: "Volunteers",
     Profile: [
       {
-        image: "",
-        name: "",
+        image: "/Organiser/Volunteers/Vaishnav.png",
+        name: "Vaishnav",
+      },
+      {
+        image: "/Organiser/Volunteers/vishnu.png",
+        name: "Vishnu",
+      },
+      {
+        image: "/Organiser/Volunteers/srujann.png",
+        name: "sujan",
       },
     ],
   },
