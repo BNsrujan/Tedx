@@ -62,7 +62,7 @@ const OrganizerData: OrganizerData[] = [
     Team: "Promotion Marketing",
     Profile: [
       {
-        image: "/Organiser/Promotion&Marketing/AdvithSuvarn.png",
+        image: "/Organiser/Promotion&Marketing/advithsuvarna.png",
         name: "Advith Suvarn",
       },
       {
