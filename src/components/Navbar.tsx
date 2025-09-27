@@ -76,6 +76,14 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             >
               Sponsors
             </Link>
+             <Link
+              href="/#organizers"
+              className={`  hover:text-ted-red transition duration-300 ${
+                isHovered ? "text-black/70" : ""
+              }`}
+            >
+              Organizer 
+            </Link>
           </div>
 
           {/* Ticket Button */}

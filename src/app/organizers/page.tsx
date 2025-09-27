@@ -50,7 +50,7 @@ const OrganizerData: OrganizerData[] = [
       },
       {
         image: "/Organiser/speakerCuration/Spoorthi.png",
-        name: "Sporthi",
+        name: "Spoorthi",
       },
       {
         image: "/Organiser/speakerCuration/Nikita.png",
@@ -115,7 +115,7 @@ const OrganizerData: OrganizerData[] = [
       },
       {
         image: "/Organiser/StageManagment/ayukshi.png",
-        name: "Arpita",
+        name: "Ayukshi",
       },
       {
         image: "/Organiser/StageManagment/pranit.png",
