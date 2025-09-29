@@ -91,13 +91,13 @@ export default function Footer() {
                       external: true,
                     },
                     {
-                      href: "#organizers",
+                      href: "/organizers",
                       text: "TEDx Organizers",
                       bold: true,
                     },
                   ].map((link) => (
                     <li key={link.text}>
-                      <a
+                      <Link
                         href={link.href}
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
@@ -106,7 +106,7 @@ export default function Footer() {
                         }`}
                       >
                         <HyperText>{link.text}</HyperText>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

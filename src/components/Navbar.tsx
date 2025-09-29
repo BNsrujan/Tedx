@@ -77,7 +77,7 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
               Sponsors
             </Link>
              <Link
-              href="/#organizers"
+              href="/organizers"
               className={`  hover:text-ted-red transition duration-300 ${
                 isHovered ? "text-black/70" : ""
               }`}
@@ -184,6 +184,13 @@ export default function Navbar({ isHovered = false }: NavbarProps) {
             className="block hover:text-ted-red transition duration-300"
           >
             Sponsors
+          </Link>
+          <Link
+            href="/organizers"
+            onClick={() => setIsOpen(false)}
+            className="block hover:text-ted-red transition duration-300"
+          >
+            Organizer
           </Link>
           <Link
             href="/"
