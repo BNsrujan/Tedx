@@ -31,6 +31,11 @@ const OrganizerData: OrganizerData[] = [
         name: "Ansil",
         Tag: "Co-curator",
       },
+      {
+        image: "/Organiser/satwik.png",
+        name: "Satwik.png",
+        Tag: "Mentor",
+      }
     ],
   },
   {
@@ -159,7 +164,7 @@ const OrganizerData: OrganizerData[] = [
         name: "Prasana",
       },{
         image: "/Organiser/technical/srujan.png",
-        name: "srujan",
+        name: "Srujan",
       }
     ]
   },
@@ -203,7 +208,7 @@ const OrganizerData: OrganizerData[] = [
       },
       {
         image: "/Organiser/Volunteers/srujann.png",
-        name: "sujan",
+        name: "Sujan",
       },
       {
         image: "/Organiser/Volunteers/Adithi.png",
